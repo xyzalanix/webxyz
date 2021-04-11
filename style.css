@@ -1,0 +1,245 @@
+/* SIDEBAR */
+              /* SIDEBAR */
+                            /* SIDEBAR */
+                                          /* SIDEBAR */
+                                                        /* SIDEBAR */
+
+@font-face {
+font-family: tex;
+src: url(fonts/texgyreheroscn-regular.otf);
+}
+
+.screen img{
+  z-index:1;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation{
+  text-decoration: none;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: tex;
+  color:#333;
+  width:322px;
+  border-radius: 5px;
+  margin-top:88px;
+  line-height: 20px;
+}
+
+.navigation a {
+  /* padding: 2px 8px 2px 0px; */
+  text-decoration: none;
+  font-size: 22px;
+  color: #333;
+  display: block;
+  padding:4px 0 4px 22px;
+
+}
+
+.navigation a:hover {
+  color:#60fcae;
+  font-weight: bold;
+  filter: blur(4px);
+  /* background-color: black; */
+}
+
+.top{
+  text-decoration: none;
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: tex;
+  font-size: 16px;
+  padding:22px;
+  color:#333;
+  margin-bottom: 22px;
+}
+.top a{
+  position: fixed;
+  text-decoration: none;
+  text-align: left;
+}
+
+.top a:hover{
+  color:#60fcae;
+  font-weight: bold;
+  filter: blur(4px);
+
+}
+
+.side {
+  box-shadow: 0px 0px 31px -9px #333;
+  height: 100%;
+  width: 322px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 22px;
+  font-family:tex;
+  /* -webkit-backdrop-filter: blur(10px); */
+  backdrop-filter: invert(54%);
+  backdrop-filter: hue-rotate(20deg);
+  backdrop-filter: saturate(90%);
+}
+
+a:visited{
+  color:#333;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+              /* IMAGES */
+                            /* IMAGES */
+                                          /* IMAGES */
+                                                        /* IMAGES */
+                                                                      /* IMAGES */
+
+.row {
+  margin-left: 322px; /* Same as the width of the sidebar */
+  padding: 0px 11px 11px 11px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 50%;
+  padding: 22px 11px 11px 22px;
+  z-index: 6;
+}
+
+.column img {
+  margin-bottom: 22px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 8px;
+}
+.column img:hover {
+  box-shadow: 0px 0px 31px -9px #60fcae;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 7;
+  /* padding-bottom: 122px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #33333380;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
+
+  background-color: rgba(250,253,255,0.6);
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  height:75%;
+  max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 222px;
+  font-weight: bold;
+  z-index:4;
+}
+
+.close:hover,
+.close:focus {
+  color: #60fcae;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  /* max-width: 400px; */
+}
+.vertical {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  max-width: 400px;
+}
+/* Caption text */
+.caption-container {
+  text-align: center;
+  font-size:64px;
+  padding: 2px 16px;
+  color: #333;
+  z-index:4;
+  font-family: tex;
+  /* text-shadow: 0 0 2px  #333; */
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 1700px) {
+}
+
+@media screen and (max-width: 1100px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 75%;
+    max-width: 100%;
+  }
+  .side{
+    width:100%;
+    height:100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    padding: 22px 11px 11px 22px;
+    z-index: 6;
+  }
+
+
+}

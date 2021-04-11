@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<HTML>
+<HEAD>
+<TITLE>work by alanix</TITLE>
+<link href="style.css" rel="stylesheet"/>
+<style type="text/css">
+
+body {
+	background-image: url(images/main_bg.png), url("images/screen.png");
+	/* filter:blur(8px); */
+}
+</style>
+</HEAD>
+
+<div class="side">
+	<img src="images/xyz-logo.svg" width="111px" style="margin-left:22px; margin-bottom:11px;">
+  <!-- <a href="mailto:hello@xyzalanix.com?subject=Hi" target="_blank">Contact</a>
+  <a href="https://github.com/xyzalanix" target="_blank">Github</a>
+	<a href="https://instagram.com/xyzalanix" target="_blank">Social</a> -->
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="work/pa-000.jpg" onclick="openModal();currentSlide(1)">
+		<img src="work/juanduarte.jpg" onclick="openModal();currentSlide(2)">
+		<img src="work/rs-mix.png" onclick="openModal();currentSlide(3)">
+		<img src="work/rs-intro.png" onclick="openModal();currentSlide(4)">
+		<img src="work/neural-logo-piratebay.png" onclick="openModal();currentSlide(5)">
+		<img src="work/mandarina-artwork-alansedit.jpg" onclick="openModal();currentSlide(6)">
+  </div>
+  <div class="column">
+		<img src="work/mandarina-alt.jpg" onclick="openModal();currentSlide(7)">
+		<img src="work/jala-1.jpg" onclick="openModal();currentSlide(8)">
+		<img src="work/jala-2.jpg" onclick="openModal();currentSlide(9)">
+    <img src="work/mashup_aqours.png" onclick="openModal();currentSlide(10)">
+  </div>
+</div>
+
+<div class="navigation">
+	<a href="mailto:hello@xyzalanix.com?subject=Hi" target="_blank">↗ Contact</a>
+	<a href="https://github.com/xyzalanix" target="_blank">↗ Github</a>
+	<a href="https://instagram.com/xyzalanix" target="_blank">↗ Social</a>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <img class="demo vertical" src="work/pa-000.jpg" style="width:100%;border-radius: 8px;" alt="A submission for Paris/Atlantic 2021 publication.">
+    </div>
+
+		<div class="mySlides">
+      <img class="demo" src="work/juanduarte.jpg" style="width:100%;border-radius: 8px;" alt="3D work & Video post-production for Juan Duarte.">
+    </div>
+
+    <div class="mySlides">
+      <img class="demo" src="work/rs-mix.png" style="width:100%;border-radius: 8px;" alt="Visuals for DJ Sustancia's mix on Reality Sessions by Widows Radio. 2020">
+    </div>
+
+    <div class="mySlides">
+      <img class="demo" src="work/rs-intro.png" style="width:100%;border-radius: 8px;" alt="Neural video work for Widows Radio's Reality Sessions. 2020">
+    </div>
+
+    <div class="mySlides">
+      <img class="demo" src="work/neural-logo-piratebay.png" style="width:100%;border-radius: 8px;" alt="Pirate Bay logo from Neural Logos series. 2021">
+    </div>
+
+		<div class="mySlides">
+      <img class="demo" src="work/mandarina-artwork-alansedit.jpg" style="width:100%;border-radius: 8px;" alt="Artwork for Mandarina's Una Ciudad Entra al Criminal. 2020">
+    </div>
+
+		<div class="mySlides">
+			<img class="demo" src="work/mandarina-alt.jpg" style="width:100%;border-radius: 8px;" alt="Unused logo work for Mandarina. 2020">
+		</div>
+
+		<div class="mySlides">
+			<img class="demo vertical" src="work/jala-1.jpg" style="width:100%;border-radius: 8px;" alt="Still from Jalaconda's S2021 teasers. I played with blends between dithered layers to highlight textures. 2021">
+		</div>
+
+		<div class="mySlides">
+			<img class="demo vertical" src="work/jala-2.jpg" style="width:100%;border-radius: 8px;" alt="Still from Jalaconda's S2021 teasers. 2021">
+		</div>
+
+		<div class="mySlides">
+			<img class="demo" src="work/mashup_aqours.png" style="width:100%;border-radius: 8px;" alt="Digestion of a McDonald's Flavor Twist ad. 2020">
+		</div>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+	</div>
+</div>
+
+<div class=top>
+	 © Alan Ixba 2021<br>
+	 <a href="worklog.html" target="_blank">
+	 ↗ Work log
+	 </a>
+</div>
+
+<div class="screen">
+	<img src="images/screen-up.png">
+</div>
+
+
+
+
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</BODY>
+</HTML>
