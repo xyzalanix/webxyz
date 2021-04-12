@@ -9,6 +9,22 @@ font-family: tex;
 src: url(fonts/texgyreheroscn-regular.otf);
 }
 
+
+.loader{
+  z-index:999;
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: #333;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-family: tex;
+}
+
 .screen img{
   z-index:1;
   object-fit: cover;
@@ -23,7 +39,7 @@ src: url(fonts/texgyreheroscn-regular.otf);
 
 .navigation{
   text-decoration: none;
-  z-index: 2;
+  z-index: 6;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +47,7 @@ src: url(fonts/texgyreheroscn-regular.otf);
   color:#333;
   width:322px;
   border-radius: 5px;
-  margin-top:88px;
+  margin-top:22px;
   line-height: 20px;
 }
 
@@ -42,7 +58,6 @@ src: url(fonts/texgyreheroscn-regular.otf);
   color: #333;
   display: block;
   padding:4px 0 4px 22px;
-
 }
 
 .navigation a:hover {
@@ -59,7 +74,7 @@ src: url(fonts/texgyreheroscn-regular.otf);
   bottom: 0;
   left: 0;
   font-family: tex;
-  font-size: 16px;
+  font-size: 22px;
   padding:22px;
   color:#333;
   margin-bottom: 22px;
@@ -74,10 +89,9 @@ src: url(fonts/texgyreheroscn-regular.otf);
   color:#60fcae;
   font-weight: bold;
   filter: blur(4px);
-
 }
 
-.side {
+.bar {
   box-shadow: 0px 0px 31px -9px #333;
   height: 100%;
   width: 322px;
@@ -100,8 +114,8 @@ a:visited{
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .barnav {padding-top: 15px;}
+  .barnav a {font-size: 18px;}
 }
 
               /* IMAGES */
@@ -132,7 +146,7 @@ a:visited{
   border-radius: 8px;
 }
 .column img:hover {
-  box-shadow: 0px 0px 31px -9px #60fcae;
+  box-shadow: 0px 0px 31px 0px #60fcae;
   cursor: pointer;
 }
 
@@ -145,11 +159,10 @@ a:visited{
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow:auto;
   background-color: #33333380;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(12px);
-
   background-color: rgba(250,253,255,0.6);
 }
 
@@ -158,16 +171,21 @@ a:visited{
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   margin: auto;
-  height:75%;
-  max-width: 700px;
+  max-height:85%;
+  max-width: 600px;
+}
+
+.modal-content img{
+    box-shadow: 0px 0px 42px -9px #333;
+    max-width: 100%;
 }
 
 /* The Close Button */
 .close {
   color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
+  position: fixed;
+  top: 50px;
+  right: 100px;
   font-size: 222px;
   font-weight: bold;
   z-index:4;
@@ -183,24 +201,44 @@ a:visited{
 /* Hide the slides by default */
 .mySlides {
   display: none;
+  text-align: center;
   /* max-width: 400px; */
 }
+
+.mySlides a{
+  text-decoration: none;
+  font-family: tex;
+  font-size:16px;
+  color: #333;
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #60fcae;
+  text-align: center;
+  line-height: 64px;
+}
+
+.mySlides a:hover{
+  filter: blur(4px);
+}
+
 .vertical {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-
   max-width: 400px;
+  margin-bottom:22px;
 }
 /* Caption text */
 .caption-container {
   text-align: center;
   font-size:64px;
-  padding: 2px 16px;
+  padding: 2px 16px 16px 2px;
   color: #333;
   z-index:4;
   font-family: tex;
+  width:100%;
+  /* position: absolute; */
   /* text-shadow: 0 0 2px  #333; */
 }
 
@@ -217,22 +255,44 @@ img.hover-shadow {
 
 @media screen and (max-width: 1100px) {
   .column {
-    flex: 50%;
+    flex: 25%;
     max-width: 50%;
+  }
+  .bar{
+    width:100%;
+    height:22%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .column{
+    flex: 50%;
+    max-width: 100%;
+    padding: 22px 11px 11px 22px;
+    z-index: 6;
+  }
+  .row {
+  margin-left: 22px; /* Same as the width of the sidebar */
+  padding: 0px 111px 111px 111px;
+  }
+  .navigation{
+    width: 100%;
+    display: flex;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .column {
     flex: 75%;
     max-width: 100%;
   }
-  .side{
+  .bar{
     width:100%;
     height:100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
   }
   .column {
     flex: 100%;
