@@ -9,7 +9,7 @@
 <style type="text/css">
 
 head {
-
+	background-color: rgb(250,253,255);
 }
 body {
 	background-image: url(images/main_bg.png), url("images/screen.png");
@@ -17,13 +17,6 @@ body {
 }
 </style>
 </HEAD>
-
-<!-- <div class="bar">
-	<img src="images/xyz-logo.svg" width="111px" style="margin-left:22px; margin-bottom:11px;">
-  <a href="mailto:hello@xyzalanix.com?subject=Hi" target="_blank">Contact</a>
-  <a href="https://github.com/xyzalanix" target="_blank">Github</a>
-	<a href="https://instagram.com/xyzalanix" target="_blank">Social</a>
-</div> -->
 
 <div class="row">
   <div class="column">
@@ -34,7 +27,7 @@ body {
 		<img src="work/mandarina-artwork-alansedit.jpg" onclick="openModal();currentSlide(5)">
   </div>
   <div class="column">
-		<img src="work/mandarina-alt.jpg" onclick="openModal();currentSlide(6)">
+		<img src="work/torso-0.jpg" onclick="openModal();currentSlide(6)">
 		<img src="work/jala-1.jpg" onclick="openModal();currentSlide(7)">
     <img src="work/mashup_aqours.png" onclick="openModal();currentSlide(8)">
   </div>
@@ -47,38 +40,49 @@ body {
 </div>
 
 <div id="myModal" class="modal">
+	<div onclick="closeModal()" style="background-color:red;"></div>
   <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p>
   <div class="modal-content">
 
     <div class="mySlides">
-      <img class="demo vertical" src="work/pa-000.jpg" style="width:100%;border-radius: 8px;" alt="1 out of 3 works for my Paris Atlantic 2021 submission.">
+      <img class="demo vertical" src="work/pa-000.jpg" style="width:100%;border-radius: 8px;" alt="'000' from my submission for Paris Atlantic 2021.">
     </div>
 
 		<div class="mySlides">
       <img class="demo" src="work/juanduarte.jpg" style="width:100%;border-radius: 8px;" alt="3D work & video processing for Juan Duarte.">
 			<a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank">
-			↗ 👁️ Collide24.
+			↗ 👁️ Collide24
 			</a>
     </div>
 
     <div class="mySlides">
-      <img class="demo" src="work/mix-cut.gif" style="width:100%;border-radius: 8px;" alt="Visuales para DJ Sustancia's mix en Reality Sessions by Widows Radio. 2020">
+      <img class="demo" src="work/mix-cut.gif" style="width:100%;border-radius: 8px;" alt="Visuals for DJ Sustancia's mix on Reality Sessions by Widows Collective. 2020">
+			<a href="https://youtu.be/foHcFuKtTAk?t=13" target="_blank">
+			↗ 💉 Dj Sustancia's Mix
+			</a>
     </div>
 
     <div class="mySlides">
-      <img class="demo" src="work/rs-intro.png" style="width:100%;border-radius: 8px;" alt="Neural video work for Widows Radio's Reality Sessions. 2020">
+
+      <img class="demo" src="work/rs-intro.png" style="width:100%;border-radius: 8px;" alt="Neural video work for Widows Collective's Reality Sessions. 2020">
+			<a href="https://youtu.be/pWeJg7FCP8Q" target="_blank">
+			↗ 👁️ Widows Collective.
+			</a>
     </div>
 
 		<div class="mySlides">
-      <img class="demo" src="work/mandarina-artwork-alansedit.jpg" style="width:100%;border-radius: 8px;" alt="Artwork for Mandarina. 2020">
+			<img class="demo" src="work/mandarina-artwork-alansedit.jpg" style="width:100%;border-radius: 8px;" alt="Artwork for Mandarina. 2020">
+			<a href="https://open.spotify.com/album/59H324BD07C0ASRDnLj3kT?si=DRu9dXGWRTCLLcDhaRFbQw">↗ 🔉 Una Ciudad Entra al Criminal</a>
     </div>
 
 		<div class="mySlides">
-			<img class="demo" src="work/mandarina-alt.jpg" style="width:100%;border-radius: 8px;" alt="Torso para Mandarina. 2020">
+			<img class="demo" src="work/torso-0.jpg" style="width:100%;border-radius: 8px;" alt="Torso. 2020">
 		</div>
 
 		<div class="mySlides">
-			<img class="demo vertical" src="work/jala-2.jpg" style="width:100%;border-radius: 8px;" alt="Still from Jalaconda's S2021 teasers. 2021">
+
+			<img class="demo vertical" src="work/jala-1.jpg" style="width:100%;border-radius: 8px;" alt="Still from Jalaconda's S2021 teasers. 2021">
+			<a href="https://www.instagram.com/jalaconda" target="_blank">↗ 👁️ @jalaconda</a>
 		</div>
 
 		<div class="mySlides">
@@ -91,7 +95,7 @@ body {
 
 	</div>
 </div>
-
+</div>
 <div class=top>
 	 © Alan Ixba 2021<br>
 	 <a href="worklog.html">
@@ -117,6 +121,12 @@ $(window).on("load",function(){
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
+
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        closeModal();
+    }
+});
 
 // Close the Modal
 function closeModal() {
