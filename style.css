@@ -25,12 +25,11 @@ src: url(fonts/texgyreheroscn-regular.otf);
   position: fixed;
   top:0;
   left:0;
-  background-color: #333;
-  mix-blend-mode: difference;
+  background-color:rgb(250,253,255);
   display:flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 42px;
   font-family: tex;
 }
 
