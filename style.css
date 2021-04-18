@@ -129,7 +129,8 @@ a:visited{
   max-width: 50%;
   padding: 22px 11px 11px 22px;
   z-index: 6;
-  /* mix-blend-mode: overlay; */
+
+  mix-blend-mode: overlay;
 }
 
 .column img {
