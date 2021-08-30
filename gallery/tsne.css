@@ -1,0 +1,118 @@
+@font-face {
+  font-family: terminal;
+  src: url("terminal-grotesque-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: cirrus;
+  src: url("CirrusCumulus.woff") format("woff");
+}
+body{
+  margin:0;
+}
+
+h2{
+  max-width: 850px;
+  font-family: terminal;
+  padding: 15px;
+  text-align: left;
+  justify-content: left;
+  font-size: 140px;
+  color:white;
+  margin:50px;
+  margin-bottom:25px;
+  box-shadow: 0 0 36px #00000075;
+  word-wrap: break-word;
+  /* background-color: #ffffff25; */
+  text-shadow: 0 0 4px #000000;
+}
+
+div.description {
+  color: #white;
+  text-shadow: 0 0 4px #000000;
+  z-index: 3;
+  font-family: cirrus;
+  font-size: 16px;
+  text-align: left;
+  justify-content: left;
+  padding:15px;
+  margin:50px;
+  margin-top:25px;
+  box-shadow: 0 0 24px #00000075;
+  /* background-color: #ffffff25; */
+}
+
+a.back {
+  text-decoration: none;
+  font-family: terminal;
+  line-height: 15px;
+  font-size: 30px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 99;
+  border: solid 0.6px;
+  -webkit-text-stroke: 0.2px blue;
+  color: #12fc35;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 28px;
+  box-shadow: 0 0 24px #00000075;
+  /* background-color: blue; */
+}
+
+a.watch {
+  text-decoration: none;
+  font-family: terminal;
+  line-height: 15px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  border: dashed 0.6px;
+  color: #12fc35;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  box-shadow: 0 0 24px #00000075;
+  background-color: #ffffff25;
+  border-radius: 25px;
+  /* background-color: #12fc35; */
+}
+
+a:active{
+  background-color: #12fc35;
+
+}
+
+.popup {
+  visibility: hidden;
+
+  position: absolute;
+  z-index: 41;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  margin-bottom: 50px;
+}
+
+video {
+  box-shadow: 0 0 24px #00000075;
+  border: dashed 0.6px;
+  color: #12fc35;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

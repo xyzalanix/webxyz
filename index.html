@@ -1,130 +1,133 @@
+<!-- tal y tanto arriba -->
 <!DOCTYPE html>
 
 <HTML>
 <HEAD>
-<TITLE>work by alanix</TITLE>
+<TITLE>alanix:home</TITLE>
 <link href="style.css" rel="stylesheet"/>
 <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 <script src="jquery-2.1.4.js"></script>
-<style type="text/css">
 
-body {
-	/* background-color: black; */
-	/* background-image: url("images/main_bg.png"); */
+
+<script>
+
+var flesh = new Array()
+
+flesh[0] = 'images/0002.png'
+flesh[1] = 'images/0048.png'
+flesh[2] = 'images/0216.png'
+flesh[3] = 'images/0352.png'
+flesh[4] = 'images/0366.png'
+flesh[5] = 'images/1084.png'
+flesh[6] = 'images/1427.png'
+flesh[7] = 'images/0210.png'
+flesh[8] = 'images/1596.png'
+
+var j = 0
+var p = flesh.length;
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+   preBuffer[i] = new Image()
+   preBuffer[i].src = flesh[i]
 }
-</style>
+var whichFlesh = Math.round(Math.random()*(p-1));
+function showImage(){
+document.write('<img src="'+flesh[whichFlesh]+'">');
+}
+
+</script>
+
 </HEAD>
 
-<div class="row">
-  <div class="column">
-    <img src="work/pa-000.jpg" onclick="openModal();currentSlide(1)">
-		<img src="work/juanduarte.jpg" onclick="openModal();currentSlide(2)">
-		<img src="work/mix-cut.gif" onclick="openModal();currentSlide(3)">
-		<img src="work/rs-intro.png" onclick="openModal();currentSlide(4)">
-		<img src="work/mandarina-artwork-alansedit.jpg" onclick="openModal();currentSlide(5)">
-  </div>
-  <div class="column">
-		<img src="work/torso-0.jpg" onclick="openModal();currentSlide(6)">
-		<img src="work/s.jpg" onclick="openModal();currentSlide(7)">
-		<img src="work/jala-1.jpg" onclick="openModal();currentSlide(8)">
-    <img src="work/mashup_aqours.png" onclick="openModal();currentSlide(9)">
-		<a href="https://xyzalanix.github.io/2020GANs/" target="_blank"><img src="work/gans.jpg"></a>
-  </div>
+<div class="screen">
+	<!-- <img src="images/0366.png"> -->
+	<script>
+	showImage();
+	</script>
 </div>
 
 <div class="navigation">
-	<a href="contact.html" target="_blank">Contact</a>
-	<a href="https://github.com/xyzalanix" target="_blank">Github</a>
-	<a href="https://instagram.com/xyzalanix" target="_blank">Social</a>
+	<a onclick="openModal();currentSlide(1)">INFO</a>
+	<a href="work.html" class="middle">WORK</a>
+	<a href="https://instagram.com/xyzalanix" target="_blank" class="right">SOCIAL</a>
 </div>
+
+<div class="bio">
+
+	<img src="images/me.png" style="height:100%;max-width:111px;margin:0px;padding-right:11px;">
+  <p>Alan Ixba is a multimedia designer and creative technologist from the mexican border.</p>
+</div>
+
+<div class="projects">
+	<a>ONGOING COLLABORATIONS</a>
+</div>
+
+<a class="description" style="margin:0px;">Entangled Others</a><br>
+<a href="https://entangledothers.studio" target="_blank"  class="description" style="margin:0px;font-size:14px;border-color:#00000000;"> —— Creative Research & Technical Assistance</a>
+<!-- <p class="description" style="margin:0px;">nu studio</p>
+<a class="description" style="margin:0px;font-size:14px;border-color:#00000000;">—— New Media Support</a> -->
+<p class="description" style="margin:0px;">Jalaconda</p>
+<a href="https://www.instagram.com/jalaconda/" target="_blank" class="description" style="margin:0px;font-size:14px;border-color:#00000000;">—— Patterns</a>
+<p class="description" style="margin:0px;">Widows Collective</p>
+<a href="https://www.instagram.com/widows.de/" target="_blank" class="description" style="margin:0px;font-size:14px;border-color:#00000000;">—— Visuals</a>
+
+        <!-- MODAL -->
 
 <div id="myModal" class="modal" onclick="closeModal()">
   <!-- <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p> -->
   <div class="modal-content">
 
     <div class="mySlides">
-      <img class="demo vertical" src="work/pa-000.jpg" style="width:100%;border-radius: 8px;">
-			<img class="demo vertical" src="work/pa-111.jpg" style="width:100%;border-radius: 8px; margin-top:22px;">
-			<img class="demo vertical" src="work/pa-222.jpg" style="width:100%;border-radius: 8px; margin-top:22px;">
-			<p class="caption-container">'000', '111' & '222'</p>
-			<p class="detail">Touhou textures and dithered blends.</p>
-			<p class="detail">From my submissions to Paris Atlantic 2021 publication.</p>
-			<p class="detail">2021</p>
+      <a href="https://github.com/xyzalanix" target="_blank" class="middle">GITHUB</a>
+      <p class="detail">hello@xyzalanix.com</p>
     </div>
 
 		<div class="mySlides">
-      <img class="demo" src="work/juanduarte.jpg" style="width:100%;border-radius: 8px;" alt="3D work & video edit for Juan Duarte.">
-			<a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank">
-			↗ 👁️ Collide24
-			</a>
-			<p class="caption-container">3D work & video edit for Juan Duarte.</p>
-			<p class="detail">Crossover between lockdown worlds.</p>
-			<p class="detail">Collab con Juan Duarte, Pedro Nascimento & Martina Vansteen.</p>
-			<p class="detail">2021</p>
+      <p class="detail"><i>blush</i></p>
+      <p class="detail" style="border-top:solid;border-width:thin;">Ongoing</p>
+      <p class="detail"></p>
+      <img class="demo" src="work/1137.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/1145.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/1141.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/1139.jpg" style="width:100%;border-radius: 0px;" alt="blush">
     </div>
 
     <div class="mySlides">
-      <img class="demo" src="work/mix-cut.gif" style="width:100%;border-radius: 8px;">
-			<a href="https://youtu.be/foHcFuKtTAk?t=13" target="_blank">
-			↗ 💉 Dj Sustancia's Mix
-			</a>
-			<p class="caption-container">Visuals for DJ Sustancia's mix on Reality Sessions.</p>
-			<p class="detail">2020</p>
+      <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i></a>
+      <p class="detail" style="border-top:solid;border-width:thin;">08 2021</p>
+  		<p class="detail">The patterns for this collection came from an amalgam of neural outputs I had collected throughout the year.</p>
+	    <a href="https://casadecriadores.com.br/jalaconda" class="detail">See more of the project here.</a>
+      <img class="demo" src="work/undies.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/43523425.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/foto-1_sozinha.jpg" style="width:100%;border-radius: 0px;">
+      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
     </div>
 
-    <div class="mySlides" >
-
-      <img class="demo" src="work/rs-intro.png" style="width:100%;border-radius: 8px;">
-			<a href="https://youtu.be/pWeJg7FCP8Q" target="_blank">
-			↗ 👁️ Widows Collective.
-			</a>
-			<p class="caption-container" >Intro for Widows Collective's Reality Sessions.</p>
-			<p class="detail">Video style transfer on different creatures. 3D design by Layla Rubí.</p>
-			<p class="detail">2021</p>
+    <div class="mySlides">
+      <p class="detail"><i>Reptilian encounters</i></p>
+      <p class="detail" style="border-top:solid;border-width:thin;">11 2020</p>
+      <p class="detail" >Jalinha and I were curious about the power of snake imagery, both in Brazilian and Mexican folklore. We collected images and trained a neural network using this data.</p>
+      <p class="detail">A selection of these outputs were printed in early 2021.</p>
+      <img class="demo" src="work/prints/snakes/seed1156-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/snakes/seed34536-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/snakes/seed34458-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/run.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/snakes/vittar.jpg" style="width:100%;border-radius: 0px;">
     </div>
 
-		<div class="mySlides">
-			<img class="demo" src="work/mandarina-artwork-alansedit.jpg" style="width:100%;border-radius: 8px;">
-			<a href="https://open.spotify.com/album/59H324BD07C0ASRDnLj3kT?si=DRu9dXGWRTCLLcDhaRFbQw" target="_blank">↗ 🔉 Una Ciudad Entra al Criminal</a>
-			<p class="caption-container">Artwork for Mandarina.</p>
-			<p class="detail">Tierra, muerte, patrullas, ojos, y huellas.</p>
-			<p class="detail">2020</p>
+    <div class="mySlides">
+      <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Texture Explorations</i></a>
+      <p class="detail" style="border-top:solid;border-width:thin;">03 2021</p>
+      <p class="detail">A video project which evolved into an attentive texture-seeking experience.</p>
+      <a href="instagram." class="detail">See more of the project here.</a>
+      <img class="demo" src="work/jala-00.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/jala-0.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/j-0.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/jala-1.jpg" style="width:100%;border-radius: 0px;">
+      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
     </div>
-
-		<div class="mySlides">
-			<img class="demo" src="work/torso-0.jpg" style="width:100%;border-radius: 8px;">
-			<img class="demo" src="work/torso-1.jpg" style="width:100%;border-radius: 8px;margin-top:22px;">
-			<img class="demo" src="work/torso-2.jpg" style="width:100%;border-radius: 8px;margin-top:22px;">
-			<p class="caption-container">Ejercicios de Torso</p>
-			<p class="detail">2021</p>
-			<p class="detail">Torso de Fernando Ríos en el Realito.</p>
-		</div>
-
-		<div class="mySlides">
-			<img class="demo" src="work/s.jpg" style="width:100%;border-radius: 8px;">
-			<p class="caption-container">🐍</p>
-			<p class="detail">2020</p>
-			<p class="detail">Snake edit with Ubaldo Ortiz</p>
-		</div>
-
-		<div class="mySlides">
-			<img class="demo vertical" src="work/jala-1.jpg" style="width:100%;border-radius: 8px;">
-			<img class="demo vertical" src="work/jala-2.jpg" style="width:100%;border-radius: 8px; margin-top:22px;">
-			<img class="demo vertical" src="work/jala-00.jpg" style="width:100%;border-radius: 8px; margin-top:22px;">
-			<img class="demo vertical" src="work/jala-0.jpg" style="width:100%;border-radius: 8px; margin-top:22px;">
-			<a href="https://www.instagram.com/p/CMF3wLcn8uH/" target="_blank">↗ 👁️ @jalaconda</a>
-			<p class="caption-container">Stills from Jalaconda's S2021 teasers.</p>
-			<p class="detail">2021</p>
-			<p class="detail">Models: @onyinye.moneke @talisharibeiro
-				Camera operator: @fluizgrasso
-3D Lettering: @vitor.milagres
-Music: 3008 by @d3lcu from @d3lcu & @white.prata Hell's Universal Harmony</p>
-		</div>
-
-		<div class="mySlides">
-			<img class="demo" src="work/mashup_aqours.png" style="width:100%;border-radius: 8px;">
-			<p class="caption-container">Digestion of a McDonald's Flavor Twist ad. 2020</p>
-		</div>
 
     <div class="caption-container">
       <p id="caption"></p>
@@ -133,18 +136,18 @@ Music: 3008 by @d3lcu from @d3lcu & @white.prata Hell's Universal Harmony</p>
 	</div>
 </div>
 </div>
-<div class=top>
-	<!-- <img src="images/xyz-logo.svg" style="width:100px;"> -->
-	 <p style="margin-bottom:0px;">© Alan Ixba 2021</p>
+<div>
+	 <a href="gallery/index.html" class="top banner"style="margin-bottom:0px;"><span>VISIT GAN GALLERY: A SELECTION OF GENERATIVE OUTPUTS &nbsp;</span></a>
+	 <a href="gallery/index.html" class="top banner banner2"style="margin-bottom:0px;"><span>VISIT GAN GALLERY: A SELECTION OF GENERATIVE OUTPUTS &nbsp;</span></a>
 </div>
 
-<div class="screen">
-	<img src="images/screen2.png"style="mix-blend-mode:difference;">
-</div>
-
+<!-- <div class="screen">
+	<img src="images/s-r.jpg">
+</div> -->
+<!--
 <div class="loader">
-	<p>⌛</p>
-</div>
+	<p>loading</p>
+</div> -->
 
 <script>
 
@@ -204,3 +207,5 @@ function showSlides(n) {
 
 </BODY>
 </HTML>
+
+<!-- tal y tanto abajo -->
