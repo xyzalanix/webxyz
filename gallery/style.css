@@ -1,35 +1,35 @@
 @font-face {
   font-family: terminal;
-  src: url("terminal-grotesque-webfont.woff") format("woff");
+  src: url("../fonts/texgyreheros-regular.otf");
 }
 @font-face {
   font-family: cirrus;
   src: url("CirrusCumulus.woff") format("woff");
 }
 body {
-  background: rgb(182,182,182);
-  background: radial-gradient(circle, rgba(182,182,182,1) 28%, rgba(0,0,0,1) 100%);
-  display: grid;
-  justify-content: center;
+  /* background: rgb(182,182,182);
+  background: radial-gradient(circle, rgba(182,182,182,1) 28%, rgba(0,0,0,1) 100%); */
+  background-image: url("../images/main_bg-b.png");
+  /* display: grid; */
+
 }
 nav {
+  display: flex;
   line-height:40px;
-  margin:50px;
+  width: 100%;
+
+  justify-content: center;
+  /* margin:50px; */
 }
 
 a{
   display: flex;
   justify-content: center;
   font-family: terminal;
-  font-size: 64px;
-  color: white;
+  font-size: 33px;
+  color: #f3f3f3;
   text-decoration: none;
-  padding-left:15px;
-  padding-right:15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 11px;
 }
 p {
   max-width: 300px;

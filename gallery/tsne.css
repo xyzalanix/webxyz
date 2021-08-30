@@ -1,11 +1,12 @@
 @font-face {
   font-family: terminal;
-  src: url("terminal-grotesque-webfont.woff") format("woff");
+  src: url("../fonts/texgyreheros-regular.otf");
 }
 @font-face {
   font-family: cirrus;
   src: url("CirrusCumulus.woff") format("woff");
 }
+
 body{
   margin:0;
 }
@@ -41,7 +42,7 @@ div.description {
   /* background-color: #ffffff25; */
 }
 
-a.back {
+/* a.back {
   text-decoration: none;
   font-family: terminal;
   line-height: 15px;
@@ -52,35 +53,41 @@ a.back {
   z-index: 99;
   border: solid 0.6px;
   -webkit-text-stroke: 0.2px blue;
-  color: #12fc35;
+  color: #60fcae;
   cursor: pointer;
   padding: 10px;
   font-size: 28px;
   box-shadow: 0 0 24px #00000075;
-  /* background-color: blue; */
-}
+} */
 
-a.watch {
+a.watch, a.back {
   text-decoration: none;
+  text-align: center;
   font-family: terminal;
-  line-height: 15px;
+  line-height: 16px;
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 99;
   border: dashed 0.6px;
-  color: #12fc35;
+  color: #60fcae;
   cursor: pointer;
   padding: 10px;
-  font-size: 24px;
+  font-size: 16px;
   box-shadow: 0 0 24px #00000075;
   background-color: #ffffff25;
   border-radius: 25px;
-  /* background-color: #12fc35; */
+  /* background-color: #60fcae; */
+}
+
+a.back {
+
+  max-width: 50px;
+  left: 50px;
 }
 
 a:active{
-  background-color: #12fc35;
+  background-color: #60fcae;
 
 }
 
@@ -98,7 +105,7 @@ a:active{
 video {
   box-shadow: 0 0 24px #00000075;
   border: dashed 0.6px;
-  color: #12fc35;
+  color: #60fcae;
 }
 
 .popup .show {

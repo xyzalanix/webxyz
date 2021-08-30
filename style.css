@@ -40,7 +40,7 @@ body {
   flex-wrap: nowrap;
   top:0;
   left:0;
-  margin: 2% 0px 4px 0px;
+  margin: 3% 0px 4px 0px;
   justify-content: center;
   text-align: left;
   align-items: center;
@@ -133,7 +133,6 @@ body {
   font-size:18px;
   /* border-left:solid; */
   border-color: #60fcae;
-
 }
 
 .projects a {
