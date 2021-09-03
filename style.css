@@ -5,8 +5,8 @@ font-family: tex;
 src: url(fonts/texgyreheroscn-regular.otf);
 }
 @font-face {
-font-family: tex-reg;
-src: url(fonts/texgyreheros-regular.otf);
+font-family: tex-bold;
+src: url(fonts/texgyreheroscn-bold.otf);
 }
 @font-face {
 font-family: tex-it;
@@ -69,6 +69,10 @@ body {
   margin:0;
 }
 
+.bio img {
+  max-width:111px;
+}
+
 .screen img{
   pointer-events: none;
   z-index:4;
@@ -92,6 +96,7 @@ body {
   position: fixed;
   top:0;
   width:100%;
+  z-index: 6;
   /* border-bottom: solid;
   border-width: thin; */
 }
@@ -140,13 +145,20 @@ body {
 
 .description {
   border:none;
-  margin: 0;
-  font-size:18px;
+  /* margin: 0; */
+  /* font-size:14px;
+  line-height: 28px; */
   /* border-left:solid; */
-  border-color: #60fcae;
-  padding-top: 4%;
+  /* border-color: #60fcae; */
+  /* padding-top: 4%; */
+}
+#projtitles{
+  padding:5.5px 0;
 }
 
+#projtitles:hover {
+  filter:blur(0px);
+}
 .projects a {
   line-height: 10px;
 }
@@ -189,6 +201,7 @@ body {
 }
 
 .demo{
+  padding:0;
   margin:0;
   width:100%;
   border-radius: 0px;
@@ -230,12 +243,6 @@ a:visited{
   }
 }
 
-
-              /* IMAGES */
-                            /* IMAGES */
-                                          /* IMAGES */
-                                                        /* IMAGES */
-                                                                      /* IMAGES */
 
 .row {
   padding: 0px 11px 11px 11px;
@@ -339,21 +346,30 @@ a:visited{
 .mySlides a{
   text-decoration: none;
   font-family: tex;
-  font-size:16px;
+  /* font-size:16px; */
   color: #333;
   /* border:solid;
   border-width: thin;
   border-radius: 0px; */
   /* padding: 8px; */
   text-align: left;
-  line-height: 40px;
-  padding: 11px 0 11px 0;
+  /* line-height: 40px; */
+
 }
 
-.mySlides a:hover{
+.description:hover{
   filter: blur(4px);
+  /* color:#60fcae; */
 }
 
+#date{
+  font-family: tex-bold;
+  /* border-top:solid;
+  border-bottom:solid;
+  border-width:thin; */
+  color:#333;
+
+}
 
 /* Caption text */
 .caption-container {
@@ -368,16 +384,22 @@ a:visited{
 
 .detail {
   text-align: left;
-  font-size:16px;
-  padding: 11px 0 11px 0;
+  font-size:22px;
+  line-height: 22px;
+  /* padding: 11px 0 11px 0; */
   color:#333;
   z-index:4;
   font-family: tex;
-  margin: 0;
+  max-width: 450px;
+  margin:11px 0;
+  /* margin: 0; */
 
   /* width:100%; */
 }
 
+#mini{
+  font-size:12px;
+}
 
 img.hover-shadow {
   transition: 0.3s;
@@ -388,5 +410,85 @@ img.hover-shadow {
 }
 
 
+
+@media screen and (min-device-width: 200px) and (max-device-width: 800px) {
+
+  .navigation a {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .bio {
+    font-size: 55px;
+    line-height: 55px;
+    /* flex-direction: column; */
+    max-width: none;
+    top:0;
+    bottom:0;
+    margin-bottom:100px;
+    /* text-align: center; */
+  }
+  .bio img {
+    max-width:350px;
+  }
+
+  .top{
+    font-size:88px;
+    line-height: 88px;
+  }
+
+  .banner span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: banner 8s linear infinite;
+
+  }
+
+  .banner2 span {
+    animation-delay: 4s;
+  }
+
+  .detail{
+    font-size: 88px;
+    line-height: 111px;
+    max-width: none;
+  }
+
+  /* .mySlides a{
+    font-size: 55px;
+    line-height: 55px;
+  } */
+  .projects{
+    border: none;
+  }
+  .demo{
+    margin:0;
+    padding:0;
+  }
+  .imgcontainer{
+    margin-top:111px;
+  }
+  #spread a{
+    font-size:55px;
+  }
+  .modal-content img, video{
+    padding: 4px;
+    max-width: 100%;
+    float: left;
+      /* box-shadow: 0px 0px 42px -9px #333; */
+  }
+  #date{
+    margin:44px 0;
+  }
+#studio{
+  font-size: 55px;
+  line-height: 66px;
+}
+  #projtitles{
+    margin:22px 0;
+    line-height: 66px;
+    padding: 22px 0;
+  }
+}
 
 /* tal y tanto abajo */

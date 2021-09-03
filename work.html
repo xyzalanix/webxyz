@@ -55,36 +55,34 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
 
             <!-- [ I M A G E S] -->
 <div id="spread">
-  <div class="imgcontainer"style="padding:3% 0 0 0;">
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;"><i>blush:</i> emotionally charged plane deformations.</a>
-    <a>
-      <img class="demo" loading="lazy" src="work/blush-preview.jpg" onclick="openModal();currentSlide(2)">
-    </a>
+  <div class="imgcontainer" style="padding:3% 0 0 0;">
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>blush:</i> emotionally charged plane deformations.</a>
+    <img class="demo" loading="lazy" src="work/blush-preview.jpg" onclick="openModal();currentSlide(2)">
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;"><i>been feelin equirectangular:</i> Series of landscape sequences seen through fractured geometry.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>been feelin equirectangular:</i> Series of landscape sequences seen through fractured geometry.</a>
     <div style="padding:56.2% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/594710899?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=f9ec3dc859" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="eqr-0001-vimeo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;"><i>Neural Digestions:</i> Flavor Twist</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>Neural Digestions:</i> Flavor Twist</a>
     <img class="demo" loading="lazy" src="work/mashup_flavortwist.jpg">
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;">Jalaconda: <i>4 Patas 5 Bocas</i></a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Jalaconda: <i>4 Patas 5 Bocas</i></a>
     <a>
     <img class="demo" loading="lazy" src="work/undies.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(3)">
     </a>
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;"><i>Reptilian encounters</i></a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>Reptilian encounters</i></a>
     <a>
     <img class="demo" loading="lazy" src="work/prints/snakes/reptilian-thumbnail.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(4)">
     </a>
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;">Widows Reality Sessions: Audioreactive visual landscape for Dj Sustancia's mix.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Widows Reality Sessions: Audioreactive visual landscape for Dj Sustancia's mix.</a>
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="0.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
     <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank">
       <img class="demo" loading="lazy" src="work/juanduarte.jpg" alt="3D work & video edit for Juan Duarte.">
     </a>
 
-    <a class="description" style="margin:0px;font-size:14px;border:none;padding:5.5px 0 5.5px 0;text-align:center;">Jalaconda's S2021 texture explorations.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Jalaconda's S2021 texture explorations.</a>
     <img class="demo" loading="lazy" src="work/jala-1-full.jpg"onclick="openModal();currentSlide(5)">
 
   </div>
@@ -100,8 +98,8 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
     </div>
 
 		<div class="mySlides">
-      <p class="detail"><i>blush</i></p>
-      <p class="detail" style="border-top:solid;border-width:thin;">Ongoing</p>
+      <a class="detail"><i>blush</i></a>
+      <p id="date"class="detail">Ongoing</p>
 
       <img class="demo" src="work/1137.jpg" style="width:100%;border-radius: 0px;" alt="blush">
       <img class="demo" src="work/1145.jpg" style="width:100%;border-radius: 0px;" alt="blush">
@@ -115,8 +113,8 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
 
     <div class="mySlides">
       <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i></a>
-      <p class="detail" style="border-top:solid;border-width:thin;">08 2021</p>
-  		<p class="detail">The patterns for this collection came from an amalgam of neural outputs I had collected throughout the year.</p>
+      <p id="date" class="detail">08 2021</p>
+  		<p class="detail">The patterns for this collection come from an amalgam of neural outputs I had compiled throughout the year.</p>
 	    <a href="https://casadecriadores.com.br/jalaconda" class="detail">See more of the project here.</a><br>
       <img class="demo" src="work/prints/43523425.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/undies.jpg" style="width:100%;border-radius: 0px;">
@@ -126,10 +124,11 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
     </div>
 
     <div class="mySlides">
-      <p class="detail"><i>Reptilian encounters</i></p>
-      <p class="detail" style="border-top:solid;border-width:thin;">11 2020</p>
-      <p class="detail" >Jalinha and I were curious about the power of snake imagery, both in Brazilian and Mexican folklore. We collected images and trained a neural network using this data.</p>
-      <p class="detail">A selection of these outputs were printed in early 2021 as Jalaconda pieces.</p>
+      <a class="detail"><i>Reptilian encounters</i></a>
+      <p id="date"class="detail">11 2020</p>
+      <p class="detail">Marina (@jalinha97) and I were curious about the power of snake imagery, both in Brazilian and Mexican folklore.</p>
+      <p class="detail">We collected images and trained a neural network using this data.</p>
+      <p class="detail">A selection of these outputs were printed as Jalaconda pieces.</p>
       <img class="demo" src="work/prints/snakes/seed1156-1.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/prints/snakes/seed34536-1.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/prints/snakes/seed34458-1.jpg" style="width:100%;border-radius: 0px;">
@@ -139,8 +138,8 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
 
     <div class="mySlides">
       <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Texture Explorations</i></a>
-      <p class="detail" style="border-top:solid;border-width:thin;">03 2021</p>
-      <p class="detail">A video project which evolved into an attentive texture-seeking experience.</p>
+      <p id="date"class="detail">03 2021</p>
+      <p class="detail">A video project which evolved into an absorbing texture-seeking experience.</p>
       <a href="instagram." class="detail">See more of the project here.</a>
       <img class="demo" src="work/jala-00.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/jala-0.jpg" style="width:100%;border-radius: 0px;">
