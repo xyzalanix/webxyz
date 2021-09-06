@@ -8,7 +8,6 @@
 <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 <script src="jquery-2.1.4.js"></script>
 
-
 <script>
 
 var flesh = new Array()
@@ -22,7 +21,6 @@ flesh[5] = 'images/8colors/1084.png'
 flesh[6] = 'images/8colors/1427.png'
 flesh[7] = 'images/8colors/0210.png'
 flesh[8] = 'images/8colors/1596.png'
-
 
 var j = 0
 var p = flesh.length;
@@ -48,42 +46,37 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
 </div>
 
 <div class="navigation">
-  <a href="index.html">HOME</a>
-	<a onclick="openModal();currentSlide(1)"class="middle">INFO</a>
-	<a href="https://instagram.com/xyzalanix" target="_blank" class="right">SOCIAL</a>
+  <!-- <a onclick="openModal();currentSlide(1)">INFO</a> -->
+  <a href="index.html">BACK</a>
 </div>
-
             <!-- [ I M A G E S] -->
 <div id="spread">
   <div class="imgcontainer" style="padding:3% 0 0 0;">
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>blush:</i> emotionally charged plane deformations.</a>
-    <img class="demo" loading="lazy" src="work/blush-preview.jpg" onclick="openModal();currentSlide(2)">
+    <a id="projtitles" class="description" style="margin:0px;border:none;"><i>blush</i></a>
+    <img class="demo" loading="lazy" src="work/blush/blush-preview.jpg" onclick="openModal();currentSlide(2)">
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>been feelin equirectangular:</i> Series of landscape sequences seen through fractured geometry.</a>
-    <div style="padding:56.2% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/594710899?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=f9ec3dc859" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="eqr-0001-vimeo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <a id="projtitles" class="description" style="margin:0px;border:none;"><i>been feelin equirectangular</i></a>
+    <!-- <div style="padding:56.2% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/594710899?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=f9ec3dc859" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="eqr-0001-vimeo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
+    <img class="demo" loading="lazy" src="work/0183.jpg" onclick="openModal();currentSlide(3)">
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>Neural Digestions:</i> Flavor Twist</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;"><i>Neural Digestions</i></a>
     <img class="demo" loading="lazy" src="work/mashup_flavortwist.jpg">
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Jalaconda: <i>4 Patas 5 Bocas</i></a>
-    <a>
-    <img class="demo" loading="lazy" src="work/undies.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(3)">
-    </a>
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;"><i>Reptilian encounters</i></a>
-    <a>
-    <img class="demo" loading="lazy" src="work/prints/snakes/reptilian-thumbnail.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(4)">
-    </a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;">Jalaconda: <i>4 Patas 5 Bocas</i></a>
+    <img class="demo" loading="lazy" src="work/undies.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(4)">
+    <a id="projtitles" class="description" style="margin:0px;border:none;"><i>Reptilian encounters</i></a>
+    <img class="demo" loading="lazy" src="work/prints/snakes/reptilian-thumbnail.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(5)">
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Widows Reality Sessions: Audioreactive visual landscape for Dj Sustancia's mix.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;">Widows Reality Sessions: Audioreactive visual landscape for Dj Sustancia's mix.</a>
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="0.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
     <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank">
       <img class="demo" loading="lazy" src="work/juanduarte.jpg" alt="3D work & video edit for Juan Duarte.">
     </a>
 
-    <a id="projtitles" class="description" style="margin:0px;border:none;text-align:center;">Jalaconda's S2021 texture explorations.</a>
-    <img class="demo" loading="lazy" src="work/jala-1-full.jpg"onclick="openModal();currentSlide(5)">
+    <a id="projtitles" class="description" style="margin:0px;border:none;">Jalaconda's S2021 texture explorations.</a>
+    <img class="demo" loading="lazy" src="work/jala-1-full.jpg"onclick="openModal();currentSlide(6)">
 
   </div>
 </div>
@@ -93,31 +86,41 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
   <div class="modal-content" id="spread">
 
     <div class="mySlides">
-      <!-- <a href="https://github.com/xyzalanix" target="_blank">GITHUB</a> -->
+      <a href="https://github.com/xyzalanix" target="_blank">GITHUB</a><br>
       <!-- <a id="mini"><i>message within technicalities</i></a><br> -->
       <a class="detail">hello@xyzalanix.com</a><br>
       <a class="detail">Nuevo Laredo, Mx</a><br>
-      <a id="studio"href="https://entangledothers.studio" target="_blank" class="detail">[Creative Research, Technical Assistance] @ Entangled Others Studio.</a><br>
+      <a id="studio"href="https://entangledothers.studio" target="_blank" class="detail">(Creative Research, Technical Assistance) @ Entangled Others Studio.</a><br>
     </div>
+
 		<div class="mySlides">
       <a class="detail"><i>blush</i></a>
-      <p id="date"class="detail">Ongoing</p>
+      <p id="date"class="detail">2021 - Ongoing</p>
+      <p class="detail">Video-guided plane deformations.</p>
+      <img class="demo" src="work/blush/1137.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <!-- <video autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;" alt="blush">
+        <source src="work/blush/blush-web.mp4"/>
+      </video> -->
+      <img class="demo" src="work/blush/1141.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/blush/1145.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/blush/1139.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/blush/0131.jpeg" style="width:100%;border-radius: 0px;" alt="blush">
+      <img class="demo" src="work/blush/0233.jpeg" style="width:100%;border-radius: 0px;" alt="blush">
 
-      <img class="demo" src="work/1137.jpg" style="width:100%;border-radius: 0px;" alt="blush">
-      <img class="demo" src="work/1145.jpg" style="width:100%;border-radius: 0px;" alt="blush">
-      <video autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;" alt="blush">
-        <source src="work/blush-web.mp4"/>
-      </video>
-      <img class="demo" src="work/1141.jpg" style="width:100%;border-radius: 0px;" alt="blush">
-      <img class="demo" src="work/1139.jpg" style="width:100%;border-radius: 0px;" alt="blush">
+    </div>
 
+    <div class="mySlides">
+      <a class="detail"><i>been feelin equirectangular</i></a>
+      <p id="date"class="detail">2021 - Ongoing</p>
+      <p class="detail">Landscape sequences as seen through fractured geometry.</p>
+      <div style="padding:56.2% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/594710899?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=f9ec3dc859" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="eqr-0001-vimeo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 
     <div class="mySlides">
       <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i></a>
       <p id="date" class="detail">08 2021</p>
-  		<p class="detail">The patterns for this collection come from an amalgam of neural outputs I had compiled throughout the year.</p>
-	    <a href="https://casadecriadores.com.br/jalaconda" class="detail">See more of the project here.</a><br>
+  		<p class="detail">These patterns come from a mashup of neural outputs I had compiled throughout the year.</p>
+	    <a href="https://casadecriadores.com.br/jalaconda" class="detail">See more</a><br>
       <img class="demo" src="work/prints/43523425.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/undies.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/prints/foto-1_sozinha.jpg" style="width:100%;border-radius: 0px;">
@@ -142,7 +145,7 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
       <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Texture Explorations</i></a>
       <p id="date"class="detail">03 2021</p>
       <p class="detail">A video project which evolved into an absorbing texture-seeking experience.</p>
-      <a href="instagram." class="detail">See more of the project here.</a>
+      <a href="https://www.instagram.com/jalaconda/" class="detail">See more</a><br>
       <img class="demo" src="work/jala-00.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/jala-0.jpg" style="width:100%;border-radius: 0px;">
       <img class="demo" src="work/j-0.jpg" style="width:100%;border-radius: 0px;">
