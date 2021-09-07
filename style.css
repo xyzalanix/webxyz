@@ -99,7 +99,7 @@ body {
 .navigation{
   font-family: tex;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   position: fixed;
   top:0;
   width:100%;
@@ -216,6 +216,10 @@ body {
   margin:0;
   width:100%;
   border-radius: 0px;
+  filter: none;
+}
+.demo:hover{
+  filter:none;
 }
 
 a{
@@ -424,7 +428,7 @@ img.hover-shadow {
 
 @media screen and (min-device-width: 200px) and (max-device-width: 800px) {
   .navigation{
-    flex-direction: column;
+    /* flex-direction: column; */
     /* max-width: 350px; */
   }
 
@@ -432,10 +436,10 @@ img.hover-shadow {
     font-size: 100px;
     line-height: 100px;
   }
-  .right {
+  /* .right {
     text-align: left;
     justify-content: left;
-  }
+  } */
 
   .bio {
     font-size: 55px;
