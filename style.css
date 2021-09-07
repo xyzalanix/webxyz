@@ -56,7 +56,7 @@ body {
 .bio {
   display: flex;
   position: absolute;
-  bottom:60%;
+  bottom:50%;
   /* left:0; */
   /* margin: 15% 0px 4px 0px; */
   justify-content: center;
