@@ -15,12 +15,12 @@ var flesh = new Array()
 flesh[0] = 'images/8colors/0002.png'
 flesh[1] = 'images/8colors/0048.png'
 flesh[2] = 'images/8colors/0216.png'
-flesh[3] = 'images/8colors/0352.png'
-flesh[4] = 'images/8colors/0366.png'
-flesh[5] = 'images/8colors/1084.png'
-flesh[6] = 'images/8colors/1427.png'
-flesh[7] = 'images/8colors/0210.png'
-flesh[8] = 'images/8colors/1596.png'
+// flesh[3] = 'images/8colors/0352.png'
+flesh[3] = 'images/8colors/0366.png'
+// flesh[4] = 'images/8colors/1084.png'
+// flesh[6] = 'images/8colors/1427.png'
+flesh[4] = 'images/8colors/0210.png'
+flesh[5] = 'images/8colors/1596.png'
 
 var j = 0
 var p = flesh.length;
@@ -45,43 +45,161 @@ document.write('<img src="'+flesh[whichFlesh]+'">');
 	</script>
 </div>
 
-<div class="navigation">
-  <a href="work.html">WORKS</a>
-	<a onclick="openModal();currentSlide(1)" class="right">INFO</a>
+<!-- <a class="navigation right" onclick="openModal();currentSlide(1)">INFO</a> -->
+
+  <div class="bio">
+    <!-- <a id="contact" href="https://github.com/xyzalanix" target="_blank">🡥 github</a> -->
+    <a id="contact"  href="https://instagram.com/xyzalanix" target="_blank">> ig</a><br>
+  	<!-- <img src="images/me.png" style="height: auto;margin:0px;padding-right:11px;"> -->
+    <p id="about">I'm Alan Ixba—multimedia designer and creative technologist from the mexican border.</p>
+    <a>My core interest is in employing neural networks as <i>prima materia</i> for further exploration in the digital space.</a>
+
+
+    <!-- <a class="navigation" onclick="openModal();currentSlide(1)">+</a> -->
+    <!-- <a>Nuevo Laredo, Mx</a><br> -->
+  </div>
+
+  <div class="ido">
+    <a id="contact" href="mailto:hello@xyzalanix.com">> reach out</a><br>
+    <a id="ido">I do Creative Research and provide Technical Assistance at </a>
+    <a id="ido" href="https://entangledothers.studio" target="_blank">Entangled Others Studio.</a>
+    <!-- <a id="ido">I do Creative Research and provide Technical Assistance at </a>
+    <a id="ido" href="https://entangledothers.studio" target="_blank">Entangled Others Studio.</a> -->
+  </div>
+
+<div class="twocolumn">
+  <div class="imgcontainer">
+    <a id="projtitles" class="title" style="margin:0px;border-bottom:solid;border-width:thin;text-align:center;;">Selected Projects</a>
+    <!-- <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(1)"><i>blush</i></a> -->
+    <img id="demo" class="demo" loading="lazy" src="work/blush/blush-preview.jpg" onclick="openModal();currentSlide(1)">
+
+    <img class="demo" loading="lazy" src="work/eqr/0183.jpg" onclick="openModal();currentSlide(2)">
+
+    <!-- <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(3)"><i>Neural Digestions</i></a> -->
+    <img class="demo" loading="lazy" src="work/nd/flavortwist.jpg"onclick="openModal();currentSlide(3)">
+
+    <a id="projtitles" class="title" style="margin:0px;border-bottom:solid;border-width:thin;text-align:center;">Collaborations</a>
+
+    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(8)">@felipa.queiroz</a>
+
+    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(4)">Jalaconda: <i>4 Patas 5 Bocas</i></a>
+    <!-- <img class="demo" loading="lazy" src="work/undies.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(4)"> -->
+    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(5)">Widows Collective: <i>Dj Sustancia mix.</i></a>
+
+    <a href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">GAN assistance for Dixon @ Fondation Beyeler.</a>
+
+    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(7)">Jalaconda: S2021 texture explorations.</a>
+
+    <!-- <img class="demo" loading="lazy" src="work/prints/snakes/reptilian-thumbnail.jpg" alt="Pattern design collaboration with Jalaconda" onclick="openModal();currentSlide(5)"> -->
+
+    <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
+    <!-- <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank">
+      <img class="demo" loading="lazy" src="work/juanduarte.jpg" alt="3D work & video edit for Juan Duarte.">
+    </a> -->
+    <a href="https://www.youtube.com/watch?v=X5IYf6eBhJI" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">AI Technical assistance for Beko Connections short film.</a>
+    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(6)">Jalaconda: <i>Reptilian encounters</i></a>
+
+    <a id="projtitles" class="description" style="margin:0px;border:none;">FIL Monterrey: <i>Visual Poem Generator.</i></a>
+    <!-- <img class="demo" loading="lazy" src="work/jala-1-full.jpg"onclick="openModal();currentSlide(6)"> -->
+
+
+  </div>
 </div>
 
-<div class="bio">
-
-	<img src="images/me.png" style="height: auto;margin:0px;padding-right:11px;">
-  <p>Alan Ixba is a multimedia designer and creative technologist from the mexican border.</p>
-</div>
-
-<!-- <div class="projects">
-  <a>ONGOING COLLABORATIONS</a>
-</div>
-
-<div>
-  <a href="https://entangledothers.studio" target="_blank" class="description" style="margin:0px;">Entangled Others</a><br>
-  <a class="description" style="margin:0px;font-size:14px;"> —— Creative Research & Technical Assistance</a><br>
-  <a href="https://nustudio.xyz/" class="description" style="margin:0px;">nu studio</a><br>
-  <a class="description" style="margin:0px;font-size:14px;">—— New Media Support</a>
-  <p class="description" style="margin:0px;">Jalaconda</p>
-  <a href="https://www.instagram.com/jalaconda/" target="_blank" class="description" style="margin:0px;font-size:14px;">—— Patterns</a>
-  <p class="description" style="margin:0px;">Widows Collective</p>
-  <a href="https://www.instagram.com/widows.de/" target="_blank" class="description" style="margin:0px;font-size:14px;">—— Visuals</a>
-</div> -->
         <!-- MODAL -->
 
 <div id="myModal" class="modal" onclick="closeModal()">
   <!-- <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p> -->
   <div class="modal-content">
+
     <div class="mySlides">
-      <a href="https://github.com/xyzalanix" target="_blank">GITHUB</a><br>
-      <a href="https://github.com/xyzalanix" target="_blank">@xyzalanix</a><br>
-      <a class="detail">hello@xyzalanix.com</a><br>
-      <a class="detail">Nuevo Laredo, Mx</a><br>
-      <a id="studio"href="https://entangledothers.studio" target="_blank" class="detail">(Creative Research, Technical Assistance) @ Entangled Others Studio.</a><br>
+      <a id="date" class="detail">2021</a>
+      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs). The driving sequence was extracted from a GAN, and gives both its texture and depth information to the plane.</a><br><br>
+      <!-- <p class="detail">Plane deformations guided by video frames.</p> -->
+      <img id="vertical" class="demo" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
+      <img id="vertical" class="demo" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
+      <img id="vertical" class="demo" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
+      <video autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;" alt="blush">
+        <source src="work/blush/blush-trim.mp4"/>
+      </video>
+      <img id="vertical" class="demo" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush">
+      <img id="vertical" class="demo" src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
+      <img id="vertical" class="demo" src="work/blush/1139.jpg" style="border-radius: 0px;" alt="blush">
     </div>
+
+    <div class="mySlides">
+      <a id="date" class="detail">WIP</a>
+      <a class="detail"><i>been feelin equirectangular</i> — a nature-seeking process from my desktop. I began by creating an <i>equirectangular</i> image dataset, which was fed into a GAN. The (equirectangular) sequences extracted from it were then re-inserted into a 3D environment. And finally observed through fractured geometry.</a><br><br>
+      <video id="widecontent" autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;">
+        <source src="work/eqr/eqr-interp-web.mp4"/>
+      </video>
+      <img class="demo" src="work/eqr/0183.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/eqr/0004.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/eqr/houstontx.jpg" style="width:100%;border-radius: 0px;">
+      <video autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;">
+        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
+      </video>
+      <video id="widecontent" autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;">
+        <source src="work/eqr/eqr-wide-web.mp4"/>
+      </video>
+    </div>
+
+    <div class="mySlides">
+      <a id="date"class="detail">2020</a>
+      <a class="detail"><i>Neural Digestions</i> — tools and their unintended purposes; this is a deviation of generative techniques, originally designed to replicate small images for use in 3D texturing. When dealing with multiple images: structure, texture and meaning are interwoven.</a><br><br>
+      <img id="widecontent" class="demo" src="work/nd/flavortwist.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/nd/10dll.jpeg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/nd/rammellzee.jpeg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/nd/vera.jpeg" style="width:100%;border-radius: 0px;">
+    </div>
+
+    <div class="mySlides">
+      <a id="date" class="detail">08 2021</a>
+      <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i></a>
+      <p class="detail">These patterns come from a mashup of neural outputs I had compiled throughout the year.</p>
+      <a href="https://casadecriadores.com.br/jalaconda" class="detail" target="_blank">See more</a><br><br>
+      <img id="widecontent" class="demo" src="work/prints/43523425.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/undies.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/prints/foto-1_sozinha.jpg" style="width:100%;border-radius: 0px;">
+      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
+    </div>
+    <div class="mySlides">
+      <a id="date"class="detail">12 2020</a>
+      <a class="detail"><i>Widows Reality Sessions</i> — audio reactive landscape that I built in TouchDesigner for DJ Sustancia's mix. I used miscellaneous outputs and random edits as raw material for the visuals to develop throughout the set.</a><a href="https://www.youtube.com/c/WidowsCollective/videos" target="_blank"> > Visit Widows Collective</a><br><br>
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="0.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+
+
+    <div class="mySlides">
+      <a id="date"class="detail">11 2020</a>
+      <a class="detail"><i>Reptilian Encounters</i> — @jalinha97 and I were fascinated by the power of snake imagery in Mexican and Brazilian native cultures. We created a reptilian-themed dataset, and trained a neural network using this data. A selection of these outputs were printed as Jalaconda pieces.</a><br>
+      <a href="https://www.instagram.com/jalaconda/" target="_blank">> Jalaconda's ig</a><br><br>
+      <img class="demo" src="work/prints/snakes/seed1156-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/snakes/seed34536-1.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/prints/snakes/seed34458-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/run.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/snakes/vittar.jpg" style="width:100%;border-radius: 0px;">
+    </div>
+
+    <div class="mySlides">
+      <a id="date"class="detail">03 2021</a>
+      <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Jalaconda S2021</i> — A video project which evolved into an absorbing texture-seeking experience.</a><br>
+      <a href="https://www.instagram.com/jalaconda/" target="_blank" class="detail">See more</a><br><br>
+      <img id="widecontent" class="demo" src="work/jala-00.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/jala-0.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/j-0.jpg" style="width:100%;border-radius: 0px;">
+      <img id="widecontent" class="demo" src="work/jala-1.jpg" style="width:100%;border-radius: 0px;">
+      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
+      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
+    </div>
+
+    <div class="mySlides">
+      <video id="widecontent" autoplay="true" loop class="demo" style="width:100%;border-radius: 0px;">
+        <source src="work/fq/fq-web.mp4"/>
+      </video>
+    </div>
+
 	</div>
 </div>
 
@@ -107,6 +225,14 @@ $(window).on("load",function(){
 // Open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
+}
+
+function showProject() {
+  document.getElementById("demo").style.display = "block";
+}
+
+function hideProject(){
+  document.getElementById("demo").style.display = "none";
 }
 
 document.addEventListener('keyup', function(e) {
