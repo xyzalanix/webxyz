@@ -457,91 +457,40 @@ img.hover-shadow {
 
 
 @media screen and (min-device-width: 200px) and (max-device-width: 800px) {
-  .navigation{
-    /* flex-direction: column; */
-    /* max-width: 350px; */
-  }
-
-  .navigation a {
-    font-size: 100px;
-    line-height: 100px;
-  }
-  /* .right {
-    text-align: left;
-    justify-content: left;
-  } */
-
-  .bio {
-    font-size: 55px;
-    line-height: 55px;
-    /* flex-direction: column; */
-    max-width: none;
-    /* top:0; */
-    bottom:0;
-    /* margin-bottom:100px; */
-    /* text-align: center; */
-  }
-  .bio img {
-    max-width:350px;
-  }
-
-  .top{
-    font-size:88px;
-    line-height: 88px;
-  }
-
-  .banner span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: banner 8s linear infinite;
-
-  }
-
-  .banner2 span {
-    animation-delay: 4s;
-  }
-
-  .detail{
-    font-size: 88px;
-    line-height: 111px;
-    max-width: none;
-  }
-
-  .mySlides a{
-    font-size: 100px;
-    line-height: 100px;
-  }
-  .projects{
-    border: none;
-  }
-  .demo{
+  .twocolumn{
     margin:0;
-    /* padding:0; */
   }
-  .imgcontainer{
-    margin-top:222px;
+  #contact{
+    font-size:48px;
   }
-  #spread a{
-    font-size:55px;
+  .bio, .reachout, .ido{
+    position:relative;
+    max-width: none;
+    font-size: 64px;
+  }
+  .modal{
+    left:0;
+    width: 100%;
+    background-color: rgba(119,119,119,0.8);
+    overflow-x: hidden;
+  }
+  .mySlides a{
+    font-size: 64px;
   }
   .modal-content img, video{
-    padding: 4px;
-    max-width: 100%;
-    float: left;
-    margin-top:22px;
-      /* box-shadow: 0px 0px 42px -9px #333; */
+    max-width: none;
+  }
+  #widecontent, #vertical{
+    max-width: none;
+  }
+  .title{
+    font-size: 32px;
   }
   #date{
-    margin:44px 0;
+    font-size:32px;
   }
-#studio{
-  font-size: 55px;
-  line-height: 66px;
-}
-  #projtitles{
-    margin:22px 0;
-    line-height: 66px;
-    padding: 22px 0;
+  .description{
+    text-shadow: 0px 0px 12px #777;
   }
 }
 
