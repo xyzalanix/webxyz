@@ -7,8 +7,18 @@
   src: url("CirrusCumulus.woff") format("woff");
 }
 
+*{
+  cursor: move;
+  border: none;
+}
+
 body{
   margin:0;
+}
+
+#myPopup {
+  font-family: terminal;
+  max-width: 33%;
 }
 
 h2{
@@ -93,13 +103,18 @@ a:active{
 
 .popup {
   visibility: hidden;
-
+  max-width: 33%;
   position: absolute;
   z-index: 41;
   position: fixed;
   bottom: 50px;
   right: 50px;
   margin-bottom: 50px;
+  text-align: right;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 22px;
+  padding: 22px;
 }
 
 video {

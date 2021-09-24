@@ -3,7 +3,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>SHITPOST GAN 2020</title>
+        <title>Deep Fried Memes</title>
         <link href="tsne.css" rel="stylesheet" type="text/css">
         <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 				<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
@@ -12,7 +12,7 @@
 
             body {
 								color: #fff;
-                background-color: black;
+                background-color: #777;
             }
             #glslCanvas {
               z-index: -10;
@@ -26,6 +26,16 @@
 
     </head>
     <body>
+
+    <div id="openseadragon1" style="background-color:black;top:50%;left:50%;width: 100%; height: 100%;transform: translate(-50%,-50%);position:absolute;"></div>
+    <script src="openseadragon.js"></script>
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "memes-key-b_files",
+            tileSources: "memes-key-b.dzi"
+        });
+    </script>
 
 			<div  class="content">
         <canvas id="glslCanvas" width="1" height="1" data-fragment="
