@@ -4,7 +4,7 @@
 
         <meta charset="utf-8">
         <title>Minerales</title>
-        <link href="tsne.css" rel="stylesheet" type="text/css">
+        <link href="gallery/tsne.css" rel="stylesheet" type="text/css">
         <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
         <script type="text/javascript" src="gallery/openseadragon.js"></script>
 				<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
@@ -41,22 +41,22 @@
 
 			<div  class="content">
         <canvas id="glslCanvas" width="1" height="1" data-fragment="
-#ifdef GL_ES
-precision mediump float;
-#endif
-uniform vec2 u_resolution;
-/* uniform sampler2D u_tex0; // assets/minerales-plot-key.png */
-uniform vec2 u_tex0Resolution;
-uniform vec2 u_mouse;
-uniform float scale;
+      #ifdef GL_ES
+      precision mediump float;
+      #endif
+      uniform vec2 u_resolution;
+      /* uniform sampler2D u_tex0; // assets/minerales-plot-key.png */
+      uniform vec2 u_tex0Resolution;
+      uniform vec2 u_mouse;
+      uniform float scale;
 
-void main(){
-    vec2 tex_resolution = u_tex0Resolution.xy / scale;
-    vec2 st = gl_FragCoord.xy / tex_resolution;
-    vec2 offset = clamp(-0.05 + 1.1 * u_mouse / u_resolution, 0.0, 1.0);
-    st += offset * (tex_resolution - u_resolution) / (tex_resolution);
-    gl_FragColor = texture2D(u_tex0, vec2(st.x, st.y));
-}"></canvas>
+      void main(){
+          vec2 tex_resolution = u_tex0Resolution.xy / scale;
+          vec2 st = gl_FragCoord.xy / tex_resolution;
+          vec2 offset = clamp(-0.05 + 1.1 * u_mouse / u_resolution, 0.0, 1.0);
+          st += offset * (tex_resolution - u_resolution) / (tex_resolution);
+          gl_FragColor = texture2D(u_tex0, vec2(st.x, st.y));
+      }"></canvas>
 			</div>
 
 
