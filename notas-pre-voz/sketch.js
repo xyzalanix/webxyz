@@ -6,16 +6,16 @@ let fake;
 let real;
 
 function preload(){
-  f1 = loadSound("notas-pre-voz/processed/marie_fake.wav"); //20160529
-  r1 = loadSound("notas-pre-voz/processed/marie_real.wav");
-  f2 = loadSound("notas-pre-voz/processed/demo_fake.wav"); //2017XXXX
-  r2 = loadSound("notas-pre-voz/processed/demo_real.wav");
-  f3 = loadSound("notas-pre-voz/processed/annemasse_fake.wav"); //20160704
-  r3 = loadSound("notas-pre-voz/processed/annemasse_real.wav");
-  f4 = loadSound("notas-pre-voz/processed/plath_fake.wav"); //20210905
-  r4 = loadSound("notas-pre-voz/processed/plath_real.wav");
-  f5 = loadSound("notas-pre-voz/processed/sabor_fake.wav"); //20210907
-  r5 = loadSound("notas-pre-voz/processed/sabor_real.wav");
+  f1 = loadSound("notas-pre-voz/processed/marie_fake.mp3"); //20160529
+  r1 = loadSound("notas-pre-voz/processed/marie_real.mp3");
+  f2 = loadSound("notas-pre-voz/processed/demo_fake.mp3"); //2017XXXX
+  r2 = loadSound("notas-pre-voz/processed/demo_real.mp3");
+  f3 = loadSound("notas-pre-voz/processed/annemasse_fake.mp3"); //20160704
+  r3 = loadSound("notas-pre-voz/processed/annemasse_real.mp3");
+  f4 = loadSound("notas-pre-voz/processed/plath_fake.mp3"); //20210905
+  r4 = loadSound("notas-pre-voz/processed/plath_real.mp3");
+  f5 = loadSound("notas-pre-voz/processed/sabor_fake.mp3"); //20210907
+  r5 = loadSound("notas-pre-voz/processed/sabor_real.mp3");
 
   font = loadFont('fonts/texgyreheroscn-regular.otf');
 
