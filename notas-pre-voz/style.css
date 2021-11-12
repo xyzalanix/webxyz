@@ -1,0 +1,115 @@
+/* tal y tanto arriba */
+
+@font-face {
+font-family: tex;
+src: url(../fonts/texgyreheroscn-regular.otf);
+}
+@font-face {
+font-family: tex-bold;
+src: url(../fonts/texgyreheroscn-bold.otf);
+}
+@font-face {
+font-family: tex-it;
+src: url(../fonts/texgyreheroscn-italic.otf);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+*{
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+
+          font-family: tex;
+        }
+
+::selection {
+  color:#60fcae;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  bottom:50px;
+  /* transform: translate(0px, 25px); */
+}
+.right {
+  position: absolute;
+  right:0;
+  width: 50%;
+  bottom: 50px;
+  /* transform: translate(0px, 25px); */
+}
+
+.p5Canvas{
+
+  background: radial-gradient(circle, #60fcae, 15%, #f1f1f1, 50%, #f1f1f100);
+  /* border-radius: 66px; */
+  padding: none;
+  box-shadow: 0px 0px 66px #33333330;
+
+}
+
+.about{
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top:50px;
+  width: 100%
+}
+
+body{
+  /* background: radial-gradient(circle, rgba(96,252,174,1) 12%, rgba(215,255,235,1) 92%); */
+  background: radial-gradient(circle, #60fcae, 5%, #f1f1f1, 50%, #f1f1f1);
+  /* background-color: #333; */
+  background-size: 50% 50%;
+  margin:0px;
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+.button {
+  align-items: center;
+  border-radius: 500px;
+  border:none;
+  width: 240px;
+  height: 240px;
+  box-shadow: 0px 0px 16px #60fcae00;
+  color: #777;
+  transition: 0.3s;
+}
+
+.button:hover{
+
+  cursor: pointer;
+  /* background-color:#f1f1f150; */
+  filter:drop-shadow(0 0 22px #60fcae);
+  /* box-shadow: 0px 0px 80px #FFCCBC50; */
+
+
+  /* filter: blur(4px); */
+  /* background-color: #f1f1f1; */
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:50% 50%}
+    50%{background-position:50% 50%}
+    100%{background-position:50% 50%}
+}
+/* @-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%} */
+}
