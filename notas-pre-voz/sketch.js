@@ -28,6 +28,8 @@ function setup() {
   btt4 = createButton('');
   btt5 = createButton('');
   btt1 = createButton('');
+
+  bttstop = createButton('⏹︎');
   // dim = width / 2;
 }
 
@@ -114,6 +116,11 @@ function draw() {
   btt5.addClass('button');
   btt5.style('background: radial-gradient(circle, #f1f1f1, 50%, #f1f1f100, 75%, #60fcae00);');
 
+  bttstop.mouseClicked(stopAll);
+  bttstop.position(windowWidth/2-12,windowHeight-100);
+  bttstop.style('background:none;border:none;color:#77777750;');
+  bttstop.addClass('stopbutton');
+
   // btt5.style('font-size:16px;');
 //
 
@@ -140,9 +147,8 @@ function draw() {
   textAlign(CENTER, CENTER);
   text('Fake: ' + round(right, 2), windowWidth-50, windowHeight/2);
 
-
   // strokeWeight(0.5);
-  // stroke('#60fcae');
+  // stroke('#000000');
   // line(width / 2, 0, width / 2, height);
 
   if (mouseX < windowWidth/2) { // left
