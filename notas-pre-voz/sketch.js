@@ -78,13 +78,13 @@ function draw() {
   by = (windowHeight/2)-105;
   createCanvas(windowWidth, windowHeight);
 //
-  btt1.mousePressed(loaded1);
+  btt1.mouseClicked(loaded1);
   btt1.position(bx,by);
   // btt1.center();
   btt1.addClass('button');
   btt1.style('background: radial-gradient(circle, #f1f1f1, 50%, #f1f1f100, 75%, #60fcae00);');
 
-  btt2.mousePressed(loaded2);
+  btt2.mouseClicked(loaded2);
   btt2.position(bx+spacing,by);
   // btt2.center();
   btt2.addClass('button');
@@ -92,7 +92,7 @@ function draw() {
 
   // btt2.style('font-size:16px;');
 
-  btt3.mousePressed(loaded3);
+  btt3.mouseClicked(loaded3);
   btt3.position(bx,by+spacing);
   // btt3.center();
   btt3.addClass('button');
@@ -100,7 +100,7 @@ function draw() {
 
   // btt3.style('font-size:16px;');
 
-  btt4.mousePressed(loaded4);
+  btt4.mouseClicked(loaded4);
   btt4.position(bx-spacing,by);
   // btt3.center();
   btt4.addClass('button');
@@ -108,7 +108,7 @@ function draw() {
 
   // btt4.style('font-size:16px;');
 
-  btt5.mousePressed(loaded5);
+  btt5.mouseClicked(loaded5);
   btt5.position(bx,by-spacing);
   // btt3.center();
   btt5.addClass('button');
@@ -141,9 +141,9 @@ function draw() {
   text('Fake: ' + round(right, 2), windowWidth-50, windowHeight/2);
 
 
-  strokeWeight(0.5);
-  stroke('#60fcae');
-  line(width / 2, 0, width / 2, height);
+  // strokeWeight(0.5);
+  // stroke('#60fcae');
+  // line(width / 2, 0, width / 2, height);
 
   if (mouseX < windowWidth/2) { // left
     cursor('notas-pre-voz/real.cur');
