@@ -4,18 +4,19 @@ var bh = 30;
 var bw = 30;
 let fake;
 let real;
+let playing = false;
 
 function preload(){
-  f1 = loadSound("notas-pre-voz/processed/marie_fake.mp3"); //20160529
-  r1 = loadSound("notas-pre-voz/processed/marie_real.mp3");
-  f2 = loadSound("notas-pre-voz/processed/demo_fake.mp3"); //2017XXXX
-  r2 = loadSound("notas-pre-voz/processed/demo_real.mp3");
-  f3 = loadSound("notas-pre-voz/processed/annemasse_fake.mp3"); //20160704
-  r3 = loadSound("notas-pre-voz/processed/annemasse_real.mp3");
-  f4 = loadSound("notas-pre-voz/processed/plath_fake.mp3"); //20210905
-  r4 = loadSound("notas-pre-voz/processed/plath_real.mp3");
-  f5 = loadSound("notas-pre-voz/processed/sabor_fake.mp3"); //20210907
-  r5 = loadSound("notas-pre-voz/processed/sabor_real.mp3");
+  f1 = loadSound("prenostalgia/processed/marie_fake.mp3"); //20160529
+  r1 = loadSound("prenostalgia/processed/marie_real.mp3");
+  f2 = loadSound("prenostalgia/processed/demo_fake.mp3"); //2017XXXX
+  r2 = loadSound("prenostalgia/processed/demo_real.mp3");
+  f3 = loadSound("prenostalgia/processed/annemasse_fake.mp3"); //20160704
+  r3 = loadSound("prenostalgia/processed/annemasse_real.mp3");
+  f4 = loadSound("prenostalgia/processed/plath_fake.mp3"); //20210905
+  r4 = loadSound("prenostalgia/processed/plath_real.mp3");
+  f5 = loadSound("prenostalgia/processed/sabor_fake.mp3"); //20210907
+  r5 = loadSound("prenostalgia/processed/sabor_real.mp3");
 
   font = loadFont('fonts/texgyreheroscn-regular.otf');
 
@@ -23,14 +24,14 @@ function preload(){
 
 function setup() {
 
-  btt2 = createButton('');
-  btt3 = createButton('');
-  btt4 = createButton('');
-  btt5 = createButton('');
-  btt1 = createButton('');
+  btt2 = createButton('⏵');
+  btt3 = createButton('⏵');
+  btt4 = createButton('⏵');
+  btt5 = createButton('⏵');
+  btt1 = createButton('⏵');
 
-  bttstop = createButton('⏹︎');
-  // dim = width / 2;
+  bttstop = createButton('STOP');
+
 }
 
 function loaded1(){
@@ -39,6 +40,8 @@ function loaded1(){
   f1.loop();
   r1.play();
   r1.loop();
+  playing = true;
+
 }
 function loaded2(){
   stopAll();
@@ -47,6 +50,8 @@ function loaded2(){
   f2.loop();
   r2.play();
   r2.loop();
+  playing = true;
+
 }
 function loaded3(){
   stopAll();
@@ -55,6 +60,8 @@ function loaded3(){
   f3.loop();
   r3.play();
   r3.loop();
+  playing = true;
+
 }
 function loaded4(){
   stopAll();
@@ -63,6 +70,8 @@ function loaded4(){
   f4.loop();
   r4.play();
   r4.loop();
+  playing = true;
+
 }
 function loaded5(){
   stopAll();
@@ -71,13 +80,15 @@ function loaded5(){
   f5.loop();
   r5.play();
   r5.loop();
+  playing = true;
+
 }
 
 function draw() {
-  spacing = 150;
+  spacing = 210;
 
-  bx = (windowWidth/2)-120;
-  by = (windowHeight/2)-105;
+  bx = (windowWidth/2)-168;
+  by = (windowHeight/2)-168;
   createCanvas(windowWidth, windowHeight);
 //
   btt1.mouseClicked(loaded1);
@@ -116,10 +127,7 @@ function draw() {
   btt5.addClass('button');
   btt5.style('background: radial-gradient(circle, #f1f1f1, 50%, #f1f1f100, 75%, #60fcae00);');
 
-  bttstop.mouseClicked(stopAll);
-  bttstop.position(windowWidth/2-12,windowHeight-100);
-  bttstop.style('background:none;border:none;color:#77777750;');
-  bttstop.addClass('stopbutton');
+
 
   // btt5.style('font-size:16px;');
 //
@@ -139,26 +147,37 @@ function draw() {
   r5.setVolume(left);
 
   print('Real:' + left,'Fake:' + right)
-  fill('#777777');
-  strokeWeight(0);
-  textFont(font);
-  textAlign(CENTER, CENTER);
-  text('Real: ' + round(left, 2), 50, windowHeight/2);
-  textAlign(CENTER, CENTER);
-  text('Fake: ' + round(right, 2), windowWidth-50, windowHeight/2);
+  if (playing){
+    // mix indicators
+    fill('#999999');
+    strokeWeight(0);
+    textFont(font);
+    textSize(15);
+    textAlign(CENTER, CENTER);
+    text('Real: ' + round(left, 2), 50, windowHeight/2);
+    textAlign(CENTER, CENTER);
+    text('Fake: ' + round(right, 2), windowWidth-50, windowHeight/2);
+
+  }
+  // stop button
+  bttstop.mouseClicked(stopAll);
+  bttstop.position(windowWidth/2-16,windowHeight-(windowHeight*0.08));
+  bttstop.style('background:none;border:none;color:#999999;font-size:15px;');
+  bttstop.addClass('stopbutton');
 
   // strokeWeight(0.5);
   // stroke('#000000');
   // line(width / 2, 0, width / 2, height);
 
   if (mouseX < windowWidth/2) { // left
-    cursor('notas-pre-voz/real.cur');
+    cursor('prenostalgia/real.cur');
   } else if (mouseX > windowWidth/2) {  // right
-    cursor('notas-pre-voz/fake.cur');
+    cursor('prenostalgia/fake.cur');
   }
 }
 
 function stopAll(){
+  playing = false;
   f1.stop();
   r1.stop();
   f2.stop();

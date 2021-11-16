@@ -33,7 +33,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   position: absolute;
   left: 0;
   width: 50%;
-  bottom:50px;
+  bottom: 50px;
   /* transform: translate(0px, 25px); */
 }
 .right {
@@ -45,12 +45,11 @@ src: url(../fonts/texgyreheroscn-italic.otf);
 }
 
 .p5Canvas{
-
-  background: radial-gradient(circle, #60fcae, 15%, #f1f1f1, 50%, #f1f1f100);
-  /* border-radius: 66px; */
+  background: radial-gradient(circle, #60fcae, 21%, #f1f1f1, 50%, #f1f1f100);
+  /* border-radius: 111px; */
   padding: none;
   box-shadow: 0px 0px 66px #33333330;
-
+  z-index: -2;
 }
 
 .about{
@@ -58,15 +57,28 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   text-align: center;
   align-items: center;
   justify-content: center;
-  top:80px;
-  width: 100%
+  top:6%;
+  width: 100%;
+  z-index: 3;
+
+  /* filter: drop-shadow(0px 0px 4px #999); */
 }
 
 .about img{
-  opacity: 15%;
+  /* opacity: 25%;
+  -webkit-opacity: 0.25; */
+
+}
+
+.about img:hover{
+  cursor: help;
 }
 
 body{
+
+  /* filter: blur(1px); */
+  /* mix-blend-mode: lighten; */
+
   /* background: radial-gradient(circle, rgba(96,252,174,1) 12%, rgba(215,255,235,1) 92%); */
   background: radial-gradient(circle, #60fcae, 5%, #f1f1f1, 50%, #f1f1f1);
   /* background-color: #333; */
@@ -79,29 +91,78 @@ body{
 
 .button {
   align-items: center;
-  border-radius: 500px;
+  /* border-radius: 500px; */
   border:none;
-  width: 240px;
-  height: 240px;
+  width: 336px;
+  height: 336px;
   box-shadow: 0px 0px 16px #60fcae00;
-  color: #777;
+  color: #999;
   transition: 0.3s;
+  font-size: 16px;
 }
 
 
 .stopbutton:hover, .button:hover{
-
   cursor: pointer;
   /* background-color:#f1f1f150; */
   filter:drop-shadow(0 0 22px #60fcae);
   /* box-shadow: 0px 0px 80px #FFCCBC50; */
-
-
   /* filter: blur(4px); */
   /* background-color: #f1f1f1; */
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 7;
+  text-align: center;
+  /* padding-bottom: 122px; */
+  /* left: 30%; */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background-color: #f1f1f175;
+  /* mix-blend-mode: lighten; */
+  /* background-color: rgba(96,252,174,0.8); */
+  /* background-color: rgba(255,255,255,1); */
+  font-style: normal;
+}
 
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  position: absolute;
+  top: 12%; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  /* max-height:85%; */
+  max-width: 50%;
+  /* margin:24px 24px; */
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  /* text-align: center; */
+  /* background-color: #60fcae; */
+  border-radius: 11px;
+  padding: 22px;
+  /* max-width: 400px; */
+
+}
+
+.mySlides a, .mySlides p{
+  text-decoration: none;
+  font-family: tex;
+  font-size:16px;
+  color: #999;
+  text-align: center;
+}
 
 @-webkit-keyframes AnimationName {
     0%{background-position:50% 50%}
