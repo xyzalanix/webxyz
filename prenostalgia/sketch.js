@@ -36,8 +36,10 @@ function setup() {
 
 function loaded1(){
   stopAll();
+  f1.playMode("restart");
   f1.play();
   f1.loop();
+  r1.playMode("restart");
   r1.play();
   r1.loop();
   playing = true;
@@ -45,9 +47,10 @@ function loaded1(){
 }
 function loaded2(){
   stopAll();
-
+  f2.playMode("restart");
   f2.play();
   f2.loop();
+  r2.playMode("restart");
   r2.play();
   r2.loop();
   playing = true;
@@ -55,9 +58,10 @@ function loaded2(){
 }
 function loaded3(){
   stopAll();
-
+  f3.playMode("restart");
   f3.play();
   f3.loop();
+  r3.playMode("restart");
   r3.play();
   r3.loop();
   playing = true;
@@ -65,9 +69,10 @@ function loaded3(){
 }
 function loaded4(){
   stopAll();
-
+  f4.playMode("restart");
   f4.play();
   f4.loop();
+  r4.playMode("restart");
   r4.play();
   r4.loop();
   playing = true;
@@ -75,9 +80,10 @@ function loaded4(){
 }
 function loaded5(){
   stopAll();
-
+  f5.playMode("restart");
   f5.play();
   f5.loop();
+  r5.playMode("restart");
   r5.play();
   r5.loop();
   playing = true;
