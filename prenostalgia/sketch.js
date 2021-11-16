@@ -24,11 +24,11 @@ function preload(){
 
 function setup() {
 
-  btt2 = createButton('⏵');
-  btt3 = createButton('⏵');
-  btt4 = createButton('⏵');
-  btt5 = createButton('⏵');
-  btt1 = createButton('⏵');
+  btt2 = createButton('▶');
+  btt3 = createButton('▶');
+  btt4 = createButton('▶');
+  btt5 = createButton('▶');
+  btt1 = createButton('▶');
 
   bttstop = createButton('STOP');
 
