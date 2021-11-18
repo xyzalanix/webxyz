@@ -5,12 +5,15 @@
     <title>Prenostalgia</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
-    <link href="prenostalgia/style.css" rel="stylesheet" type="text/css">
     <script src="prenostalgia/sketch.js" type="text/javascript"></script>
+    <link href="prenostalgia/style.css" rel="stylesheet" type="text/css">
     <script src="jquery-2.1.4.js"></script>
 
   </head>
   <body>
+    <div class="screen">
+    	<img src="prenostalgia/dither_2.png">
+    </div>
     <div class="about">
       <a onclick="openModal();currentSlide(1)">
         <!-- <p>Prenostalgia</p> -->
@@ -19,17 +22,16 @@
 
       <!-- <p>About</p> -->
     </div>
-    <div class="left">
-      <!-- <p>Memoria Real</p> -->
-    </div>
-    <div class="right">
-      <!-- <p>Memoria Reconstruída</p> -->
-    </div>
 
     <div id="myModal" class="modal" onclick="closeModal()">
       <div class="modal-content">
+
           <div class="mySlides">
-            <p>Prenostalgia es un esfuerzo autoetnográfico iniciado en el 2015, coleccionando íntimos fragmentos sonoros con la intuición de que se volverían añorables.<br> ‧ <br>Aquí busco visualizarlos en un estado de pre-significado, donde el sentimiento se despreocupa de la lógica. Colaborando con redes neuronales, los registros son re-imaginados. <br> ‧‧ <br>Lejos de ser 'state of the art', el modelo busca replicar la frecuencia exacta, sin buscar coherencia entre los audios que genera.<br>‧‧‧<br>Play and navigate between original memories (left) and reconstructed ones (right).
+            <!-- <p>
+            </p> -->
+            <p>Prenostalgia es un esfuerzo autoetnográfico iniciado en el 2015, coleccionando íntimos fragmentos sonoros con la intuición de que se volverían añorables. <br><br>Aquí busco visualizarlos en un estado de <i>pre-significado</i>, donde el sentimiento se despreocupa de la lógica. Colaborando con redes neuronales, los registros se reviven.<br><br>Lejos de ser 'state of the art', el modelo busca replicar frecuencias exactas, sin buscar coherencia entre los audios que genera. Conforme la máquina refina su aprendizaje, el tiempo se comprime y las memorias se reconstruyen.<br><br>Da play y navega entre los registros originales (izquierda) y las reconstrucciones (derecha).
+            </p>
+            <p>Prenostalgia is an autoethnographic effort that began in 2015, by collecting intimate sound fragments with an intuition that they would be yearned for.<br><br>Here I seek to visualize them in a state of <i>pre-meaning</i>, where feeling is unconcerned with logic. Collaborating with neural networks, these memories are reexperienced.<br><br>Far from being 'state of the art', the model seeks to replicate exact frequencies, providing little coherence between the audio samples it generates. Within the networks, time is compressed and memory shapes are formed as learning is refined.<br><br>Play and navigate between original memories (left) and reconstructed ones (right).
             </p>
           </div>
       </div>
@@ -84,7 +86,7 @@
       // for (i = 0; i < dots.length; i++) {
       //   dots[i].className = dots[i].className.replace(" active", "");
       // }
-      slides[slideIndex-1].style.display = "block";
+      slides[slideIndex-1].style.display = "flex";
       // dots[slideIndex-1].className += " active";
       // captionText.innerHTML = dots[slideIndex-1].alt;
     }
