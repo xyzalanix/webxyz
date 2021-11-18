@@ -13,7 +13,8 @@
   <body>
     <div class="about">
       <a onclick="openModal();currentSlide(1)">
-        <img width="140px" src="prenostalgia/pn_777.png" alt="prenostalgia-logo">
+        <!-- <p>Prenostalgia</p> -->
+        <img src="prenostalgia/pn3d_0.png" alt="prenostalgia-logo">
       </a>
 
       <!-- <p>About</p> -->
@@ -28,8 +29,7 @@
     <div id="myModal" class="modal" onclick="closeModal()">
       <div class="modal-content">
           <div class="mySlides">
-            <p>Es un registro iniciado en el 2015 con la recolección de pequeños fragmentos auditivos a mi alrededor. En el intento por prolongar un sentimento, robarme un cachito de una persona.<br>Recorre el cursor desde los audios originales (izq) hacia los reconstruidos (der).
-              <br>Navigate from original recordings (left) to reconstructed ones (right).
+            <p>Prenostalgia es un esfuerzo autoetnográfico iniciado en el 2015, coleccionando íntimos fragmentos sonoros con la intuición de que se volverían añorables.<br> ‧ <br>Aquí busco visualizarlos en un estado de pre-significado, donde el sentimiento se despreocupa de la lógica. Colaborando con redes neuronales, los registros son re-imaginados. <br> ‧‧ <br>Lejos de ser 'state of the art', el modelo busca replicar la frecuencia exacta, sin buscar coherencia entre los audios que genera.<br>‧‧‧<br>Play and navigate between original memories (left) and reconstructed ones (right).
             </p>
           </div>
       </div>
@@ -44,14 +44,6 @@
     // Open the Modal
     function openModal() {
       document.getElementById("myModal").style.display = "block";
-    }
-
-    function showProject() {
-      document.getElementById("demo").style.display = "block";
-    }
-
-    function hideProject(){
-      document.getElementById("demo").style.display = "none";
     }
 
     document.addEventListener('keyup', function(e) {
