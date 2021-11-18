@@ -31,6 +31,23 @@ src: url(../fonts/texgyreheroscn-italic.otf);
 ::selection {
   color:#60fcae;
 }
+.loader{
+  z-index:999;
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color:#999999;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: tex;
+}
+.loader p {
+  color: #60fcae;
+}
 .screen{
   z-index:4;
   isolation: isolate;
@@ -104,7 +121,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
 }
 
 .about img:hover{
-  cursor: help;
+  cursor: pointer;
 }
 
 body{

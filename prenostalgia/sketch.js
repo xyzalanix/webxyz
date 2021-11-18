@@ -9,6 +9,7 @@ let patos200 = false;
 let snakes = false;
 let gracias = false;
 let sabor = false;
+// var loading = true;
 
 function preload(){
   f1 = loadSound("prenostalgia/processed/marie_fake.mp3"); //20160529
@@ -25,6 +26,10 @@ function preload(){
   font = loadFont('fonts/texgyreheroscn-regular.otf');
 
 }
+
+// function loaded(){
+//   loading = false;
+// }
 
 function setup() {
   btt2 = createButton('▶');
@@ -97,6 +102,14 @@ function loaded5(){
 }
 
 function draw() {
+  // if (loading){
+  //   fill('#999999');
+  //   strokeWeight(0);
+  //   textFont(font);
+  //   textSize(13);
+  //   textAlign(CENTER, CENTER);
+  //   text("Je me méfie de Alan:\n\nMarie discovers I was recording her singing.", windowWidth/2,);
+  // }
 
   spacing = 120;
 
