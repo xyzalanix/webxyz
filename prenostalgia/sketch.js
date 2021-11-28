@@ -238,7 +238,7 @@ function draw() {
   // stop button
   bttstop.mouseClicked(stopAll);
   bttstop.position(windowWidth/2-11,windowHeight-(windowHeight*0.08));
-  bttstop.style('background:none;border:none;color:#99999950;font-size:16px;');
+  bttstop.style('background:none;border:none;color:#999999;font-size:16px;');
   bttstop.addClass('stopbutton');
 
   // strokeWeight(0.5);
