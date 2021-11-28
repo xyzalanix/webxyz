@@ -77,6 +77,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   width: 13.5%;
 }
 
+
 .left {
   position: absolute;
   left: 0;
@@ -110,17 +111,18 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   top:5%;
   width: 100%;
   z-index: 3;
-
+  font-size: 13px;
+  display: grid;
+  color: #999;
 
 }
 
-.about img{
+.about p{
   /* opacity: 25%;
   -webkit-opacity: 0.25; */
-  /* filter: drop-shadow(0px 0px 1px #99999950); */
 }
 
-.about img:hover{
+.about p:hover{
   cursor: pointer;
 }
 
@@ -144,10 +146,11 @@ body{
   border:none;
   width: 220px;
   height: 220px;
-  box-shadow: 0px 0px 16px #60fcae00;
-  color: #999;
+  border-radius: 500px;
+  color: #99999950;
   transition: 0.3s;
   font-size: 10px;
+  transition: 0.5s;
 }
 
 
@@ -155,6 +158,7 @@ body{
   cursor: pointer;
   /* background-color:#c3c9c650; */
   filter:drop-shadow(0 0 22px #60fcae);
+  color: #999999;
   /* box-shadow: 0px 0px 80px #FFCCBC50; */
   /* filter: blur(4px); */
   /* background-color: #c3c9c6; */
@@ -203,12 +207,12 @@ body{
   /* text-align: center; */
   /* -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px); */
-  background-color: #60fcae;
+  background: linear-gradient(0deg, rgba(96,252,174,1) 12%, rgba(215,255,235,1) 92%);
   border-radius: 22px 22px 0px 0px;
   padding: 11px 12px;
   /* margin: 22px; */
   /* max-width: 400px; */
-
+  cursor: default;
 }
 
 .mySlides a, .mySlides p{
@@ -219,7 +223,19 @@ body{
   font-size:15px;
   color: #999;
   text-align: left;
+
 }
+
+#en, #sp{
+  /* filter:blur(4px); */
+  opacity: 25%;
+  transition: 0.5s;
+}
+#en:hover, #sp:hover{
+  filter:none;
+  opacity: 100%;
+}
+
 
 @-webkit-keyframes AnimationName {
     0%{background-position:50% 50%}

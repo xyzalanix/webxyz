@@ -210,7 +210,7 @@ function draw() {
     len_real = r4.duration()-(r4.currentTime());
     len_fake = f4.duration()-(f4.currentTime());
     textAlign(CENTER, CENTER);
-    text("Muchas Gracias:\n\nEmotionally charged Christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.15));
+    text("Muchas Gracias:\n\nKVOZ AM christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.15));
     textAlign(LEFT, CENTER);
     text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
     textAlign(RIGHT, CENTER);
@@ -219,7 +219,7 @@ function draw() {
     len_real = r5.duration()-(r5.currentTime());
     len_fake = f5.duration()-(f5.currentTime());
     textAlign(CENTER, CENTER);
-    text("Pa'que agarre el sabor:\n\nMom's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.15));
+    text("Pa'que agarre el sabor:\n\nBibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.15));
     textAlign(LEFT, CENTER);
     text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
     textAlign(RIGHT, CENTER);
@@ -238,13 +238,13 @@ function draw() {
   // stop button
   bttstop.mouseClicked(stopAll);
   bttstop.position(windowWidth/2-11,windowHeight-(windowHeight*0.08));
-  bttstop.style('background:none;border:none;color:#999999;font-size:16px;');
+  bttstop.style('background:none;border:none;color:#99999950;font-size:16px;');
   bttstop.addClass('stopbutton');
 
   // strokeWeight(0.5);
   // stroke('#000000');
   // line(width / 2, 0, width / 2, height);
-  cursor('prenostalgia/select.cur');
+  // cursor('prenostalgia/select.cur');
 //   if (mouseX < windowWidth/2) { // left
 //     cursor('select.png');
 //   } else if (mouseX > windowWidth/2) {  // right
