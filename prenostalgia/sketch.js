@@ -24,7 +24,7 @@ function preload(){
   r5 = loadSound("prenostalgia/processed/sabor_real.mp3");
 
   font = loadFont('fonts/texgyreheroscn-regular.otf');
-
+  titles = loadFont('fonts/MAZIUSREVIEW20.09-Extraitalic.woff');
 }
 
 // function loaded(){
@@ -37,8 +37,18 @@ function setup() {
   btt4 = createButton('▶');
   btt5 = createButton('▶');
   btt1 = createButton('▶');
-  bttstop = createButton('■');
 
+  bttstop = createButton('■');
+  // pair1 = createA('https://goo.gl/maps/r1sGtddq3NRMdzZbA',"US/MX Border", top);
+  // pair1.style('display:none;');
+  // pair2 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
+  // pair2.style('display:none;');
+  // pair3 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
+  // pair3.style('display:none;');
+  // pair4 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
+  // pair4.style('display:none;');
+  // pair5 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
+  // pair5.style('display:none;');
 }
 
 function loaded1(){
@@ -110,6 +120,8 @@ function draw() {
   //   textAlign(CENTER, CENTER);
   //   text("Je me méfie de Alan:\n\nMarie discovers I was recording her singing.", windowWidth/2,);
   // }
+  // let div = createDiv('').size(100, 100);
+  // div.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638156880730!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f209.63134214562854!4f-0.04978988851756583!5f0.7820865974627469" width="300" height="180" style="border:0;"loading="lazy"></iframe>');
 
   spacing = 120;
 
@@ -174,60 +186,75 @@ function draw() {
 
   print('Orignal:' + left,'Reconstructed:' + right)
 
-  fill('#999999');
   strokeWeight(0);
-  textFont(font);
-  textSize(13);
+  textSize(26);
+  fill('#f1f1f1');
   if (marie){
 
     len_real = r1.duration()-(r1.currentTime());
     len_fake = f1.duration()-(f1.currentTime());
     textAlign(CENTER, CENTER);
-    text("Je me méfie de Alan:\n\nMarie discovers I was recording her singing.", windowWidth/2, windowHeight-(windowHeight*0.15));
-    textAlign(LEFT, CENTER);
-    text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
-    textAlign(RIGHT, CENTER);
-    text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.15));
+    textFont(titles);
+    text("Je me méfie d'Alan:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    textFont(font);
+    text("Marie finds out I'm recording. Translation: I can't  \ntrust Alan, you can't even fart without him recording it.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // textAlign(LEFT, CENTER);
+    // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
+    // textAlign(RIGHT, CENTER);
+    // text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.18));
   } else if (patos200){
     len_real = r2.duration()-(r2.currentTime());
     len_fake = f2.duration()-(f2.currentTime());
     textAlign(CENTER, CENTER);
-    text("Patos 200:\n\nLost demo from highly self-absorbed times,\nliving at the foot of Cerro del Chupón in Satélite, Monterrey.", windowWidth/2, windowHeight-(windowHeight*0.15));
-    textAlign(LEFT, CENTER);
-    text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
-    textAlign(RIGHT, CENTER);
-    text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.15));
+    textFont(titles);
+    text("Patos 200:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    textFont(font);
+    text("Lost demo from highly self-absorbed times,\nliving at the foot of Cerro del Chupón in Satélite, Monterrey.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // textAlign(LEFT, CENTER);
+    // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
+    // textAlign(RIGHT, CENTER);
+    // text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.18));
   } else if (snakes){
     len_real = r3.duration()-(r3.currentTime());
     len_fake = f3.duration()-(f3.currentTime());
     textAlign(CENTER, CENTER);
-    text("Are there snakes around here?:\n\nWhile singing in the fields of Annemasse at night, Marina and João convince themselves \nthey're not afraid of snakes, while I mock typical french songs.", windowWidth/2, windowHeight-(windowHeight*0.15));
-    textAlign(LEFT, CENTER);
-    text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
-    textAlign(RIGHT, CENTER);
-    text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.15));
+    textFont(titles);
+    text("Are there snakes around here?", windowWidth/2, windowHeight-(windowHeight*0.82));
+    textFont(font);
+    text("While singing in the fields of Annemasse at night, Marina and João\n convince themselves they're not afraid of snakes, while I mock typical french songs.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // textAlign(LEFT, CENTER);
+    // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
+    // textAlign(RIGHT, CENTER);
+    // text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.18));
   } else if (gracias){
     len_real = r4.duration()-(r4.currentTime());
     len_fake = f4.duration()-(f4.currentTime());
     textAlign(CENTER, CENTER);
-    text("Muchas Gracias:\n\nKVOZ AM christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.15));
-    textAlign(LEFT, CENTER);
-    text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
-    textAlign(RIGHT, CENTER);
-    text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.15));
+    textFont(titles);
+    text("Muchas Gracias:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    textFont(font);
+    text("KVOZ AM Christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // textAlign(LEFT, CENTER);
+    // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
+    // textAlign(RIGHT, CENTER);
+    // text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.18));
   } else if (sabor){
     len_real = r5.duration()-(r5.currentTime());
     len_fake = f5.duration()-(f5.currentTime());
     textAlign(CENTER, CENTER);
-    text("Pa'que agarre el sabor:\n\nBibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.15));
-    textAlign(LEFT, CENTER);
-    text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.15));
-    textAlign(RIGHT, CENTER);
-    text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.15));
+    textFont(titles);
+    text("Pa'que agarre el sabor:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    textFont(font);
+    text("Bibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // textAlign(LEFT, CENTER);
+    // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
+    // textAlign(RIGHT, CENTER);
+    // text(round(len_fake, 0)+"s", windowWidth-50, windowHeight-(windowHeight*0.18));
   }
-
+  // strokeWeight(15.5);
+  // stroke('#000000');
+  // line(0, height/2, width, height/2);
   // mix indicators
-  fill('#999999');
   strokeWeight(0);
   textFont(font);
   textSize(13);
@@ -238,19 +265,22 @@ function draw() {
   // stop button
   bttstop.mouseClicked(stopAll);
   bttstop.position(windowWidth/2-11,windowHeight-(windowHeight*0.08));
-  bttstop.style('background:none;border:none;color:#999999;font-size:16px;');
+  bttstop.style('background:none;border:none;color:#f1f1f1;font-size:16px;');
   bttstop.addClass('stopbutton');
 
-  // strokeWeight(0.5);
-  // stroke('#000000');
-  // line(width / 2, 0, width / 2, height);
-  // cursor('prenostalgia/select.cur');
-//   if (mouseX < windowWidth/2) { // left
-//     cursor('select.png');
-//   } else if (mouseX > windowWidth/2) {  // right
-//     cursor('');
-//   }
+  // embed = createDiv('').size(800, 800);
+  // embed.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638156880730!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f209.63134214562854!4f-0.04978988851756583!5f0.7820865974627469" width="300" height="180" style="border:0;"loading="lazy"></iframe>');
+  // embed.style('position:fixed;z-index:10;');
+
+
+  // if (mouseX < windowWidth/2) { // left
+  //   cursor('select.png');
+  // } else if (mouseX > windowWidth/2) {  // right
+  //   cursor('');
+  // }
 }
+
+
 function falseReset(){
   marie = false;
   patos200 = false;
@@ -260,16 +290,22 @@ function falseReset(){
 }
 function stopAll(){
   playing = false;
+
   f1.stop();
   r1.stop();
+  // pair1.style('display:none;');
   f2.stop();
   r2.stop();
+  // pair2.style('display:none;');
   f3.stop();
   r3.stop();
+  // pair3.style('display:none;');
   f4.stop();
   r4.stop();
+  // pair4.style('display:none;');
   f5.stop();
   r5.stop();
+  // pair5.style('display:none;');
   marie = false;
   patos200 = false;
   snakes = false;
