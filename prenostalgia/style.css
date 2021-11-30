@@ -75,13 +75,16 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   margin-left: auto;
   margin-right: auto;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   top: 0; left: 0; bottom: 0; right: 0;
   position: fixed;
-  z-index:4;
-
-  mix-blend-mode: color-dodge;
+  z-index:10;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  /* left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute; */
 }
 
 .left {
@@ -100,6 +103,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
 }
 
 .p5Canvas{
+  pointer-events: all;
   position: relative;
   /* background: radial-gradient(circle, #60fcae, 10%, #c3c9c6, 80%, #c3c9c600); */
 
@@ -109,7 +113,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   /* backdrop-filter: blur(6px); */
   box-shadow: 0px 0px 66px #33333330;
 
-  z-index:3;
+  z-index:4;
 
 }
 
@@ -154,6 +158,7 @@ body{
 }
 
 .button {
+  pointer-events: all;
   position: relative;
   z-index: 4;
   align-items: center;

@@ -25,6 +25,37 @@ function preload(){
 
   font = loadFont('fonts/texgyreheroscn-regular.otf');
   titles = loadFont('fonts/MAZIUSREVIEW20.09-Extraitalic.woff');
+
+  loc1 = createDiv('')
+       loc1.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638300946343!6m8!1m7!1sQ_H8VerrCMmF2nwocDYkVw!2m2!1d45.80432275827974!2d5.792473497134724!3f216.36321741433673!4f-0.8480308953521387!5f1.4280720308265442" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       );
+  loc1.addClass('location');
+  loc1.style('display:none;');
+
+  loc2 = createDiv('')
+       loc2.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638299798841!6m8!1m7!1siKL5zYbscd-VXVh9jAc3Jw!2m2!1d25.60091957296614!2d-100.2734826424512!3f227.66171484268412!4f16.808810845943526!5f0.4273103147069183" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       );
+  loc2.addClass('location');
+  loc2.style('display:none;');
+
+  loc3 = createDiv('')
+       loc3.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638299433777!6m8!1m7!1slaqum3jR9vPuWWLBo7r8-A!2m2!1d46.15674152700031!2d6.261920167912551!3f278.63783576618806!4f2.547160845509069!5f1.5526072420959163" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       );
+  loc3.addClass('location');
+  loc3.style('display:none;');
+
+  loc4 = createDiv('')
+       loc4.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638298865514!6m8!1m7!1sQ3POtwkOAzNx0qrkjkF7yQ!2m2!1d27.49798260716391!2d-99.50130992498377!3f279.5121264487804!4f-0.044209055752645554!5f2.049038004354639" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       );
+  loc4.addClass('location');
+  loc4.style('display:none;');
+
+  loc5 = createDiv('')
+       loc5.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638298779078!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f213.56520861107762!4f-0.8925290067386982!5f1.5029633609634248" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       );
+  loc5.addClass('location');
+  loc5.style('display:none;');
+
 }
 
 // function loaded(){
@@ -37,18 +68,9 @@ function setup() {
   btt4 = createButton('▶');
   btt5 = createButton('▶');
   btt1 = createButton('▶');
-
   bttstop = createButton('■');
-  // pair1 = createA('https://goo.gl/maps/r1sGtddq3NRMdzZbA',"US/MX Border", top);
-  // pair1.style('display:none;');
-  // pair2 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
-  // pair2.style('display:none;');
-  // pair3 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
-  // pair3.style('display:none;');
-  // pair4 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
-  // pair4.style('display:none;');
-  // pair5 = createA('https://p5js.org/reference/#/p5/createA',"US/MX Border");
-  // pair5.style('display:none;');
+
+
 }
 
 function loaded1(){
@@ -60,7 +82,9 @@ function loaded1(){
   r1.playMode("restart");
   r1.play();
   r1.loop();
+
   marie = true;
+  loc1.style('display:grid;');
 }
 function loaded2(){
   falseReset();
@@ -71,7 +95,9 @@ function loaded2(){
   r2.playMode("restart");
   r2.play();
   r2.loop();
+
   patos200 = true;
+  loc2.style('display:grid;');
 
 }
 function loaded3(){
@@ -83,7 +109,9 @@ function loaded3(){
   r3.playMode("restart");
   r3.play();
   r3.loop();
+
   snakes = true;
+  loc3.style('display:grid;');
 
 }
 function loaded4(){
@@ -95,7 +123,9 @@ function loaded4(){
   r4.playMode("restart");
   r4.play();
   r4.loop();
+
   gracias = true;
+  loc4.style('display:grid;');
 
 }
 function loaded5(){
@@ -107,7 +137,9 @@ function loaded5(){
   r5.playMode("restart");
   r5.play();
   r5.loop();
+
   sabor = true;
+  loc5.style('display:grid;');
 
 }
 
@@ -120,8 +152,7 @@ function draw() {
   //   textAlign(CENTER, CENTER);
   //   text("Je me méfie de Alan:\n\nMarie discovers I was recording her singing.", windowWidth/2,);
   // }
-  // let div = createDiv('').size(100, 100);
-  // div.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638156880730!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f209.63134214562854!4f-0.04978988851756583!5f0.7820865974627469" width="300" height="180" style="border:0;"loading="lazy"></iframe>');
+
 
   spacing = 120;
 
@@ -210,6 +241,7 @@ function draw() {
     text("Patos 200:", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
     text("Lost demo from highly self-absorbed times,\nliving at the foot of Cerro del Chupón in Satélite, Monterrey.", windowWidth/2, windowHeight-(windowHeight*0.18));
+
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
     // textAlign(RIGHT, CENTER);
@@ -222,6 +254,7 @@ function draw() {
     text("Are there snakes around here?", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
     text("While singing in the fields of Annemasse at night, Marina and João\n convince themselves they're not afraid of snakes, while I mock typical french songs.", windowWidth/2, windowHeight-(windowHeight*0.18));
+
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
     // textAlign(RIGHT, CENTER);
@@ -234,6 +267,7 @@ function draw() {
     text("Muchas Gracias:", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
     text("KVOZ AM Christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.18));
+
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
     // textAlign(RIGHT, CENTER);
@@ -246,6 +280,7 @@ function draw() {
     text("Pa'que agarre el sabor:", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
     text("Bibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.18));
+
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
     // textAlign(RIGHT, CENTER);
@@ -268,9 +303,7 @@ function draw() {
   bttstop.style('background:none;border:none;color:#f1f1f1;font-size:16px;');
   bttstop.addClass('stopbutton');
 
-  // embed = createDiv('').size(800, 800);
-  // embed.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638156880730!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f209.63134214562854!4f-0.04978988851756583!5f0.7820865974627469" width="300" height="180" style="border:0;"loading="lazy"></iframe>');
-  // embed.style('position:fixed;z-index:10;');
+
 
 
   // if (mouseX < windowWidth/2) { // left
@@ -293,19 +326,19 @@ function stopAll(){
 
   f1.stop();
   r1.stop();
-  // pair1.style('display:none;');
+  loc1.style('display:none;');
   f2.stop();
   r2.stop();
-  // pair2.style('display:none;');
+  loc2.style('display:none;');
   f3.stop();
   r3.stop();
-  // pair3.style('display:none;');
+  loc3.style('display:none;');
   f4.stop();
   r4.stop();
-  // pair4.style('display:none;');
+  loc4.style('display:none;');
   f5.stop();
   r5.stop();
-  // pair5.style('display:none;');
+  loc5.style('display:none;');
   marie = false;
   patos200 = false;
   snakes = false;
