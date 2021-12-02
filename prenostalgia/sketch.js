@@ -27,31 +27,31 @@ function preload(){
   titles = loadFont('fonts/MAZIUSREVIEW20.09-Extraitalic.woff');
 
   loc1 = createDiv('')
-       loc1.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638300946343!6m8!1m7!1sQ_H8VerrCMmF2nwocDYkVw!2m2!1d45.80432275827974!2d5.792473497134724!3f216.36321741433673!4f-0.8480308953521387!5f1.4280720308265442" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       loc1.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638462223513!6m8!1m7!1smdObaI7WLuRtF7B0lEco_w!2m2!1d46.04511115737544!2d6.089621579971094!3f240.06500307908433!4f-12.979067731956576!5f1.3340806652435755" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
        );
   loc1.addClass('location');
   loc1.style('display:none;');
 
   loc2 = createDiv('')
-       loc2.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638299798841!6m8!1m7!1siKL5zYbscd-VXVh9jAc3Jw!2m2!1d25.60091957296614!2d-100.2734826424512!3f227.66171484268412!4f16.808810845943526!5f0.4273103147069183" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       loc2.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638299798841!6m8!1m7!1siKL5zYbscd-VXVh9jAc3Jw!2m2!1d25.60091957296614!2d-100.2734826424512!3f227.66171484268412!4f16.808810845943526!5f0.4273103147069183" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
        );
   loc2.addClass('location');
   loc2.style('display:none;');
 
   loc3 = createDiv('')
-       loc3.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638299433777!6m8!1m7!1slaqum3jR9vPuWWLBo7r8-A!2m2!1d46.15674152700031!2d6.261920167912551!3f278.63783576618806!4f2.547160845509069!5f1.5526072420959163" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       loc3.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638299433777!6m8!1m7!1slaqum3jR9vPuWWLBo7r8-A!2m2!1d46.15674152700031!2d6.261920167912551!3f278.63783576618806!4f2.547160845509069!5f1.5526072420959163" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
        );
   loc3.addClass('location');
   loc3.style('display:none;');
 
   loc4 = createDiv('')
-       loc4.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638298865514!6m8!1m7!1sQ3POtwkOAzNx0qrkjkF7yQ!2m2!1d27.49798260716391!2d-99.50130992498377!3f279.5121264487804!4f-0.044209055752645554!5f2.049038004354639" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       loc4.html('<iframe src="https://www.google.com/maps/embed?pb=!4v1638298865514!6m8!1m7!1sQ3POtwkOAzNx0qrkjkF7yQ!2m2!1d27.49798260716391!2d-99.50130992498377!3f279.5121264487804!4f-0.044209055752645554!5f2.049038004354639" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
        );
   loc4.addClass('location');
   loc4.style('display:none;');
 
   loc5 = createDiv('')
-       loc5.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638298779078!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f213.56520861107762!4f-0.8925290067386982!5f1.5029633609634248" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
+       loc5.html('<iframe src=https://www.google.com/maps/embed?pb=!4v1638298779078!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f213.56520861107762!4f-0.8925290067386982!5f1.5029633609634248" width="300" height="180" style="border:0;"loading="lazy"></iframe>'
        );
   loc5.addClass('location');
   loc5.style('display:none;');
