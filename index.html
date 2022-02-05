@@ -62,7 +62,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 		<a class="contact" href="https://telegram.me/alanixba" target="_blank">↗ telegram</a><br>
 	</div>
 	<div class="bio" style="border:none;">
-	  <p id="about">—Alan Ixba is a creative technologist from the mx/us border—based in Monterrey. <br><br>—He collaborates with artists, developers and algorithms to create data-inspired emotional artifacts.</p>
+	  <p id="about">Alan Ixba is a creative technologist from the mx/us border—based in Monterrey. <br><br>He collaborates with artists, developers and algorithms to create data-inspired emotional artifacts.</p>
 
 	</div>
 	<!-- ################################### -->
@@ -203,10 +203,13 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<a id="date"class="detail">2021</a>
 				<a class="detail"><i>Crystal Gazing</i></a><br><br>
 				<a id="credits">Watch video excerpts.</a><br><br>
-				<img id="widecontent" data-title="Crystal id: 96"class="demo" src="work/crystal_gazing/96.jpeg" >
-				<img id="widecontent" data-title="Crystal id: 121"class="demo" src="work/crystal_gazing/grid_121.jpg" >
-				<img id="widecontent" data-title="Crystal id: 25"class="demo" src="work/crystal_gazing/grid_25.jpg" >
-				<img id="widecontent" data-title="Crystal id: 55"class="demo" src="work/crystal_gazing/grid_55.jpg" >
+				<img id="widecontent" data-title="id—96"class="demo" src="work/crystal_gazing/96.jpeg" >
+				<img id="widecontent" data-title="id—121"class="demo" src="work/crystal_gazing/grid_121.jpg" >
+				<!-- <div class="long-text">
+					<a id="credits">dusty fields of reflections</a>
+				</div> -->
+				<img id="widecontent" data-title="id—302"class="demo" src="work/crystal_gazing/grid_0302.jpg" >
+				<img id="widecontent" data-title="id—55"class="demo" src="work/crystal_gazing/grid_55-1.0.jpg" >
 				<!-- <img id="widecontent" class="demo" src="work/crystal_gazing/0476.jpg" >
 				<img id="widecontent" class="demo" src="work/crystal_gazing/0442.jpg" > -->
 			</div>
@@ -284,10 +287,10 @@ function getOffsetDate(offsetInMintues) {
 
 	return d;
 }
-const options = { hour: 'numeric', minute:'numeric'};
+const options = { hour: 'numeric',hour12: false, minute:'numeric'};
 
 var myTimezone = getOffsetDate(360).toLocaleString(undefined,options);
-document.getElementById("timezone").innerHTML = "En Monterrey son las "+myTimezone;
+document.getElementById("timezone").innerHTML = "Monterrey, México "+myTimezone;
 
 $(window).on("load",function(){
 	$(".loader").fadeOut("slow");
