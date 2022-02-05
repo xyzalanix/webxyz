@@ -6,21 +6,26 @@
 <TITLE>alanix:home</TITLE>
 <link href="style.css" rel="stylesheet"/>
 <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+<script src="intense-images/intense.js"></script>
 <script src="jquery-2.1.4.js"></script>
 
-<script>
+<div class="loader">
+	<p>˜”*°•.˜”*°• loading •°*”˜.•°*”˜</p>
+</div>
 
+
+<script>
 var flesh = new Array()
 
 flesh[0] = 'images/8colors/0002.png'
-flesh[1] = 'images/8colors/0048.png'
-flesh[2] = 'images/8colors/0216.png'
+// flesh[1] = 'images/8colors/0352.png'
+flesh[1] = 'images/8colors/0216.png'
 // flesh[3] = 'images/8colors/0352.png'
-flesh[3] = 'images/8colors/0366.png'
+flesh[2] = 'images/8colors/0366.png'
 // flesh[4] = 'images/8colors/1084.png'
-// flesh[6] = 'images/8colors/1427.png'
-flesh[4] = 'images/8colors/0210.png'
-flesh[5] = 'images/8colors/1596.png'
+// flesh[3] = 'images/8colors/1427.png'
+flesh[3] = 'images/8colors/0210.png'
+flesh[4] = 'images/8colors/1596.png'
 
 var j = 0
 var p = flesh.length;
@@ -34,181 +39,255 @@ function showImage(){
 document.write('<img src="'+flesh[whichFlesh]+'">');
 }
 
+$('#myModal').on('hidden.bs.modal', function() {
+  $('iframe').contents().find('video')[0].pause();
+});
+
 </script>
 
 </HEAD>
+<body>
+	<div class="screen">
 
-<div class="screen">
-	<!-- <img src="images/0366.png"> -->
-	<script>
-	showImage();
-	</script>
-</div>
-
-<!-- <a class="navigation right" onclick="openModal();currentSlide(1)">INFO</a> -->
-
-  <div class="bio">
-    <!-- <a id="contact" href="https://github.com/xyzalanix" target="_blank">🡥 github</a> -->
-    <a id="contact"  href="https://instagram.com/xyzalanix" target="_blank">> ig</a><br>
-  	<!-- <img src="images/me.png" style="height: auto;margin:0px;padding-right:11px;"> -->
-    <p id="about">Alan Ixba is a creative technologist from the mx/us border—currently based in Monterrey, México.</p>
-    <a>He collaborates with artists, developers and algorithms to create data-inspired emotional artifacts.</a>
-  </div>
-
-  <div class="ido">
-    <a id="contact" href="mailto:hello@xyzalanix.com">> reach out</a><br>
-    <a id="ido">I do Creative Research and provide Technical Assistance at </a>
-    <a id="ido" href="https://entangledothers.studio" target="_blank">Entangled Others Studio.</a>
-  </div>
-
-<div class="twocolumn">
-  <div class="imgcontainer">
-    <a id="projtitles" class="title" style="margin:0px;border-bottom:solid;border-width:thin;text-align:center;">Selected Projects</a>
-    <!-- <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(1)"><i>blush</i></a> -->
-    <img id="demo" class="demo" loading="lazy" src="work/blush/blush-preview.jpg" onclick="openModal();currentSlide(1)">
-
-    <img class="demo" loading="lazy" src="work/eqr/0183.jpg" onclick="openModal();currentSlide(2)">
-
-    <img class="demo" loading="lazy" src="work/nd/flavortwist.jpg"onclick="openModal();currentSlide(3)">
-
-    <a id="projtitles" class="title" style="margin:0px;border-bottom:solid;border-width:thin;text-align:center;">Collaborations</a>
-
-    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(4)">Jalaconda: <i>4 Patas 5 Bocas</i></a>
-
-    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(5)">Widows Collective: <i>Dj Sustancia mix.</i></a>
-
-    <a href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">Dixon @ Fondation Beyeler: GAN assistance.</a>
-
-    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(7)">Jalaconda: S2021 texture explorations.</a>
-
-    <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">Monja Rebelde: 3D work & video edit for Juan Duarte.</a>
-
-    <a id="projtitles" class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(6)">Jalaconda: <i>Reptilian encounters</i></a>
-
-    <a href="https://www.youtube.com/watch?v=X5IYf6eBhJI" target="_blank" id="projtitles" class="description" style="margin:0px;border:none;color:#E2E2E2;">Beko Connections: AI Technical assistance.</a>
-    <!-- <a id="projtitles" class="description" style="margin:0px;border:none;">FIL Monterrey: <i>Visual Poem Generator.</i></a> -->
-  </div>
-</div>
-
-        <!-- MODAL -->
-
-<div id="myModal" class="modal" onclick="closeModal()">
-  <!-- <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p> -->
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <a id="date" class="detail">2021</a>
-      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs). The driving sequence was extracted from a GAN, and gives both its texture and depth information to the plane.</a><br><br>
-      <!-- <p class="detail">Plane deformations guided by video frames.</p> -->
-      <video autoplay="true" loop  muted class="demo" style="width:100%;border-radius: 0px;" alt="blush">
-        <source src="work/blush/blush-trim.mp4"/>
-        <source src="work/blush/blush-trim.webm"/>
-      </video>
-      <img id="vertical" class="demo" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
-      <img id="vertical" class="demo" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
-      <img id="vertical" class="demo" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
-
-      <img id="vertical" class="demo" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush">
-      <img id="vertical" class="demo" src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
-      <img id="vertical" class="demo" src="work/blush/1139.jpg" style="border-radius: 0px;" alt="blush">
-    </div>
-
-    <div class="mySlides">
-      <a id="date" class="detail">WIP</a>
-      <a class="detail"><i>been feelin equirectangular</i> — a nature-seeking process from my desktop. I began by training a GAN on an <i>equirectangular</i> image dataset. The (equirectangular) sequences extracted from it were then re-inserted into a 3D environment. And lastly observed through fractured geometry.</a><br><br>
-      <video id="widecontent" autoplay="true" loop  muted class="demo" style="width:100%;border-radius: 0px;">
-        <source src="work/eqr/eqr-interp-web.mp4"/>
-        <source src="work/eqr/eqr-interp-web.webm"/>
-      </video>
-      <img class="demo" src="work/eqr/0183.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/eqr/0004.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/eqr/houstontx.jpg" style="width:100%;border-radius: 0px;">
-      <video autoplay="true" loop  muted class="demo" style="width:100%;border-radius: 0px;">
-        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
-        <source src="work/eqr/eqr-0.0-2pass-6-12.webm"/>
-      </video>
-      <video id="widecontent" autoplay="true" loop  muted class="demo" style="width:100%;border-radius: 0px;">
-        <source src="work/eqr/eqr-wide-web.mp4"/>
-        <source src="work/eqr/eqr-wide-web.webm"/>
-      </video>
-    </div>
-
-    <div class="mySlides">
-      <a id="date"class="detail">2020</a>
-      <a class="detail"><i>Neural Digestions</i> — tools and their misuse; this is a deviation of generative techniques, originally designed to replicate small images for use in 3D texturing. When dealing with multiple images: structure, texture and meaning are interwoven.</a><br><br>
-      <img id="widecontent" class="demo" src="work/nd/flavortwist.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/nd/10dll.jpeg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/nd/rammellzee.jpeg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/nd/vera.jpeg" style="width:100%;border-radius: 0px;">
-    </div>
-
-    <div class="mySlides">
-      <a id="date" class="detail">08 2021</a>
-      <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i> — patterns for Jalaconda's collection presented in Casa de Criadores. These come from a mashup of neural outputs I had compiled throughout the year.</a><br>
-      <a href="https://casadecriadores.com.br/jalaconda" class="detail" target="_blank">See more</a><br><br>
-      <img id="widecontent" class="demo" src="work/prints/43523425.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/undies.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/prints/foto-1_sozinha.jpg" style="width:100%;border-radius: 0px;">
-      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
-    </div>
-    <div class="mySlides">
-      <a id="date"class="detail">12 2020</a>
-      <a class="detail"><i>Widows Reality Sessions</i> — audio reactive landscape that I built in TouchDesigner for DJ Sustancia's mix. I used miscellaneous outputs and random edits as raw material for the visuals to develop throughout the set.</a><a href="https://www.youtube.com/c/WidowsCollective/videos" target="_blank"> > Widows Collective</a><br><br>
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="rs.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
-
-    <div class="mySlides">
-      <a id="date"class="detail">11 2020</a>
-      <a class="detail"><i>Reptilian Encounters</i> — heavily inspired by the power of snake imagery in our native cultures, @jalinha97 and I built a reptilian-themed dataset and trained a neural network using this data. A selection of these outputs were printed as Jalaconda pieces.</a><br>
-      <a href="https://www.instagram.com/jalaconda/" target="_blank">> Jalaconda's ig</a><br><br>
-      <img id="widecontent" class="demo" src="work/prints/snakes/reptilian-thumbnail.jpg" style="width:100%;border-radius: 0px;">
-      <!-- <img id="widecontent" class="demo" src="work/prints/snakes/snake-thumbnail.jpg" style="width:100%;border-radius: 0px;"> -->
-      <img id="widecontent" class="demo" src="work/prints/snakes/run.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/snakes/seed1156-1.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/snakes/seed34536-1.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/snakes/vittar.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/snakes/hang.jpg" style="width:100%;border-radius: 0px;">
-    </div>
-
-    <div class="mySlides">
-      <a id="date"class="detail">03 2021</a>
-      <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Jalaconda S2021</i> — A video project which evolved into an absorbing texture-seeking experience.</a><br>
-      <a href="https://www.instagram.com/jalaconda/" target="_blank" class="detail">See more</a><br><br>
-      <img id="widecontent" class="demo" src="work/jala-00.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/jala-0.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/j-0.jpg" style="width:100%;border-radius: 0px;">
-      <img id="widecontent" class="demo" src="work/jala-1.jpg" style="width:100%;border-radius: 0px;">
-      <!-- <img class="demo" src="work/prints/s21-1.jpg" style="width:100%;border-radius: 0px;">
-      <img class="demo" src="work/prints/s21-2.jpg" style="width:100%;border-radius: 0px;"> -->
-    </div>
-
-    <div class="mySlides">
-      <a id="date" class="detail">WIP</a>
-      <a class="detail"> — finding styling variations in Felipa's photoshoot.</a><br><br>
-      <video id="widecontent" autoplay="true" loop  muted class="demo" style="width:100%;border-radius: 0px;">
-        <source src="work/fq/fq-web.mp4"/>
-        <source src="work/fq/fq-web.webm"/>
-      </video>
-    </div>
+		<script>
+		showImage();
+		</script>
 
 	</div>
-</div>
+	<!-- ################################## -->
+	<div class="bio" style="top:0;max-width:30%;width:100%;margin-right:70%;">
 
-<!-- <div>
-	 <a class="top banner"style="margin-bottom:0px;"><span>g&nbsp;</span></a>
-	 <a class="top banner banner2"style="margin-bottom:0px;"><span>g&nbsp;</span></a>
-</div> -->
+		<a class="contact" href="mailto:xyzalanix@gmail.com" target="_blank">↗ e-mail</a>
+		<a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">↗ instagram</a>
+		<a class="contact" href="https://telegram.me/alanixba" target="_blank">↗ telegram</a><br>
+	</div>
+	<div class="bio" style="border:none;">
+	  <p id="about">—Alan Ixba is a creative technologist from the mx/us border—based in Monterrey. <br><br>—He collaborates with artists, developers and algorithms to create data-inspired emotional artifacts.</p>
 
-<!-- <div class="screen">
-	<img src="images/s-r.jpg">
-</div> -->
+	</div>
+	<!-- ################################### -->
+	<div class="twocolumn">
 
-<div class="loader">
-	<p></p>
-</div>
+	  <div class="imgcontainer">
+	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
+			<a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects</a>
+
+			<a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(9)">Generative Tileworks</a>
+	    <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(8)">Crystal Gazing</a>
+	    <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(10)">Prenostalgia</a>
+		  <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(2)">Bfeqr</a>
+	    <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(3)">Digestions</a>
+	  </div>
+	  <div class="imgcontainer" >
+	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations (xoknáalo'ob)</a> -->
+	    <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations</a>
+	    <a href="https://futureeast-festival.com/favareh/" class="description" style="margin:0px;border:none;"target="_blank">Favareh I & II: Future East Festival <span style="font-size:18px;">↗</span></a>
+	    <a class="description" style="margin:0px;border:none;">Where Loss Goes</a>
+	    <a href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description" style="margin:0px;border:none;">Entangled Others <span style="font-size:18px;">↗</span></a>
+	    <!-- <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(4)">Nu Studio <span style="font-size:18px;">↗</span></a> -->
+	    <a class="description" style="margin:0px;border:none;">Jalaconda</a>
+	    <a class="description" style="margin:0px;border:none;"onclick="openModal();currentSlide(5)">Widows Collective</a>
+	    <a href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank"class="description" style="margin:0px;border:none;">Transmoderna <span style="font-size:18px;">↗</span></a>
+	    <a href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" style="margin:0px;border:none;" target="_blank">Monja Rebelde <span style="font-size:18px;">↗</span></a>
+	    <a href="https://seyhanlee.com/Our-collaboration-with-Beko-led-to-Earth-s-first-A-I-film" target="blank"class="description" style="margin:0px;border:none;">Beko Connections <span style="font-size:18px;">↗</span></a>
+	  </div>
+	</div>
+	<!-- <div class="twocolumn" style=" grid-template-columns: 100%;">
+
+	    <a class="title" style="margin: 0px 0px 0px 0px; text-align:left;background-color:#60fcae;max-width:50px;">Artifacts</a>
+
+	    <img id="demo" class="demo" loading="lazy" src="work/blush/blush-preview.jpg" onclick="openModal();currentSlide(1)">
+
+	    <img class="demo" loading="lazy" src="work/eqr/0183.jpg" onclick="openModal();currentSlide(2)">
+
+	    <img class="demo" loading="lazy" src="work/nd/flavortwist.jpg"onclick="openModal();currentSlide(3)">
+	</div> -->
+	        <!-- MODAL -->
+
+	<div id="myModal" class="modal">
+	  <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p>
+
+	  <div class="modal-content">
+
+	    <div class="mySlides">
+	      <a id="date" class="detail">2021</a>
+	      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs)</a><br><br>
+	      <img id="vertical" class="demo" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" class="demo" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" class="demo" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
+
+	      <img id="vertical" class="demo" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" class="demo" src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" class="demo" src="work/blush/1139.jpg" style="border-radius: 0px;" alt="blush">
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date" class="detail">2021</a>
+	      <a class="detail"><i>Been feelin equirectangular</i></a><br><br>
+				<a id="credits">A nature-seeking process from my desktop.</a><br><br>
+	      <!-- <video id="widecontent" autoplay="true" loop  muted class="demo">
+	        <source src="work/eqr/eqr-interp-web.mp4"/>
+	        <source src="work/eqr/eqr-interp-web.webm"/>
+	      </video> -->
+	      <img class="demo" src="work/eqr/0183.jpg">
+	      <img class="demo" src="work/eqr/0004.jpg">
+	      <img class="demo" src="work/eqr/eqr_01.jpg" >
+				<img class="demo" src="work/eqr/eqr_02.jpg" >
+	      <!-- <video autoplay="true" loop  muted class="demo" >
+	        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
+	        <source src="work/eqr/eqr-0.0-2pass-6-12.webm"/>
+	      </video> -->
+	      <!-- <video id="widecontent" autoplay="true" loop  muted class="demo" >
+	        <source src="work/eqr/eqr-wide-web.mp4"/>
+	        <source src="work/eqr/eqr-wide-web.webm"/>
+	      </video> -->
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2020</a>
+	      <a class="detail"><i>Neural Digestions</i></a><br><br>
+				<a id="credits">Structure, texture and meaning are interwoven.</a><br><br>
+	      <img  data-title="Flavor Twist"class="demo" src="work/nd/flavortwist.jpg" >
+	      <img  data-title="Ten Dollar Tarot"class="demo" src="work/nd/10dll.jpeg" >
+	      <img data-title="Rammellzee"class="demo" src="work/nd/rammellzee.jpeg" >
+	      <img data-title="Vera"class="demo" src="work/nd/vera.jpeg" >
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date" class="detail">2021</a>
+	      <a href="https://casadecriadores.com.br/jalaconda" class="detail"><i>4 Patas 5 Bocas</i></a><a>— patterns for Jalaconda's collection presented in Casa de Criadores.</a><br>
+	      <a href="https://casadecriadores.com.br/jalaconda" class="detail" target="_blank">See more</a><br><br>
+	      <img id="widecontent" class="demo" src="work/prints/43523425.jpg" >
+	      <img id="widecontent" class="demo" src="work/undies.jpg" >
+	      <img id="widecontent" class="demo" src="work/prints/foto-1_sozinha.jpg" >
+	      <!-- <img class="demo" src="work/prints/s21-1.jpg" >
+	      <img class="demo" src="work/prints/s21-2.jpg" > -->
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2020</a>
+	      <a class="detail"><i>Widows Reality Sessions</i> — audio reactive landscape for DJ Sustancia's mix.</a><a id="credits" href="https://www.instagram.com/widows.de/" target="_blank"><br> > Widows Collective</a><br><br>
+	      <div><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="rs.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script><br>
+
+	      <a id="date"class="detail">2021</a>
+	      <a class="detail"><i>Widows Reality Sessions</i> — introduction visuals.</a><a id="credits"href="https://www.instagram.com/widows.de/" target="_blank"><br>> Music by Yulav, Title design by Layla Rubí.</a><br><br>
+	      <div><iframe src="https://player.vimeo.com/video/535103162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="intro.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2020</a>
+	      <a class="detail"><i>Reptilian Encounters</i> — heavily inspired by the power of snake imagery in our native cultures, @jalinha97 and I built a reptilian-themed dataset and trained a neural network using this data. A selection of these outputs were printed as Jalaconda pieces.</a><br>
+	      <a href="https://www.instagram.com/jalaconda/" target="_blank">> Jalaconda's ig</a><br><br>
+	      <img id="widecontent" class="demo" src="work/prints/snakes/reptilian-thumbnail.jpg" >
+	      <!-- <img id="widecontent" class="demo" src="work/prints/snakes/snake-thumbnail.jpg" > -->
+	      <img id="widecontent" class="demo" src="work/prints/snakes/run.jpg" >
+	      <img class="demo" src="work/prints/snakes/seed1156-1.jpg" >
+	      <img class="demo" src="work/prints/snakes/seed34536-1.jpg" >
+	      <img class="demo" src="work/prints/snakes/vittar.jpg" >
+	      <img class="demo" src="work/prints/snakes/hang.jpg" >
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2021</a>
+	      <a href="https://www.instagram.com/jalaconda/" class="detail"><i>Jalaconda S2021</i> — A video project which evolved into an absorbing texture-seeking experience.</a><br>
+	      <a href="https://www.instagram.com/jalaconda/" target="_blank" class="detail">See more</a><br><br>
+	      <img id="widecontent" class="demo" src="work/jala-00.jpg" >
+	      <img id="widecontent" class="demo" src="work/jala-0.jpg" >
+	      <img id="widecontent" class="demo" src="work/j-0.jpg" >
+	      <img id="widecontent" class="demo" src="work/jala-1.jpg" >
+	      <!-- <img class="demo" src="work/prints/s21-1.jpg" >
+	      <img class="demo" src="work/prints/s21-2.jpg" > -->
+	    </div>
+
+			<div class="mySlides">
+				<a id="date"class="detail">2021</a>
+				<a class="detail"><i>Crystal Gazing</i></a><br><br>
+				<a id="credits">Watch video excerpts.</a><br><br>
+				<img id="widecontent" data-title="Crystal id: 96"class="demo" src="work/crystal_gazing/96.jpeg" >
+				<img id="widecontent" data-title="Crystal id: 121"class="demo" src="work/crystal_gazing/grid_121.jpg" >
+				<img id="widecontent" data-title="Crystal id: 25"class="demo" src="work/crystal_gazing/grid_25.jpg" >
+				<img id="widecontent" data-title="Crystal id: 55"class="demo" src="work/crystal_gazing/grid_55.jpg" >
+				<!-- <img id="widecontent" class="demo" src="work/crystal_gazing/0476.jpg" >
+				<img id="widecontent" class="demo" src="work/crystal_gazing/0442.jpg" > -->
+			</div>
+
+			<div class="mySlides">
+				<a id="date"class="detail">2022</a>
+				<a class="detail"><i>Generative Tileworks</i> </a><br><br>
+				<!-- <a href="https://www.instagram.com/jalaconda/" target="_blank" class="detail">Watch video excerpts.</a><br><br> -->
+				<!-- <a class="detail">Spontaneous tiled-image generation. </a><br> -->
+				<div class="long-text">
+					<a id="credits">ⓣⓘⓛⓔⓦⓞⓡⓚⓢ is a series of synchronistic GAN-based tile arrangements.</a>
+				</div>
+				<a id="date" style="color:#333;background-color:#99999900;">Memetic [̲̅t][̲̅i][̲̅l][̲̅e][̲̅w][̲̅o][̲̅r][̲̅k][̲̅s]</a><br><br>
+
+				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried network." class="demo" src="work/tileworks/000020.jpg" >
+				<img id="widecontent"data-title="Tilework" data-caption="Deep-fried network."class="demo" src="work/tileworks/000007_memes.jpg" >
+				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried network."class="demo" src="work/tileworks/000021.jpg" >
+				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried network."class="demo" src="work/tileworks/000047.jpg" >
+				<div class="long-text">
+					<a id="credits">Multiple prompts act as a mold for the network's structure at different scales (tiles).</a>
+				</div>
+				<a id="date" style="color:#333;background-color:#99999900;">Runic ≋t≋i≋l≋e≋w≋o≋r≋k≋s≋</a><br><br>
+				<img id="widecontent"data-title="Tilework"data-caption="Mineral network."class="demo" src="work/tileworks/000033.jpg" >
+				<img id="widecontent"data-title="Tilework"data-caption="Mineral network."class="demo" src="work/tileworks/000049.jpg" >
+				<img id="widecontent"data-title="Tilework"data-caption="Mineral network."class="demo" src="work/tileworks/000016.jpg" >
+				<img id="widecontent"data-title="Tilework"data-caption="Mineral network."class="demo" src="work/tileworks/000019.jpg" >
+
+
+			</div>
+
+			<div class="mySlides">
+				<a id="date"class="detail">2021</a>
+				<a><i>Prenostalgia</i> — sound experience.</a><br><br>
+				<!-- <a>Prenostalgia is a sonic autoetnography that began in 2015, by collecting intimate sound fragments on my phone.</a><br><br> -->
+				<div class="long-text">
+					<a id="credits" style="font-family:italo;">Prenostalgia is a sonic autoetnography</a><a id="credits"> through intimate voice memos recorded from 2015 ⇢ 2021. The audios were reconstructed by a neural network as a detachment exercise:</a><br>
+				</div>
+				<audio controls><source src="work/sound/gracias_fake.mp3" type="audio/mpeg"></audio><br>
+				<audio controls><source src="work/sound/red-district_fake.mp3" type="audio/mpeg"></audio><br>
+				<audio controls><source src="work/sound/plath_fake.mp3" type="audio/mpeg"></audio><br>
+				<audio controls><source src="work/sound/snakes_fake.mp3" type="audio/mpeg"></audio><br>
+				<a>Web Interface ↗</a><br>
+				<a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		 <a class="top banner"style="margin-bottom:0px;"><span id="timezone"></span></a>
+		 <a class="top banner banner2"style="margin-bottom:0px;"><span>© Alan Ixba 2022&nbsp;</span></a>
+
+	</div>
+
+	<!-- <div class="screen">
+		<img src="images/s-r.jpg">
+	</div> -->
+
+	<!-- intense-images (zoom) -->
+	<script>
+		var elements = document.querySelectorAll( 'img' );
+		Intense( elements );
+	</script>
+	<!-- intense-images (zoom) -->
+</body>
+
 
 <script>
+
+function getOffsetDate(offsetInMintues) {
+  // Get local date object
+  var d = new Date();
+  // Add local time zone offset to get UTC and
+  // Subtract offset to get desired zone
+  d.setMinutes(d.getMinutes() + d.getTimezoneOffset() - offsetInMintues);
+
+	return d;
+}
+const options = { hour: 'numeric', minute:'numeric'};
+
+var myTimezone = getOffsetDate(360).toLocaleString(undefined,options);
+document.getElementById("timezone").innerHTML = "En Monterrey son las "+myTimezone;
 
 $(window).on("load",function(){
 	$(".loader").fadeOut("slow");
@@ -216,11 +295,11 @@ $(window).on("load",function(){
 
 // Open the Modal
 function openModal() {
-  document.getElementById("myModal").style.display = "block";
+  document.getElementById("myModal").style.display = "grid";
 }
 
 function showProject() {
-  document.getElementById("demo").style.display = "block";
+  document.getElementById("demo").style.display = "grid";
 }
 
 function hideProject(){

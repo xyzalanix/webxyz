@@ -15,10 +15,6 @@
       <img src="prenostalgia/dither_2.png">
     </div>
 
-    <!-- <div class="location">
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1638163217726!6m8!1m7!1sre0NQvpyvnZlqUnoSoqOdQ!2m2!1d27.46320524006551!2d-99.50009060581755!3f212.5392840187749!4f0.6078975083800771!5f1.563995933304343" id="sabor" width="300" height="180" style="border:0;"loading="lazy"></iframe>
-    </div> -->
-
     <!-- <div class="logo">
       <a>
         <img src="prenostalgia/pn3d_0.png" alt="prenostalgia-logo">
@@ -31,6 +27,8 @@
       <a>
         <!-- <p>Prenostalgia</p> -->
         <p style="background-color: #33333350;border-style: solid;border-width: thin;border-radius:22px;padding:4px 8px;" onclick="openModal();currentSlide(1)">ABOUT</p>
+
+        <!-- <p style="background-color: #33333350;border-style: solid;border-width: thin;border-radius:22px;padding:4px 8px;" onclick="enterNavMode()">Navigate</p> -->
       </a>
 
       <!-- <p>About</p> -->
@@ -75,15 +73,33 @@
       document.getElementById("myModal").style.display = "block";
     }
 
-    document.addEventListener('keyup', function(e) {
-        if (e.keyCode == 27) {
-            closeModal();
-        }
-    });
-
     // Close the Modal
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
+    }
+
+    document.addEventListener('keyup', function(e) {
+        if (e.keyCode == 78) {
+            enterNavMode();
+        }
+    });
+
+    document.addEventListener('keyup', function(e) {
+        if (e.keyCode == 27) {
+            exitNavMode();
+        }
+    });
+    
+    function enterNavMode(){
+      var p5Canvas = document.getElementsByClassName('p5Canvas')[0];
+      p5Canvas.style['z-index'] = "5";
+    }
+
+
+
+    function exitNavMode(){
+      var location = document.getElementsByClassName('p5Canvas')[0];
+      p5Canvas.style['z-index'] = "0";
     }
 
     var slideIndex = 1;

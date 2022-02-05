@@ -79,8 +79,8 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   height: 110%;
   top: 0; left: 0; bottom: 0; right: 0;
   position: fixed;
-  z-index:10;
-  pointer-events: none;
+  z-index:3;
+  /* pointer-events: none; */
   mix-blend-mode: overlay;
   /* left: 50%;
   transform: translate(-50%, 0);
@@ -103,7 +103,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
 }
 
 .p5Canvas{
-  pointer-events: all;
+  pointer-events: auto;
   position: relative;
   /* background: radial-gradient(circle, #60fcae, 10%, #c3c9c6, 80%, #c3c9c600); */
 
@@ -113,7 +113,7 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   /* backdrop-filter: blur(6px); */
   box-shadow: 0px 0px 66px #33333330;
 
-  z-index:4;
+  z-index:5;
 
 }
 
@@ -158,9 +158,9 @@ body{
 }
 
 .button {
-  pointer-events: all;
+  pointer-events: auto;
   position: relative;
-  z-index: 4;
+  z-index: 5;
   align-items: center;
   /* border-radius: 500px; */
   border:none;
@@ -175,7 +175,7 @@ body{
 
 .stopbutton{
   position: relative;
-  z-index: 4;
+  z-index: 5;
 }
 
 .stopbutton:hover, .button:hover{
