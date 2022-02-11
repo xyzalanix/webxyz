@@ -78,7 +78,6 @@ body {
 
 .demo{
   /* margin: 2px; */
-  cursor: url("intense-images/demo/img/plus_cursor.png") 25 25, pointer;
   display: inline-block;
   background-size: cover;
   background-position: 50% 50%; }
@@ -122,7 +121,7 @@ body {
 
 }
 .bio, .reachout, .ido{
-  font-size: 22px;
+  font-size: 32px;
   /* display: flex;
   position: absolute;
   bottom:50%; */
@@ -222,11 +221,12 @@ body {
   /* flex-direction: column; */
   /* position:relative; */
   /* display:grid; */
-  margin: 0;
+  /* margin: 0; */
   border-bottom:solid;
   border-width:thin;
   border-color:#333;
-
+  background-color: #999;
+  mix-blend-mode: hard-light;
   /* background-color: #999; */
 }
 .projects, .description{
@@ -234,32 +234,31 @@ body {
   /* max-width: 500px; */
   text-decoration: none;
   color: #333;
-  /* line-height: 1.3em; */
+  /* line-height: 1.1em; */
   /* border-top: solid; */
-  border-bottom: solid;
-  border-width: thin;
+
 
 }
 
 .description {
   font-size: 24px;
   font-family: italo;
-  padding: 0;
-  text-overflow: clip;
   overflow-x:  scroll;
   overflow-y: hidden;
-  white-space: nowrap;
   border:none;
-  /* word-break: break-all; */
-  color:#333;
-  /* line-height: 1.2; */
+  word-break: break-all;
+  /* white-space: nowrap; */
+  /* color:#333; */
+  /* line-height: 36px; */
   /* color: #999; */
   text-decoration: none;
+  /* margin: 0 11px; */
+  padding: 0 22px 0 0;
+  /* background-color: red; */
 }
 
 .description a{
   color:#333;
-
 }
 
 .description:hover{
@@ -269,9 +268,18 @@ body {
 .title{
   font-family: tex;
   /* background-color: white; */
-  font-size: 20px;
+  /* font-size: 18px; */
   /* max-width: 200px; */
   /* border:solid;border-width:thin; */
+  background-color:#60fcae;
+  color:#e2e2e2;
+  margin: 0 6px 0 0px;
+  /* padding: 4px 3px 1px 3px; */
+  vertical-align:  super;
+  text-shadow: 0 0 4px #333;
+  /* padding: 2px 8px; */
+  /* padding: 5px 0; */
+  /* border-radius: 22px; */
 }
 
 #description:hover {
@@ -292,9 +300,10 @@ body {
   max-width: 30%;
 }
 
-.imgcontainer a {
-   padding:0 22px 0 0;
+.imgcontainer a{
+   /* padding:0 11px 0 11px; */
 }
+
 .top{
   text-decoration: none;
   z-index: 2;
@@ -352,24 +361,25 @@ a{
 .modal {
   display: none;
   position: fixed;
-  z-index: 7;
+  z-index: 1;
   text-align: center;
   /* padding-bottom: 122px; */
   left: 30%;
   /* top: 10%; */
   width: 70%;
-  height: 100%;
+  /* height: calc(100% - 222px); */
   /* overflow-y: hidden; */
   /* -webkit-backdrop-filter: blur(12px); */
   /* backdrop-filter: blur(12px); */
   /* background-color: rgba(96,252,174,0.8); */
-  /* background-color: #99999950; */
+  /* background-color: #e2e2e2; */
   font-style: normal;
-  margin:2px;
+  margin:0;
+
   /* backdrop-filter:blur(11px); */
   /* transform: translate(0, -102px); */
   /* background-color: #e2e2e250; */
-
+  /* mix-blend-mode: exclusion; */
 }
 
 /* Modal Content */
@@ -379,29 +389,31 @@ a{
   display: flex;
   overflow-y: scroll;
   position: absolute;
-  top: 0; left: 0; bottom: 22px; right: 0;
-  margin: auto;
-  /* max-height:85%; */
-  /* max-width: 600px; */
+  top: 0; left: 0; bottom: 0; right: 0;
+
   padding:11px 22px;
   border-color:#333;
-  /* margin: 0 0 11% 0; */
-  margin:0 0 131px 0px;
+  height: calc(100% - 22px);
   /* background-color: #e2e2e250; */
-  background:linear-gradient(180deg, #e2e2e270 0%, #e2e2e200 60%);
+  /* background:linear-gradient(180deg, #e2e2e270 0%, #e2e2e200 10%); */
   /* background: radial-gradient(#e2e2e2 20%, #60fcae); */
-  /* box-shadow: 0 0 32px #33333350; */
+  box-shadow: 0 0 32px #60fcae50;
 }
 
 .modal-content img{
-  max-width: 400px;
+  max-width: 45%;
   filter: drop-shadow(0 0 12px #e2e2e280);
+  cursor: url("intense-images/demo/img/plus_cursor.png") 25 25, pointer;
+
 
 }
 
+#external{
+  cursor: url('images/cursor_external.png') 8 8, pointer;
+}
 
 #widecontent {
-  max-width: 40%;
+  /* max-width: 45%; */
   width: 100%;
 }
 
@@ -468,7 +480,7 @@ a{
 }
 #date{
   font-family: italo;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 30px;
   color:#60fcae;
   padding: 0 2px;
@@ -476,12 +488,13 @@ a{
 }
 #credits{
   font-size: 24px;
-  color:#333;
+  /* color:#333; */
   font-family:italo;
   /* text-shadow: 0 0 6px #60fcae; */
   /* background-color: #e2e2e250; */
   /* filter: brightness(200%); */
 }
+
 
 /* Caption text */
 .caption-container {
