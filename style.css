@@ -64,7 +64,7 @@ a:link:visited{
   display:flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 28px;
   color:#e2e2e2;
   font-family: italo;
 }
@@ -558,6 +558,9 @@ a{
     max-width: none;
     white-space: normal;
   }
+  .close{
+    font-size: 280px;
+  }
   .modal{
 
     left:0;
@@ -584,6 +587,9 @@ a{
     background-color: #60fcae;
     display: block;
     text-align: center;
+  }
+  .loader{
+    font-size: 64px;
   }
   #date{
     font-size:64px;
