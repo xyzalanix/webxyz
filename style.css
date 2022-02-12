@@ -386,7 +386,7 @@ a{
 .modal-content {
   /* max-width: 200px; */
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow-y: scroll;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -522,41 +522,83 @@ a{
 }
 
 
-@media screen and (min-device-width: 200px) and (max-device-width: 800px) {
+@media screen and (min-device-width: 200px) and (max-device-width: 768px) {
   .twocolumn{
     margin:0;
   }
   .contact{
-    font-size:48px;
+    font-size:66px;
+    display: none;
+    /* background-color: #333; */
+    /* display: none; */
+    padding: 22px;
   }
   .bio, .reachout, .ido{
-    position:relative;
+    /* position:relative; */
     max-width: none;
+    font-size: 90px;
+    border-right: none;
+    bottom: 80px;
+  }
+
+  #credits{
     font-size: 64px;
+    white-space: normal;
+    word-break: normal;
+  }
+  #about {
+    display: block;
+    padding: 22px;
+    text-align: center;
+  }
+  #about-link{
+    display: none;
+  }
+  .long-text{
+    max-width: none;
+    white-space: normal;
   }
   .modal{
+
     left:0;
     width: 100%;
     background-color: rgba(119,119,119,0.8);
     overflow-x: hidden;
   }
+  .modal-content{
+    padding: 0;
+  }
   .mySlides a{
-    font-size: 64px;
+    font-size: 80px;
+    text-align: center;
+    display: block;
   }
   .modal-content img, video{
     max-width: none;
   }
-  #widecontent, #vertical{
+  /* #widecontent, #vertical{
     max-width: none;
-  }
+  } */
   .title{
-    font-size: 32px;
+    font-size: 64px;
+    background-color: #60fcae;
+    display: block;
+    text-align: center;
   }
   #date{
-    font-size:32px;
+    font-size:64px;
   }
   .description{
-    text-shadow: 0px 0px 12px #777;
+    font-size: 72px;
+    line-height: 1.5em;
+  }
+  .top{
+    left: 0;
+    font-size: 80px;
+    line-height: 1em;
+  }
+  .banner2 span {
+    animation-delay: 10s;
   }
 }
 

@@ -80,9 +80,9 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 	</div>
 	<!-- ################################### -->
-	<div class="twocolumn">
+	<div class="twocolumn"  onclick="closeAbout()">
 
-	  <div class="imgcontainer"  onclick="closeAbout()">
+	  <div class="imgcontainer">
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
 			<a class="title">✪ Projects ✪</a><br>
 
@@ -96,16 +96,22 @@ $('#myModal').on('hidden.bs.modal', function() {
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations (xoknáalo'ob)</a> -->
 	    <a class="title" >☻ Collaborations ☻</a><br>
 	    <a id="external" href="https://futureeast-festival.com/favareh/" class="description" style="border:none;"target="_blank">Favareh I & II: Future East Festival</a>
+
 	    <a class="description" style="border:none;">Where Loss Goes</a>
+
 	    <a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description" style="border:none;">Entangled Others: Hybrid Ecosystems</a>
 	    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(4)">Nu Studio</a> -->
 			<a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(6)">Reptilian Encounters</a>
 
 	    <a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(7)">Jalaconda</a>
+
 	    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(5)">Widows Collective</a>
+
 			<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="blank" class="description">Revista Tonel</a>
 	    <a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank"class="description" style="border:none;">Dixon x Transmoderna @Fondation Beyeler</a>
+
 	    <a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" style="border:none;" target="_blank">Monja Rebelde</a>
+
 	    <a id="external" href="https://seyhanlee.com/Our-collaboration-with-Beko-led-to-Earth-s-first-A-I-film" target="blank"class="description" style="border:none;">Beko Connections</a>
 	  </div>
 	</div>
@@ -148,10 +154,10 @@ $('#myModal').on('hidden.bs.modal', function() {
 					<a id="credits">Fragmented landscape visualizer.</a><br>
 					<!-- <a id="credits" href="./work/eqr/equirectangular.html">Visit the web visualizer.</a><br> -->
 				</div>
-	      <img data-caption="Unprojected Equirectangular Panorama" data-title="Still" src="work/eqr/eqr_01.jpg" >
-				<img data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/eqr_02.jpg" >
-				<img data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/0183.jpg">
-				<img data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/0004.jpg">
+	      <img id="widecontent" data-caption="Unprojected Equirectangular Panorama" data-title="Still" src="work/eqr/eqr_01.jpg" >
+				<img id="widecontent" data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/eqr_02.jpg" >
+				<img id="widecontent" data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/0183.jpg">
+				<img id="widecontent" data-caption="Unprojected Equirectangular Panorama"data-title="Still" src="work/eqr/0004.jpg">
 
 	      <!-- <video autoplay="true" loop  muted >
 	        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
@@ -211,17 +217,19 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a><br>
 				<div class="long-text">
 					<a id="credits">🐍🐍🐍<br>Early stages Reptilian network prints with Jala & Juan Duarte<br>🦎🦎🦎</a><br>
+					<a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a>
+					<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a>
 				</div>
 
 				<!-- <img id="widecontent" src="work/prints/snakes/reptilian-thumbnail.jpg" > -->
 				<img id="widecontent" src="work/prints/snakes/snake-thumbnail.jpg" >
 
-				<img src="work/prints/snakes/seed1156-1.jpg" >
+				<img id="widecontent" src="work/prints/snakes/seed1156-1.jpg" >
 				<img id="widecontent" src="work/prints/snakes/run.jpg" >
-				<img src="work/prints/snakes/hang.jpg" >
+				<img id="widecontent" src="work/prints/snakes/hang.jpg" >
 
-				<img src="work/prints/snakes/seed34458-1.jpg" >
-				<img src="work/prints/snakes/seed34536-1.jpg" >
+				<img id="widecontent" src="work/prints/snakes/seed34458-1.jpg" >
+				<img id="widecontent" src="work/prints/snakes/seed34536-1.jpg" >
 				<div class="long-text">
 
 				</div>
@@ -236,7 +244,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<br><br>
 				<!-- <img id="widecontent" src="work/prints/43523425.jpg" > -->
 				<!-- <img id="widecontent" src="work/undies.jpg" > -->
-				<img src="work/prints/foto-1_sozinha.jpg" >
+				<img id="widecontent" src="work/prints/foto-1_sozinha.jpg" >
 				<br><br>
 				<!-- <a class="detail" href="https://www.instagram.com/jalaconda/" target="blank">S2021</a><br><br> -->
 				<div class="long-text">
@@ -247,8 +255,8 @@ $('#myModal').on('hidden.bs.modal', function() {
 	      <img id="widecontent" src="work/j-0.jpg" >
 	      <img id="widecontent" src="work/jala-1.jpg" >
 
-	      <img src="work/prints/s21-2.jpg" >
-	      <img src="work/prints/s21-1.jpg" >
+	      <img id="widecontent" src="work/prints/s21-2.jpg" >
+	      <img id="widecontent" src="work/prints/s21-1.jpg" >
 				<br><br>
 
 				<div class="long-text">
@@ -322,15 +330,15 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<a>Web Interface ↗</a><br>
 				<a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br>
 			</div>
-
-				<div>
-					 <a class="top banner"style="margin-bottom:0px;"><span id="timezone"></span></a>
-					 <a class="top banner banner2"style="margin-bottom:0px;"><span>© Alan Ixba 2022&nbsp;</span></a>
-
-				</div>
 		</div>
+
 	</div>
 
+	<div>
+		 <a class="top banner"style="margin-bottom:0px;"><span id="timezone"></span></a>
+		 <a class="top banner banner2"style="margin-bottom:0px;"><span>© Alan Ixba 2022&nbsp;</span></a>
+
+	</div>
 
 	<!-- <div class="screen">
 		<img src="images/s-r.jpg">
@@ -351,6 +359,7 @@ function comeUp(){
 	// $("#myModal").fadeOut("fast");
 	$(".modal-content").animate({ scrollTop: 0 }, "fast");
 	// $("#myModal").fadeIn("fast");
+
 }
 
 </script>
@@ -358,6 +367,25 @@ function comeUp(){
 
 
 <script>
+
+$(window).on("load",function(){
+
+	$(".loader").fadeOut("slow");
+
+	var myHeader = $(".imgcontainer").outerHeight();
+	var myHeader = myHeader*4
+
+	const mediaQuery = window.matchMedia('(max-width: 768px)')
+	if (mediaQuery.matches) {
+		document.getElementById("myModal").style.height = "50%";
+} else {
+	document.getElementById("myModal").style.height = "calc(100% - " + myHeader + "px";
+
+}
+
+});
+
+// Time zone calcs //
 
 function getOffsetDate(offsetInMintues) {
   // Get local date object
@@ -373,19 +401,11 @@ const options = { hour: 'numeric',hour12: false, minute:'numeric', weekday: 'sho
 var myTimezone = getOffsetDate(360).toLocaleString(undefined,options);
 document.getElementById("timezone").innerHTML = "(UTC-6) "+myTimezone;
 
-$(window).on("load",function(){
-	$(".loader").fadeOut("slow");
-
-
-	var myHeader = $(".imgcontainer").outerHeight();
-	var myHeader = myHeader*4
-	document.getElementById("myModal").style.height = "calc(100% - " + myHeader + "px";
-});
-
+// Time zone calcs //
 
 function openAbout(){
 	document.getElementById("about").style.display = "block";
-	// document.getElementById("about-link").style.display = "none";
+
 }
 
 function closeAbout(){
@@ -394,7 +414,6 @@ function closeAbout(){
 
 // Open the Modal
 function openModal() {
-  // document.getElementById("myModal").style.display = "grid";
 	$("#myModal").fadeIn("fast");
 }
 
