@@ -80,7 +80,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 	</div>
 	<!-- ################################### -->
-	<div class="twocolumn"  onclick="closeAbout()">
+	<div class="twocolumn"  onclick="closeAbout()" id="twocolumn">
 
 	  <div class="imgcontainer">
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
@@ -375,9 +375,9 @@ $(window).on("load",function(){
 	var myHeader = $(".imgcontainer").outerHeight();
 	var myHeader = myHeader*4
 
-	const mediaQuery = window.matchMedia('(max-width: 768px)')
+	const mediaQuery = window.matchMedia('(maxn-width: 768px)')
 	if (mediaQuery.matches) {
-		document.getElementById("myModal").style.height = "50%";
+		document.getElementById("myModal").style.height = "100%";
 } else {
 	document.getElementById("myModal").style.height = "calc(100% - " + myHeader + "px";
 
@@ -415,6 +415,11 @@ function closeAbout(){
 // Open the Modal
 function openModal() {
 	$("#myModal").fadeIn("fast");
+	const mediaQuery2 = window.matchMedia('(max-width: 768px)')
+	if (mediaQuery2.matches){
+		document.getElementById("twocolumn").style.display = "none";
+	}
+
 }
 
 function showProject() {
@@ -435,6 +440,7 @@ document.addEventListener('keyup', function(e) {
 function closeModal() {
   // document.getElementById("myModal").style.display = "none";
 	$("#myModal").fadeOut("fast");
+	document.getElementById("imgcontainer").style.display = "grid";
 
 }
 
