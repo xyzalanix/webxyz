@@ -80,9 +80,9 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 	</div>
 	<!-- ################################### -->
-	<div class="twocolumn"  onclick="closeAbout()" id="twocolumn">
+	<div class="twocolumn"  onclick="closeAbout()"id="twocolumn">
 
-	  <div class="imgcontainer">
+	  <div class="imgcontainer" >
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
 			<a class="title">✪ Projects ✪</a><br>
 
@@ -92,7 +92,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 		  <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(2)">been feelin equirectangular</a>
 	    <!-- <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(3)">Neural Digestions</a> -->
 	  </div>
-	  <div class="imgcontainer" >
+	  <div class="imgcontainer">
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations (xoknáalo'ob)</a> -->
 	    <a class="title" >☻ Collaborations ☻</a><br>
 	    <a id="external" href="https://futureeast-festival.com/favareh/" class="description" style="border:none;"target="_blank">Favareh I & II: Future East Festival</a>
@@ -379,7 +379,8 @@ $(window).on("load",function(){
 	if (mediaQuery.matches) {
 		document.getElementById("myModal").style.height = "100%";
 } else {
-	document.getElementById("myModal").style.height = "calc(100% - " + myHeader + "px";
+	document.getElementById("myModal").style.height = "100%";
+	// document.getElementById("myModal").style.height = "calc(100% - " + myHeader + "px";
 
 }
 
@@ -409,17 +410,13 @@ function openAbout(){
 }
 
 function closeAbout(){
-	document.getElementById("about").style.display = "none";
+	// document.getElementById("about").style.display = "none";
 }
 
 // Open the Modal
 function openModal() {
 	$("#myModal").fadeIn("fast");
-	const mediaQuery2 = window.matchMedia('(max-width: 768px)')
-	if (mediaQuery2.matches){
-		document.getElementById("twocolumn").style.display = "none";
-	}
-
+	document.getElementById("twocolumn").style.display = "none";
 }
 
 function showProject() {
@@ -438,9 +435,9 @@ document.addEventListener('keyup', function(e) {
 
 // Close the Modal
 function closeModal() {
-  // document.getElementById("myModal").style.display = "none";
-	$("#myModal").fadeOut("fast");
-	document.getElementById("imgcontainer").style.display = "grid";
+  document.getElementById("myModal").style.display = "none";
+	// $("#myModal").fadeOut("fast");
+	document.getElementById("twocolumn").style.display = "grid";
 
 }
 
