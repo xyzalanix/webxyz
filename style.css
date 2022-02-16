@@ -64,7 +64,7 @@ a:link:visited{
   display:flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: 30px;
   color:#e2e2e2;
   font-family: italo;
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .contact {
-  font-size: 20px;
+  font-size: 22px;
   /* position:fixed; */
   /* background-color: #60fcae; */
   font-family: tex;
@@ -121,7 +121,7 @@ body {
 
 }
 .bio, .reachout, .ido{
-  font-size: 32px;
+  font-size: 34px;
   /* display: flex;
   position: absolute;
   bottom:50%; */
@@ -241,7 +241,7 @@ body {
 }
 
 .description {
-  font-size: 24px;
+  font-size: 26px;
   font-family: italo;
   overflow-x:  scroll;
   overflow-y: hidden;
@@ -290,7 +290,7 @@ body {
 }
 
 .projects {
-  font-size:24px;
+  font-size:26px;
   padding-bottom: 2px;
   /* padding: 0; */
 
@@ -311,7 +311,7 @@ body {
   bottom: 0;
   left:30%;
   font-family: italo;
-  font-size: 24px;
+  font-size: 26px;
   color:#e2e2e2;
   width: 100%;
   /* border-left: solid;
@@ -583,8 +583,8 @@ a{
     max-width: none;
   } */
   .title{
-    font-size: 64px;
-    background-color: #60fcae;
+    font-size: 80px;
+    /* background-color: #60fcae; */
     display: block;
     text-align: center;
   }
