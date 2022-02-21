@@ -220,7 +220,7 @@ var Intense = (function() {
         margin: "0px",
         padding: "0px",
         fontWeight: "normal",
-        fontSize: "40px",
+        fontSize: "56px",
         letterSpacing: "0.5px",
         lineHeight: "35px",
         textAlign: "left"
@@ -236,7 +236,7 @@ var Intense = (function() {
         margin: "0px",
         padding: "0px",
         fontWeight: "normal",
-        fontSize: "24px",
+        fontSize: "30px",
         letterSpacing: "0.2px",
         maxWidth: "400px",
         textAlign: "left",

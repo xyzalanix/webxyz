@@ -55,23 +55,22 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 		<script>
 		showImage();
-
 		</script>
 
 	</div>
 	<!-- ################################## -->
-	<div class="bio" style="top:0;max-width:30%;width:100%;margin-right:70%;">
+	<div class="bio" style="top:0;max-width:20%;width:100%;margin-right:80%;">
 		<a class="contact" href="mailto:xyzalanix@gmail.com" target="_blank">☻ mail</a>
 		<a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">☻ instagram</a>
 		<a class="contact" href="https://vimeo.com/alanix" target="_blank">☻ vimeo</a>
 	</div>
 	<div class="bio" style="border:none;">
-		<a id="about-link"class="contact" onclick="openAbout();" target="_blank">᚛about</a>
+		<!-- <a id="about-link"class="contact" onclick="openAbout();" target="_blank">᚛about</a> -->
 
 		<!-- <a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">۞</a> -->
 				<!-- <a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">🖧</a> -->
 	  <div id="about">
-		<p>Alan Ixba is a creative technologist from the mx/us border, based in Monterrey, México.</p>
+		<p>&#x2698;&#x26AD;Alan Ixba&#x26AD;&#x2698; is a creative technologist from the mx/us border, based in Monterrey, México.</p>
 		<!-- <p>The chaotic nature of the us/mx border is forever present in his aesthetic longings.</p><br>
 		<p>His practice seeks to stimulate contemporary myth-making, and to help facilite artful interactions with data.
 		</p> -->
@@ -82,37 +81,40 @@ $('#myModal').on('hidden.bs.modal', function() {
 	<!-- ################################### -->
 	<div class="twocolumn"  onclick="closeAbout()"id="twocolumn">
 
-	  <div class="imgcontainer" >
+	  <div class="imgcontainer">
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
-			<a class="title">Projects</a><br>
-
-			<a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(9)">Tileworks</a>
-	    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(8)">Crystal Gazing</a>
-	    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(10)">Prenostalgia</a> -->
-		  <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(2)">been feelin equirectangular</a>
-	    <!-- <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(3)">Neural Digestions</a> -->
-	  </div>
+			<a class="title" onclick="openProjects()">&#x2766;Projects</a>
+				<div id="projects" style="display:none;">
+					<a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(9)">Tileworks</a>
+			    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(8)">Crystal Gazing</a>
+			    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(10)">Prenostalgia</a> -->
+				  <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(2)">been feelin equirectangular</a>
+			    <!-- <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(3)">Neural Digestions</a> -->
+				</div>
+		</div>
 	  <div class="imgcontainer">
 	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations (xoknáalo'ob)</a> -->
-	    <a class="title" >Collaborations</a><br>
-	    <a id="external" href="https://futureeast-festival.com/favareh/" class="description" style="border:none;"target="_blank">Favareh I & II: Future East Festival</a>
+	    <a class="title" onclick="openCollaborations()">&#x2723;Collaborations</a>
+			<div id="collaborations" style="display:none;">
+		    <a id="external" href="https://futureeast-festival.com/favareh/" class="description" style="border:none;"target="_blank">&#x260D;Favareh I & II: Future East Festival</a>
 
-	    <!-- <a class="description" style="border:none;">Where Loss Goes</a> -->
+		    <!-- <a class="description" style="border:none;">Where Loss Goes</a> -->
 
-	    <a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description" style="border:none;">Entangled Others: Hybrid Ecosystems</a>
-	    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(4)">Nu Studio</a> -->
-			<a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(6)">Reptilian Encounters</a>
+		    <a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description" style="border:none;">&#x260D;Entangled Others: Hybrid Ecosystems</a>
+		    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(4)">Nu Studio</a> -->
+				<a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(6)">Reptilian Encounters</a>
 
-	    <a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(7)">Jalaconda</a>
+		    <a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(7)">Jalaconda</a>
 
-	    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(5)">Widows Collective</a>
+		    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(5)">Widows Collective</a>
 
-			<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="blank" class="description">Revista Tonel</a>
-	    <a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank"class="description" style="border:none;">Dixon x Transmoderna @Fondation Beyeler</a>
+				<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="blank" class="description">&#x260D;Revista Tonel</a>
+		    <a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank"class="description" style="border:none;">&#x260D;Dixon x Transmoderna @Fondation Beyeler</a>
 
-	    <a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" style="border:none;" target="_blank">Monja Rebelde</a>
+		    <a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" style="border:none;" target="_blank">&#x260D;Monja Rebelde</a>
 
-	    <a id="external" href="https://seyhanlee.com/Our-collaboration-with-Beko-led-to-Earth-s-first-A-I-film" target="blank"class="description" style="border:none;">Beko Connections</a>
+		    <a id="external" href="https://seyhanlee.com/Our-collaboration-with-Beko-led-to-Earth-s-first-A-I-film" target="blank"class="description" style="border:none;">&#x260D;Beko Connections</a>
+			</div>
 	  </div>
 	</div>
 	<!-- <div class="twocolumn" style=" grid-template-columns: 100%;">
@@ -128,8 +130,8 @@ $('#myModal').on('hidden.bs.modal', function() {
 	        <!-- MODAL -->
 
 	<div id="myModal" class="modal">
-	  <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center">&times;</p>
-
+	  <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center;font-family:tex;">&#x21e4;</p>
+<!-- &#x21c7; &#x2191;-->
 	  <div class="modal-content">
 
 	    <div class="mySlides">
@@ -216,10 +218,9 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<a id="date"class="detail">2020</a><br>
 				<a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a><br>
 				<div class="long-text">
-					<a id="credits">🐍🐍🐍<br>Early stages Reptilian network prints with Jala & Juan Duarte<br>🦎🦎🦎</a><br>
-					<a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a>
-					<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a>
-				</div>
+					<a id="credits">🐍🐍🐍<br>neuro-Reptilian prints with Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits">& Juan Duarte<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>🦎🦎🦎</a>
+
+				</div><br><br>
 
 				<!-- <img id="widecontent" src="work/prints/snakes/reptilian-thumbnail.jpg" > -->
 				<img id="widecontent" src="work/prints/snakes/snake-thumbnail.jpg" >
@@ -415,7 +416,8 @@ function closeAbout(){
 
 // Open the Modal
 function openModal() {
-	$("#myModal").fadeIn("fast");
+	$("#twocolumn").fadeOut("fast");
+	$("#myModal").fadeIn("slow");
 	document.getElementById("twocolumn").style.display = "none";
 }
 
@@ -435,9 +437,36 @@ document.addEventListener('keyup', function(e) {
 
 // Close the Modal
 function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+	$("#myModal").fadeOut("fast");
+	  document.getElementById("myModal").style.display = "none";
+		document.getElementById("twocolumn").style.display = "grid";
+
+	$("#twocolumn").fadeIn("slow");
+
+
 	// $("#myModal").fadeOut("fast");
-	document.getElementById("twocolumn").style.display = "grid";
+
+
+}
+
+function openProjects(){
+	var x = document.getElementById("projects");
+
+  if (x.style.display === "none") {
+    x.style.display = "inline";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+function openCollaborations(){
+	var x = document.getElementById("collaborations");
+
+  if (x.style.display === "none") {
+    x.style.display = "inline";
+  } else {
+    x.style.display = "none";
+  }
 
 }
 
