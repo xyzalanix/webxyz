@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>equirectangular video panorama</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			body {
+				touch-action: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<video id="video" loop muted crossOrigin="anonymous" playsinline style="display:none">
+			<!-- <source src="pano.webm"> -->
+			<source src="./eqr-0.0-2pass-6-12.mp4">
+		</video>
+
+		<!-- Import maps polyfill -->
+		<!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "./three.module.js"
+				}
+			}
+		</script>
+
+		<script type="module">
+			import { OBJLoader } from 'https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/jsm/loaders/OBJLoader.js';
+			import * as THREE from 'three';
+
+			let camera, scene, renderer;
+      var fogHex, fogDensity, parameters = {};
+
+      let isUserInteracting = false,
+				onPointerDownMouseX = 0, onPointerDownMouseY = 0,
+				lon = 0, onPointerDownLon = 0,
+				lat = 0, onPointerDownLat = 0,
+				phi = 0, theta = 0;
+
+			const distance = 0.01;
+
+			init();
+			animate();
+
+			function init() {
+
+				const container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 1, 1100 );
+
+				scene = new THREE.Scene();
+
+        fogHex = 0x000000; /* As black as your heart.	*/
+        fogDensity = 0.1; /* So not terribly dense?	*/
+        scene.fog = new THREE.FogExp2(fogHex, fogDensity);
+
+        const video = document.getElementById( 'video' );
+        video.play();
+
+        const texture = new THREE.VideoTexture( video );
+
+				const loader = new OBJLoader()
+				loader.load('867.obj',
+				(mesh) => {
+				    // the request was successfull
+				    // let material = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.05 })
+            let material = new THREE.PointsMaterial({ size: 0.06, map: texture })
+				    mesh = new THREE.Points(mesh.children[0].geometry, material)
+            mesh.rotation.x = Math.random() * 6;
+            mesh.rotation.y = Math.random() * 6;
+            mesh.rotation.z = Math.random() * 6;
+				    // mesh.position.y = -15 //this model is not exactly in the middle by default so I moved it myself
+				    scene.add(mesh)
+				},
+				(xhr) => {
+				    // the request is in progress
+				    console.log(xhr)
+				},
+				(err) => {
+				    // something went wrong
+				    console.error("loading .obj went wrong, ", err)
+				})
+
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+        container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointerdown', onPointerDown );
+
+				document.addEventListener( 'wheel', onDocumentMouseWheel );
+
+
+        document.addEventListener( 'drop', function ( event ) {
+
+					event.preventDefault();
+
+					const reader = new FileReader();
+					reader.addEventListener( 'load', function ( event ) {
+
+						material.map.image.src = event.target.result;
+						material.map.needsUpdate = true;
+
+					} );
+					reader.readAsDataURL( event.dataTransfer.files[ 0 ] );
+
+					document.body.style.opacity = 1;
+
+				} );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+      function onPointerDown( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				isUserInteracting = true;
+
+				onPointerDownMouseX = event.clientX;
+				onPointerDownMouseY = event.clientY;
+
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
+
+				document.addEventListener( 'pointermove', onPointerMove );
+				document.addEventListener( 'pointerup', onPointerUp );
+
+			}
+			function onPointerMove( event ) {
+
+				if ( isUserInteracting === true ) {
+
+					lon = ( onPointerDownMouseX - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( onPointerDownMouseY - event.clientY ) * 0.1 + onPointerDownLat;
+
+				}
+
+			}
+
+			function onPointerUp() {
+
+				isUserInteracting = false;
+
+			}
+
+
+			function onDocumentMouseWheel( event ) {
+
+				const fov = camera.fov + event.deltaY * 0.05;
+
+				camera.fov = THREE.MathUtils.clamp( fov, 40, 150 );
+
+				camera.updateProjectionMatrix();
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				update();
+
+			}
+
+			function update() {
+
+        if ( isUserInteracting === false ) {
+
+          lon += 0.1;
+
+        }
+
+				lat = Math.max( - 85, Math.min( 85, lat ) );
+				phi = THREE.MathUtils.degToRad( 90 - lat );
+				theta = THREE.MathUtils.degToRad( lon );
+
+				// camera.position.x = distance * Math.sin( phi ) * Math.cos( theta );
+				// camera.position.y = distance * Math.cos( phi );
+				// camera.position.z = distance * Math.sin( phi ) * Math.sin( theta );
+
+        const x = distance * Math.sin( phi ) * Math.cos( theta );
+        const y = distance * Math.cos( phi );
+        const z = distance * Math.sin( phi ) * Math.sin( theta );
+
+				camera.lookAt( x, y, z );
+				// camera.fov = 120;
+				// camera.updateProjectionMatrix();
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>
