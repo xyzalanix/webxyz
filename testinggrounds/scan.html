@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>equirectangular video panorama</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			body {
+				touch-action: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<video id="video" loop muted crossOrigin="anonymous" playsinline style="display:none">
+			<!-- <source src="pano.webm"> -->
+			<!-- <source src="./eqr-0.0-2pass-6-12.mp4"> -->
+		</video>
+
+		<!-- Import maps polyfill -->
+		<!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.module.js"
+				}
+			}
+		</script>
+
+		<script type="module">
+			import { OBJLoader } from 'https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/jsm/loaders/OBJLoader.js';
+			import * as THREE from 'three';
+
+			var camera, scene, renderer;
+      var fogHex, fogDensity, parameters = {};
+			let isUserInteracting = false
+			var container, HEIGHT,
+	        WIDTH, fieldOfView, aspectRatio,
+	        nearPlane, farPlane, stats,
+	        geometry, particleCount,
+	        i, h, color, size,
+	        materials = [],
+	        mouseX = 0,
+	        mouseY = 0,
+					lon=0, lat=0, phi=0, theta=0,
+	        windowHalfX, windowHalfY, cameraZ,
+	        fogHex, fogDensity, parameters = {},
+	        parameterCount, particles;
+
+
+			init();
+			animate();
+
+			function init() {
+
+				HEIGHT = window.innerHeight;
+        WIDTH = window.innerWidth;
+        windowHalfX = WIDTH / 2;
+        windowHalfY = HEIGHT / 2;
+				fieldOfView = 75;
+				aspectRatio = WIDTH / HEIGHT;
+				nearPlane = 200;
+				farPlane = 3000;
+
+				cameraZ = farPlane / 3; /*	So, 1000? Yes! move on!	*/
+        fogHex = 0x000000; /* As black as your heart.	*/
+        fogDensity = 0.0007; /* So not terribly dense?	*/
+
+        camera = new THREE.PerspectiveCamera(100, aspectRatio, nearPlane, farPlane);
+        camera.position.z = cameraZ;
+
+        scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(fogHex, fogDensity);
+
+        container = document.createElement('div');
+        document.body.appendChild(container);
+        document.body.style.margin = 0;
+        document.body.style.overflow = 'hidden';
+
+
+
+
+				geometry = new THREE.Geometry(); /*	NO ONE SAID ANYTHING ABOUT MATH! UGH!	*/
+				particleCount = 20000; /* Leagues under the sea */
+
+				for (i = 0; i < particleCount; i++) {
+
+						var vertex = new THREE.Vector3();
+						vertex.x = Math.random() * 2000 - 1000;
+						vertex.y = Math.random() * 2000 - 1000;
+						vertex.z = Math.random() * 2000 - 1000;
+
+						geometry.vertices.push(vertex);
+				}
+
+				parameters = [
+						[
+								[1, 1, 0.5], 0.5
+						],
+						[
+								[0.95, 1, 0.5], 0.4
+						],
+						[
+								[0.60, 1, 0.5], 0.3
+						],
+						[
+								[0.45, 1, 0.5], 0.2
+						],
+						[
+								[0.10, 1, 0.5], 0.1
+						]
+				];
+				parameterCount = parameters.length;
+
+				for (i = 0; i < parameterCount; i++) {
+
+            color = parameters[i][0];
+            size = parameters[i][1];
+						console.log(parameters[i][1])
+
+            materials[i] = new THREE.PointsMaterial({
+                size: size
+            });
+
+						particles = new THREE.Points(geometry, materials[i]);
+
+						// particles.rotation.x = Math.random() * 6;
+						// particles.rotation.y = Math.random() * 6;
+						// particles.rotation.z = Math.random() * 6;
+
+						// scene.add(particles);
+        }
+
+				// for (i = 0; i < parameterCount; i++) {
+				//
+        //     color = parameters[i][0];
+        //     size = parameters[i][1];
+				//
+        //     materials[i] = new THREE.PointsMaterial({
+        //         size: size
+        //     });
+				//
+				// 		const loader = new OBJLoader();
+				// 		loader.load('botes_0.obj',
+				// 		(geometry) => {
+				// 				console.log("Mesh loaded")
+				// 				const mesh = new THREE.Points(geometry.children[0].geometry, materials[i])
+				// 				mesh.scale.set(300, 300, 300)
+				// 				scene.add(mesh)
+				// 		},
+				// 		(xhr) => {
+				// 				// the request is in progress
+				// 				console.log(xhr)
+				// 		},
+				// 		(err) => {
+				// 				// something went wrong
+				// 				console.error("loading .obj went wrong, ", err)
+				// 		})
+				//
+				// 		// particles.rotation.x = Math.random() * 6;
+				// 		// particles.rotation.y = Math.random() * 6;
+				// 		// particles.rotation.z = Math.random() * 6;
+				//
+				// 		// scene.add(particles);
+        // }
+
+				const loader = new OBJLoader();
+
+				loader.load('casa_mesh_.obj',
+				(geometry) => {
+
+						console.log("Mesh loaded")
+						for (i = 0; i < parameterCount; i++){
+							color = parameters[i][0];
+							size = parameters[i][1];
+
+							materials[i] = new THREE.PointsMaterial({
+									size: size
+							});
+							const mesh = new THREE.Points(geometry.children[0].geometry, materials[i])
+							mesh.scale.set(150, 150, 150)
+							scene.add(mesh)
+						}
+
+				},
+				(xhr) => {
+						// the request is in progress
+						console.log(xhr)
+				},
+				(err) => {
+						// something went wrong
+						console.error("loading .obj went wrong, ", err)
+				})
+
+				renderer = new THREE.WebGLRenderer(); /*	Rendererererers particles.	*/
+        renderer.setPixelRatio(window.devicePixelRatio); /*	Probably 1; unless you're fancy.	*/
+        renderer.setSize(WIDTH, HEIGHT); /*	Full screen baby Wooooo!	*/
+
+        container.appendChild(renderer.domElement); /* Let's add all this crazy junk to the page.	*/
+
+				window.addEventListener('resize', onWindowResize, false);
+				document.addEventListener('mousemove', onDocumentMouseMove, false);
+				document.addEventListener('touchstart', onDocumentTouchStart, false);
+				document.addEventListener('touchmove', onDocumentTouchMove, false);
+				document.addEventListener( 'wheel', onDocumentMouseWheel );
+
+			}
+			function animate() {
+	        requestAnimationFrame(animate);
+	        render();
+
+	    }
+
+			function render() {
+	        var time = Date.now() * 0.00005;
+
+	        camera.position.x += (mouseX - camera.position.x) * 0.01;
+	        camera.position.y += (-mouseY - camera.position.y) * 0.01;
+					camera.position.z = 20;
+					// camera.position.set(0,10,20)
+
+
+					// camera.rotation.y = time/5 * (i < 4 ? i + 1 : -(i + 1));
+
+	        camera.lookAt(scene.position);
+
+	        for (i = 0; i < scene.children.length; i++) {
+
+	            var object = scene.children[i];
+
+              object.rotation.y = time/4 * (i < 4 ? i + 1 : -(i + 1));
+
+	        }
+
+	        for (i = 0; i < materials.length; i++) {
+
+	            color = parameters[i][0];
+
+	            h = (360 * (color[0] + time) % 360) / 360;
+	            materials[i].color.setHSL(h, color[1], color[2]);
+	        }
+
+	        renderer.render(scene, camera);
+	    }
+
+			function onDocumentMouseWheel( event ) {
+
+				const fov = camera.fov + event.deltaY * 0.05;
+
+				camera.fov = THREE.MathUtils.clamp( fov, 40, 80 );
+
+				camera.updateProjectionMatrix();
+
+			}
+
+
+	    function onDocumentMouseMove(e) {
+	        mouseX = e.clientX - windowHalfX;
+	        mouseY = e.clientY - windowHalfY;
+	    }
+
+	    /*	Mobile users?  I got your back homey	*/
+
+	    function onDocumentTouchStart(e) {
+
+	        if (e.touches.length === 1) {
+
+	            e.preventDefault();
+	            mouseX = e.touches[0].pageX - windowHalfX;
+	            mouseY = e.touches[0].pageY - windowHalfY;
+	        }
+	    }
+
+	    function onDocumentTouchMove(e) {
+
+	        if (e.touches.length === 1) {
+
+	            e.preventDefault();
+	            mouseX = e.touches[0].pageX - windowHalfX;
+	            mouseY = e.touches[0].pageY - windowHalfY;
+	        }
+	    }
+
+	    function onWindowResize() {
+
+	        windowHalfX = window.innerWidth / 2;
+	        windowHalfY = window.innerHeight / 2;
+
+	        camera.aspect = window.innerWidth / window.innerHeight;
+	        camera.updateProjectionMatrix();
+	        renderer.setSize(window.innerWidth, window.innerHeight);
+	    }
+
+
+		</script>
+	</body>
+</html>

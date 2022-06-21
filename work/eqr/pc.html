@@ -57,6 +57,7 @@
 				camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 1, 1100 );
 
 				scene = new THREE.Scene();
+				// scene.background = new THREE.Color (0xECECEC)
 
         fogHex = 0x000000; /* As black as your heart.	*/
         fogDensity = 0.1; /* So not terribly dense?	*/
@@ -74,9 +75,6 @@
 				    // let material = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.05 })
             let material = new THREE.PointsMaterial({ size: 0.06, map: texture })
 				    mesh = new THREE.Points(mesh.children[0].geometry, material)
-            mesh.rotation.x = Math.random() * 6;
-            mesh.rotation.y = Math.random() * 6;
-            mesh.rotation.z = Math.random() * 6;
 				    // mesh.position.y = -15 //this model is not exactly in the middle by default so I moved it myself
 				    scene.add(mesh)
 				},
