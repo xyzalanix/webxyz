@@ -218,7 +218,7 @@ function draw() {
   print('Orignal:' + left,'Reconstructed:' + right)
 
   strokeWeight(0);
-  textSize(26);
+  textSize(36);
   fill('#f1f1f1');
   if (marie){
 
@@ -226,9 +226,9 @@ function draw() {
     len_fake = f1.duration()-(f1.currentTime());
     textAlign(CENTER, CENTER);
     textFont(titles);
-    text("Je me méfie d'Alan:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    text("Je me méfie d'Alan", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
-    text("Marie finds out I'm recording. Translation: I can't  \ntrust Alan, you can't even fart without him recording it.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // text("Marie finds out I'm recording. Translation: I can't  \ntrust Alan, you can't even fart without him recording it.", windowWidth/2, windowHeight-(windowHeight*0.18));
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
     // textAlign(RIGHT, CENTER);
@@ -238,9 +238,9 @@ function draw() {
     len_fake = f2.duration()-(f2.currentTime());
     textAlign(CENTER, CENTER);
     textFont(titles);
-    text("Patos 200:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    text("Patos 200", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
-    text("Lost demo from highly self-absorbed times,\nliving at the foot of Cerro del Chupón in Satélite, Monterrey.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // text("Lost demo from highly self-absorbed times,\nliving at the foot of Cerro del Chupón in Satélite, Monterrey.", windowWidth/2, windowHeight-(windowHeight*0.18));
 
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
@@ -251,9 +251,9 @@ function draw() {
     len_fake = f3.duration()-(f3.currentTime());
     textAlign(CENTER, CENTER);
     textFont(titles);
-    text("Are there snakes around here?", windowWidth/2, windowHeight-(windowHeight*0.82));
+    text("Serpents", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
-    text("While singing in the fields of Annemasse at night, Marina and João\n convince themselves they're not afraid of snakes, while I mock typical french songs.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // text("While singing in the fields of Annemasse at night, Marina and João\n convince themselves they're not afraid of snakes, while I mock typical french songs.", windowWidth/2, windowHeight-(windowHeight*0.18));
 
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
@@ -264,9 +264,9 @@ function draw() {
     len_fake = f4.duration()-(f4.currentTime());
     textAlign(CENTER, CENTER);
     textFont(titles);
-    text("Muchas Gracias:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    text("Muchas Gracias", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
-    text("KVOZ AM Christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // text("KVOZ AM Christian radio passage.", windowWidth/2, windowHeight-(windowHeight*0.18));
 
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
@@ -277,9 +277,9 @@ function draw() {
     len_fake = f5.duration()-(f5.currentTime());
     textAlign(CENTER, CENTER);
     textFont(titles);
-    text("Pa'que agarre el sabor:", windowWidth/2, windowHeight-(windowHeight*0.82));
+    text("Pa'que agarre el sabor", windowWidth/2, windowHeight-(windowHeight*0.82));
     textFont(font);
-    text("Bibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.18));
+    // text("Bibi's recipe for Pollo Encilantrado.", windowWidth/2, windowHeight-(windowHeight*0.18));
 
     // textAlign(LEFT, CENTER);
     // text(round(len_real, 0)+"s", 50, windowHeight-(windowHeight*0.18));
@@ -291,12 +291,12 @@ function draw() {
   // line(0, height/2, width, height/2);
   // mix indicators
   strokeWeight(0);
-  textFont(font);
-  textSize(13);
-  textAlign(LEFT, CENTER);
-  text('Original: ' + round(left, 2), 50, windowHeight/2);
-  textAlign(RIGHT, CENTER);
-  text('Reconstructed: ' + round(right, 2), windowWidth-50, windowHeight/2);
+  textFont(titles);
+  textSize(40);
+  textAlign(CENTER, CENTER);
+  text('Real\n' + round(left, 2), 100, windowHeight/2);
+  textAlign(CENTER, CENTER);
+  text('Fake\n' + round(right, 2), windowWidth-100, windowHeight/2);
   // stop button
   bttstop.mouseClicked(stopAll);
   bttstop.position(windowWidth/2-11,windowHeight-(windowHeight*0.08));

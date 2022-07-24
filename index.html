@@ -59,16 +59,20 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 	</div>
 	<!-- ################################## -->
-	<div class="bio" style="top:0;max-width:20%;width:100%;margin-right:80%;">
+	<div class="bio" style="bottom:0;width:100%;margin-right:80%;">
+		<!-- <a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">ig</a>
 		<a class="contact" href="mailto:xyzalanix@gmail.com" target="_blank">mail</a>
-		<a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">instagram</a>
-		<a class="contact" href="https://vimeo.com/alanix" target="_blank">vimeo</a>
-	</div>
-	<div class="bio" style="border:none;">
-		<!-- <a id="about-link"class="contact" onclick="openAbout();" target="_blank">᚛about</a> -->
+		<a class="contact"  href="https://github.com/xyzalanix" target="_blank">github</a> -->
 
-		<!-- <a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">۞</a> -->
-				<!-- <a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">🖧</a> -->
+	</div>
+	<div class="bio">
+
+		<a class="contact"  href="https://instagram.com/xyzalanix" target="_blank">&#x2014;ig</a>
+		<!-- <a class="contact" href="https://vimeo.com/alanix" target="_blank">vimeo</a> -->
+		<a class="contact" href="mailto:xyzalanix@gmail.com" target="_blank">&#x2014;mail</a>
+
+		<a class="contact"  href="https://github.com/xyzalanix" target="_blank">&#x2014;github</a>
+
 	  <div id="about">
 		<p>&#x2698;&#x26AD;Alan Ixba&#x26AD;&#x2698; is a creative technologist based in Monterrey, México.</p>
 
@@ -82,190 +86,60 @@ $('#myModal').on('hidden.bs.modal', function() {
 	<div class="twocolumn"  onclick="closeAbout()"id="twocolumn">
 
 	  <div class="imgcontainer">
-	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px 0;">Projects (múuch’ meyajo’ob)</a> -->
-			<a class="title" onclick="openProjects()">&#x2766; work</a>
+			<!-- <a class="title" onclick="openProjects()">&#x2766; index</a> -->
 			<!-- &#x2766;WORK -->
-				<div id="projects" style="display:inline;">
-					<a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(9)">Tileworks</a>
-			    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(8)">Crystal Gazing</a>
-			    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(10)">Prenostalgia</a> -->
-				  <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(2)">been feelin equirectangular</a>
-			    <!-- <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(3)">Neural Digestions</a> -->
+				<div class="projects"id="projects" style="display:flex;  flex-wrap: wrap;">
+					<a class="description" onclick="comeUp(), openModal();currentSlide(1)">Tileworks</a>
+			    <a class="description" onclick="comeUp(), openModal();currentSlide(2)">Crystal Gazing</a>
+			    <a class="description" onclick="comeUp(), openModal();currentSlide(3)">Prenostalgia</a>
+				  <a class="description" onclick="comeUp(), openModal();currentSlide(4)">been feelin equirectangular</a>
+			    <a class="description" onclick="comeUp(), openModal();currentSlide(6)">Neural Digestions</a>
+					<a class="description" onclick="comeUp(), openModal();currentSlide(7)">Reptilian Encounters</a>
+					<a class="description"onclick="comeUp(), openModal();currentSlide(8)">Widows Collective</a>
+					<a class="description" onclick="comeUp(), openModal();currentSlide(9)">Jalaconda</a>
+					<a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description">&#x260D;Entangled Others: Hybrid Ecosystems</a>
+					<a id="external" href="https://futureeast-festival.com/favareh/" class="description"target="_blank">&#x260D;Favareh I & II: Future East Festival</a>
+					<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">&#x260D;Revista Tonel</a>
+					<a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=GeOYYts4SNQ','popup','width=600,height=600'); return false;" class="description">&#x260D;Dixon x Transmoderna @Fondation Beyeler</a>
+					<a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" target="_blank">&#x260D;Monja Rebelde</a>
+					<a id="external" href="https://www.dandad.org/awards/professional/2021/233945/connections/" target="blank"class="description">&#x260D;Beko Connections</a>
 				</div>
 		</div>
-	  <div class="imgcontainer">
-	    <!-- <a class="title" style="text-align:center;background-color:#60fcae;padding:1px;">Collaborations (xoknáalo'ob)</a> -->
-	    <a class="title" onclick="openCollaborations()">&#x2723; collaborations</a>
-			<!-- &#x2723;COLLABORATIONS -->
-			<div id="collaborations" style="display:inline;">
-		    <a id="external" href="https://futureeast-festival.com/favareh/" class="description" style="border:none;"target="_blank">&#x260D;Favareh I & II: Future East Festival</a>
 
-		    <!-- <a class="description" style="border:none;">Where Loss Goes</a> -->
 
-		    <a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description" style="border:none;">&#x260D;Entangled Others: Hybrid Ecosystems</a>
-		    <!-- <a class="description" style="margin:0px;border:none;"onclick="comeUp(), openModal();currentSlide(4)">Nu Studio</a> -->
-				<a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(6)">Reptilian Encounters</a>
-
-		    <a class="description" style="border:none;" onclick="comeUp(), openModal();currentSlide(7)">Jalaconda</a>
-
-		    <a class="description" style="border:none;"onclick="comeUp(), openModal();currentSlide(5)">Widows Collective</a>
-
-				<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="blank" class="description">&#x260D;Revista Tonel</a>
-		    <a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank"class="description" style="border:none;">&#x260D;Dixon x Transmoderna @Fondation Beyeler</a>
-
-		    <a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" style="border:none;" target="_blank">&#x260D;Monja Rebelde</a>
-
-		    <a id="external" href="https://seyhanlee.com/Our-collaboration-with-Beko-led-to-Earth-s-first-A-I-film" target="blank"class="description" style="border:none;">&#x260D;Beko Connections</a>
-			</div>
-	  </div>
 	</div>
-	<!-- <div class="twocolumn" style=" grid-template-columns: 100%;">
 
-	    <a class="title" style="margin: 0px 0px 0px 0px; text-align:left;background-color:#60fcae;max-width:50px;">Artifacts</a>
-
-	    <img id="demo" loading="lazy" src="work/blush/blush-preview.jpg" onclick="comeUp(), openModal();currentSlide(1)">
-
-	    <img loading="lazy" src="work/eqr/0183.jpg" onclick="comeUp(), openModal();currentSlide(2)">
-
-	    <img loading="lazy" src="work/nd/flavortwist.jpg"onclick="comeUp(), openModal();currentSlide(3)">
-	</div> -->
 	        <!-- MODAL -->
 
 	<div id="myModal" class="modal">
-	  <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center;font-family:tex;">&#x21e4;</p>
+	  <!-- <p class="close" onclick="closeModal()" style="margin:auto;align:center;vertical-align:middle;text-align:center;font-family:tex;">&#x2715;</p> -->
 <!-- &#x21c7; &#x2191;-->
 	  <div class="modal-content">
 
-	    <div class="mySlides">
-	      <a id="date" class="detail">2021</a>
-	      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs)</a><br><br>
-	      <img id="vertical" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
-	      <img id="vertical" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
-	      <img id="vertical" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
 
-	      <img id="vertical" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush">
-	      <img id="vertical" src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
-	      <img id="vertical" src="work/blush/1139.jpg" style="border-radius: 0px;" alt="blush">
+			<div class="mySlides">
+				<a id="date"class="detail">2022</a><br>
+				<a class="detail">Tileworks</a>
+				<div class="long-text">
+					<a id="credits">🅃🄸🄻🄴🅆🄾🅁🄺🅂 is an ongoing series of synchronistic tile arrangements.</a><br>
+				</div>
+
+				<a id="credits" style="background-color:#99999900;">Memetic [̲̅t][̲̅i][̲̅l][̲̅e][̲̅w][̲̅o][̲̅r][̲̅k][̲̅s]</a><br><br>
+
+				<img id="widecontent" data-title="Tileworks"data-caption="Deep-fried Meme GAN" src="work/tileworks/000020.jpg" >
+				<img id="widecontent"data-title="Tileworks" data-caption="Deep-fried Meme GAN"src="work/tileworks/000007_memes.jpg" >
+				<img id="widecontent" data-title="Tileworks"data-caption="Deep-fried Meme GAN"src="work/tileworks/000021.jpg" >
+				<img id="widecontent" data-title="Tileworks"data-caption="Deep-fried Meme GAN"src="work/tileworks/000047.jpg" >
+				<br><br><a id="credits" style="background-color:#99999900;">Runic ≋t≋i≋l≋e≋w≋o≋r≋k≋s≋</a><br><br>
+				<img id="widecontent"data-title="Tileworks"data-caption="Mineral GAN"src="work/tileworks/000033.jpg" >
+				<img id="widecontent"data-title="Tileworks"data-caption="Mineral GAN"src="work/tileworks/000049.jpg" >
+				<img id="widecontent"data-title="Tileworks"data-caption="Mineral GAN"src="work/tileworks/000016.jpg" >
+				<img id="widecontent"data-title="Tileworks"data-caption="Mineral GAN"src="work/tileworks/000019.jpg" >
 				<div class="long-text">
 
 				</div>
-	    </div>
 
-	    <div class="mySlides">
-	      <a id="date" class="detail">2021</a><br>
-	      <a class="detail">been feelin equirectangular</a><br><br>
-				<div class="long-text">
-					<a id="credits">Fragmented landscape visualizer.</a><br>
-					<!-- <a id="credits" href="./work/eqr/equirectangular.html">Visit the web visualizer.</a><br> -->
-				</div>
-	      <img id="widecontent" data-caption="Equirectangular Panorama" data-title="Still" src="work/eqr/eqr_01.jpg" >
-				<img id="widecontent" data-caption="Equirectangular Panorama"data-title="Still" src="work/eqr/eqr_02.jpg" >
-				<img id="widecontent" data-caption="Equirectangular Panorama"data-title="Still" src="work/eqr/0183.jpg">
-				<img id="widecontent" data-caption="Equirectangular Panorama"data-title="Still" src="work/eqr/0004.jpg">
-
-	      <!-- <video autoplay="true" loop  muted >
-	        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
-	        <source src="work/eqr/eqr-0.0-2pass-6-12.webm"/>
-	      </video> -->
-	      <!-- <video id="widecontent" autoplay="true" loop  muted >
-	        <source src="work/eqr/eqr-wide-web.mp4"/>
-	        <source src="work/eqr/eqr-wide-web.webm"/>
-	      </video> -->
-				<div class="long-text">
-
-				</div>
-	    </div>
-
-	    <div class="mySlides">
-	      <a id="date"class="detail">2020</a><br>
-	      <a class="detail"><i>Neural Digestions</i></a><br><br>
-				<!-- <a id="credits">Structure, texture and meaning are interwoven.</a><br><br> -->
-	      <img  data-title="Flavor Twist"src="work/nd/flavortwist.jpg" >
-	      <img  data-title="Ten Dollar Tarot"src="work/nd/10dll.jpeg" >
-	      <img data-title="Rammellzee"src="work/nd/rammellzee.jpeg" >
-	      <img data-title="Vera"src="work/nd/vera.jpeg" >
-	    </div>
-
-	    <div class="mySlides">
-
-	      <!-- <img src="work/prints/s21-1.jpg" >
-	      <img src="work/prints/s21-2.jpg" > -->
-				<div class="long-text">
-
-				</div>
-	    </div>
-
-	    <div class="mySlides">
-	      <a id="date"class="detail">2020</a><br>
-				<a id="detail" href="https://www.instagram.com/widows.de/" target="_blank">@widows.de</a><br><br>
-
-				<div class="long-text">
-	      	<a id="credits">Widows Reality Sessions — audio reactive landscape for DJ Sustancia's mix.</a>
-				</div>
-	      <div><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="rs.mp4"></iframe></div>
-				<!-- <br><br> -->
-	      <!-- <a id="date"class="detail">2021</a> -->
-				<div class="long-text">
-					<a id="credits">Widows Reality Sessions — introduction visuals.</a>
-		      <a id="credits"href="https://www.instagram.com/widows.de/" target="_blank">Music by Yulav, Title design by Layla Rubí.</a>
-				</div>
-
-	      <div><iframe src="https://player.vimeo.com/video/535103162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="intro.mp4"></iframe></div>
-				<div class="long-text">
-
-				</div>
-	    </div>
-
-	    <div class="mySlides">
-				<a id="date"class="detail">2020</a><br>
-				<a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a><br>
-				<div class="long-text">
-					<a id="credits">🐍🐍🐍<br>neuro-Reptilian prints with Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits">& Juan Duarte<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>🦎🦎🦎</a>
-
-				</div><br><br>
-
-				<!-- <img id="widecontent" src="work/prints/snakes/reptilian-thumbnail.jpg" > -->
-				<img id="widecontent" src="work/prints/snakes/snake-thumbnail.jpg" >
-
-				<img id="widecontent" src="work/prints/snakes/seed1156-1.jpg" >
-				<img id="widecontent" src="work/prints/snakes/run.jpg" >
-				<img id="widecontent" src="work/prints/snakes/hang.jpg" >
-
-				<img id="widecontent" src="work/prints/snakes/seed34458-1.jpg" >
-				<img id="widecontent" src="work/prints/snakes/seed34536-1.jpg" >
-				<div class="long-text">
-
-				</div>
-	    </div>
-
-	    <div class="mySlides">
-	      <a id="date"class="detail">2021</a><br>
-				<a class="detail" href="https://www.jalaconda.com/" target="blank">jalaconda.com</a><br>
-				<div class="long-text">
-					<a id="credits">Patterns for <a id="credits"href="https://www.youtube.com/watch?v=Ujtv1_OF1MQ" target="_blank">4 Patas 5 Bocas: JALACONDA na 48ª Casa de Criadores.</a></a>
-				</div>
-				<br><br>
-				<!-- <img id="widecontent" src="work/prints/43523425.jpg" > -->
-				<!-- <img id="widecontent" src="work/undies.jpg" > -->
-				<img id="widecontent" src="work/prints/foto-1_sozinha.jpg" >
-				<br><br>
-				<!-- <a class="detail" href="https://www.instagram.com/jalaconda/" target="blank">S2021</a><br><br> -->
-				<div class="long-text">
-					<a id="credits">S2021: Flyers / Texture explorations</a><br>
-				</div>
-	      <img id="widecontent" src="work/jala-00.jpg" >
-	      <img id="widecontent" src="work/jala-0.jpg" >
-	      <img id="widecontent" src="work/j-0.jpg" >
-	      <img id="widecontent" src="work/jala-1.jpg" >
-
-	      <img id="widecontent" src="work/prints/s21-2.jpg" >
-	      <img id="widecontent" src="work/prints/s21-1.jpg" >
-				<br><br>
-
-				<div class="long-text">
-
-				</div>
-	    </div>
+			</div>
 
 			<div class="mySlides">
 				<a id="date"class="detail">2021</a><br>
@@ -296,32 +170,8 @@ $('#myModal').on('hidden.bs.modal', function() {
 			</div>
 
 			<div class="mySlides">
-				<a id="date"class="detail">2022</a><br>
-				<a class="detail">Tileworks</a>
-				<div class="long-text">
-					<a id="credits">🅃🄸🄻🄴🅆🄾🅁🄺🅂 is an ongoing series of synchronistic tile arrangements.</a><br>
-				</div>
-
-				<a id="credits" style="background-color:#99999900;">Memetic [̲̅t][̲̅i][̲̅l][̲̅e][̲̅w][̲̅o][̲̅r][̲̅k][̲̅s]</a><br><br>
-
-				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried" src="work/tileworks/000020.jpg" >
-				<img id="widecontent"data-title="Tilework" data-caption="Deep-fried"src="work/tileworks/000007_memes.jpg" >
-				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried"src="work/tileworks/000021.jpg" >
-				<img id="widecontent" data-title="Tilework"data-caption="Deep-fried"src="work/tileworks/000047.jpg" >
-				<br><br><a id="credits" style="color:#333;background-color:#99999900;">Runic ≋t≋i≋l≋e≋w≋o≋r≋k≋s≋</a><br><br>
-				<img id="widecontent"data-title="Tilework"data-caption="Mineral"src="work/tileworks/000033.jpg" >
-				<img id="widecontent"data-title="Tilework"data-caption="Mineral"src="work/tileworks/000049.jpg" >
-				<img id="widecontent"data-title="Tilework"data-caption="Mineral"src="work/tileworks/000016.jpg" >
-				<img id="widecontent"data-title="Tilework"data-caption="Mineral"src="work/tileworks/000019.jpg" >
-				<div class="long-text">
-
-				</div>
-
-			</div>
-
-			<div class="mySlides">
 				<a id="date"class="detail">2021</a>
-				<a><i>Prenostalgia</i> — sound experience.</a><br><br>
+				<a><i>Prenostalgia</i> — memory reconstruction.</a><br><br>
 				<!-- <a>Prenostalgia is a sonic autoetnography that began in 2015, by collecting intimate sound fragments on my phone.</a><br><br> -->
 				<div class="long-text">
 					<a id="credits" style="font-family:italo;">Prenostalgia is a sonic autoetnography</a><a id="credits"> through intimate voice memos recorded from 2015 ⇢ 2021. The audios were reconstructed by a neural network as a detachment exercise:</a><br>
@@ -330,9 +180,135 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<audio controls><source src="work/sound/red-district_fake.mp3" type="audio/mpeg"></audio><br>
 				<audio controls><source src="work/sound/plath_fake.mp3" type="audio/mpeg"></audio><br>
 				<audio controls><source src="work/sound/snakes_fake.mp3" type="audio/mpeg"></audio><br>
-				<a>Web Interface ↗</a><br>
-				<a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br>
+				<a href="prenostalgia.html" target="">web experience ↗</a><br>
+				<!-- <a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br> -->
 			</div>
+
+	    <div class="mySlides">
+	      <a id="date" class="detail">2021</a><br>
+	      <a class="detail">been feelin equirectangular</a><br><br>
+				<div class="long-text">
+					<a id="credits">Fragmented landscape visualizer.</a><br>
+					<!-- <a id="credits" href="./work/eqr/equirectangular.html">Visit the web visualizer.</a><br> -->
+				</div>
+	      <img id="widecontent" data-caption="Still" data-title="been feelin equirectangular" src="work/eqr/eqr_01.jpg" >
+				<img id="widecontent" data-caption="Still"data-title="been feelin equirectangular" src="work/eqr/eqr_02.jpg" >
+				<img id="widecontent" data-caption="Still"data-title="been feelin equirectangular" src="work/eqr/0183.jpg">
+				<img id="widecontent" data-caption="Still"data-title="been feelin equirectangular" src="work/eqr/0004.jpg">
+
+	      <!-- <video autoplay="true" loop  muted >
+	        <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
+	        <source src="work/eqr/eqr-0.0-2pass-6-12.webm"/>
+	      </video> -->
+	      <!-- <video id="widecontent" autoplay="true" loop  muted >
+	        <source src="work/eqr/eqr-wide-web.mp4"/>
+	        <source src="work/eqr/eqr-wide-web.webm"/>
+	      </video> -->
+				<div class="long-text">
+
+				</div>
+	    </div>
+
+
+			<div class="mySlides">
+	      <a id="date" class="detail">2021</a>
+	      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs)</a><br><br>
+	      <img id="vertical" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
+
+	      <img id="vertical" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
+	      <img id="vertical" src="work/blush/1139.jpg" style="border-radius: 0px;" alt="blush">
+				<div class="long-text">
+
+				</div>
+	    </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2020</a><br>
+	      <a class="detail"><i>Neural Digestions</i></a><br><br>
+				<!-- <a id="credits">Structure, texture and meaning are interwoven.</a><br><br> -->
+	      <img data-title="Neural Digestions"data-caption="Flavor Twist"src="work/nd/flavortwist.jpg" >
+	      <img data-title="Neural Digestions"data-caption="Ten Dollar Tarot"src="work/nd/10dll.jpeg" >
+	      <img data-title="Neural Digestions"data-caption="Rammellzee"src="work/nd/rammellzee.jpeg" >
+	      <img data-title="Neural Digestions"data-caption="Vera"src="work/nd/vera.jpeg" >
+	    </div>
+
+			<div class="mySlides">
+	 		 <a id="date"class="detail">2020</a><br>
+	 		 <a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a><br>
+	 		 <div class="long-text">
+	 			 <a id="credits">🐍🐍🐍<br>neuro-Reptilian prints with Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits">& Juan Duarte<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>🦎🦎🦎</a>
+
+	 		 </div><br><br>
+
+	 		 <!-- <img id="widecontent" src="work/prints/snakes/reptilian-thumbnail.jpg" > -->
+	 		 <img id="widecontent" src="work/prints/snakes/snake-thumbnail.jpg" >
+
+	 		 <img id="widecontent" src="work/prints/snakes/seed1156-1.jpg" >
+	 		 <img id="widecontent" src="work/prints/snakes/run.jpg" >
+	 		 <img id="widecontent" src="work/prints/snakes/hang.jpg" >
+
+	 		 <img id="widecontent" src="work/prints/snakes/seed34458-1.jpg" >
+	 		 <img id="widecontent" src="work/prints/snakes/seed34536-1.jpg" >
+	 		 <div class="long-text">
+
+	 		 </div>
+	 	 </div>
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2020</a><br>
+				<a id="detail" href="https://www.instagram.com/widows.de/" target="_blank">@widows.de</a><br><br>
+
+				<div class="long-text">
+	      	<a id="credits">Widows Reality Sessions — audio reactive landscape for DJ Sustancia's mix.</a>
+				</div>
+	      <div><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="rs.mp4"></iframe></div>
+				<!-- <br><br> -->
+	      <!-- <a id="date"class="detail">2021</a> -->
+				<div class="long-text">
+					<a id="credits">Widows Reality Sessions — introduction visuals.</a>
+		      <a id="credits"href="https://www.instagram.com/widows.de/" target="_blank">Music by Yulav, Title design by Layla Rubí.</a>
+				</div>
+
+	      <div><iframe src="https://player.vimeo.com/video/535103162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="intro.mp4"></iframe></div>
+				<div class="long-text">
+
+				</div>
+	    </div>
+
+
+
+	    <div class="mySlides">
+	      <a id="date"class="detail">2021</a><br>
+				<a class="detail" href="https://www.jalaconda.com/" target="blank">jalaconda.com</a><br>
+				<div class="long-text">
+					<a id="credits">Patterns for <a id="credits"href="https://www.youtube.com/watch?v=Ujtv1_OF1MQ" target="_blank">4 Patas 5 Bocas: JALACONDA na 48ª Casa de Criadores.</a></a>
+				</div>
+				<br><br>
+				<!-- <img id="widecontent" src="work/prints/43523425.jpg" > -->
+				<!-- <img id="widecontent" src="work/undies.jpg" > -->
+				<img id="widecontent" src="work/prints/foto-1_sozinha.jpg" >
+				<br><br>
+				<!-- <a class="detail" href="https://www.instagram.com/jalaconda/" target="blank">S2021</a><br><br> -->
+				<div class="long-text">
+					<a id="credits">S2021: Flyers / Texture explorations</a><br>
+				</div>
+	      <img id="widecontent" src="work/jala-00.jpg" >
+	      <img id="widecontent" src="work/jala-0.jpg" >
+	      <img id="widecontent" src="work/j-0.jpg" >
+	      <img id="widecontent" src="work/jala-1.jpg" >
+
+	      <img id="widecontent" src="work/prints/s21-2.jpg" >
+	      <img id="widecontent" src="work/prints/s21-1.jpg" >
+				<br><br>
+
+				<div class="long-text">
+
+				</div>
+	    </div>
+
 		</div>
 
 	</div>
@@ -375,11 +351,10 @@ function comeUp(){
 $(window).on("load",function(){
 
 	$(".loader").fadeOut("slow");
-
 	var myHeader = $(".imgcontainer").outerHeight();
 	var myHeader = myHeader*4
 
-	const mediaQuery = window.matchMedia('(maxn-width: 768px)')
+	const mediaQuery = window.matchMedia('(max-width: 768px)')
 	if (mediaQuery.matches) {
 		document.getElementById("myModal").style.height = "100%";
 } else {
@@ -419,9 +394,9 @@ function closeAbout(){
 
 // Open the Modal
 function openModal() {
-	$("#twocolumn").fadeOut("fast");
+	// $("#twocolumn").fadeOut("fast");
 	$("#myModal").fadeIn("slow");
-	document.getElementById("twocolumn").style.display = "none";
+	// document.getElementById("twocolumn").style.display = "none";
 }
 
 function showProject() {
@@ -444,7 +419,7 @@ function closeModal() {
 	  document.getElementById("myModal").style.display = "none";
 		document.getElementById("twocolumn").style.display = "grid";
 
-	$("#twocolumn").fadeIn("slow");
+	// $("#twocolumn").fadeIn("slow");
 
 
 	// $("#myModal").fadeOut("fast");
@@ -456,7 +431,7 @@ function openProjects(){
 	var x = document.getElementById("projects");
 
   if (x.style.display === "none") {
-    x.style.display = "inline";
+    x.style.display = "flex";
   } else {
     x.style.display = "none";
   }
@@ -466,7 +441,7 @@ function openCollaborations(){
 	var x = document.getElementById("collaborations");
 
   if (x.style.display === "none") {
-    x.style.display = "inline";
+    x.style.display = "flex";
   } else {
     x.style.display = "none";
   }

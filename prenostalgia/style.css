@@ -40,14 +40,14 @@ src: url(../fonts/texgyreheroscn-italic.otf);
   left:0;
   background-color:#999999;
   display:flex;
-
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  font-family: tex;
+  font-size: 26px;
+  /* font-family: tex; */
 }
 .loader p {
-  color: #60fcae;
+  color: #60face;
+  /* margin: 0 10%; */
 }
 .screen{
   position: fixed;
@@ -209,15 +209,15 @@ body{
 /* Modal Content */
 .modal-content {
   display: flex;
-  flex-direction:column;
-  flex-wrap: wrap;
+  /* flex-direction:column; */
+  /* flex-wrap: wrap; */
   overflow-y: scroll;
   position: fixed;
-  /* top: 16%; left: 0; bottom: 0; right: 0; */
+  top: 50%; left: 0; bottom: 0; right: 0;
   bottom: 0;
   margin: auto;
   width: 100%;
-
+  background-color: #333333;
   /* max-height:85%; */
   /* max-width: 50%; */
   /* margin:24px 24px; */
@@ -231,22 +231,24 @@ body{
   /* text-align: center; */
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
+
   /* background: linear-gradient(0deg, #f1f1f1 12%, rgba(215,255,235,1) 92%); */
   border-radius: 22px 22px 0px 0px;
   padding: 11px 12px;
-  /* margin: 22px; */
+  margin: 0 10%;
   /* max-width: 400px; */
   cursor: default;
+  align-items: center;
 }
 
 .mySlides a, .mySlides p{
   text-decoration: none;
-  width: 50%;
-  padding: 0 22px;
+  /* width: 50%; */
+  padding: 42px;
   font-family: tex;
   font-size:15px;
-  color: #60fcae;
-  text-align: left;
+  color: #f1f1f1;
+  text-align: center;
 }
 
 .credits{
@@ -263,8 +265,8 @@ body{
 
 #en, #sp{
   /* filter:blur(4px); */
-  opacity: 25%;
-  transition: 0.5s;
+  /* opacity: 25%; */
+  /* transition: 0.5s; */
 }
 #en:hover, #sp:hover{
   filter:none;

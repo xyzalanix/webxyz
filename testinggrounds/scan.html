@@ -17,7 +17,7 @@
 
 		<video id="video" loop muted crossOrigin="anonymous" playsinline style="display:none">
 			<!-- <source src="pano.webm"> -->
-			<!-- <source src="./eqr-0.0-2pass-6-12.mp4"> -->
+			<source src="../work/eqr/eqr-0.0-2pass-6-12.mp4">
 		</video>
 
 		<!-- Import maps polyfill -->
@@ -76,7 +76,7 @@
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
-
+				// scene.background = new THREE.Color (0x999999)
         container = document.createElement('div');
         document.body.appendChild(container);
         document.body.style.margin = 0;
@@ -87,6 +87,12 @@
 
 				geometry = new THREE.Geometry(); /*	NO ONE SAID ANYTHING ABOUT MATH! UGH!	*/
 				particleCount = 20000; /* Leagues under the sea */
+
+				const video = document.getElementById( 'video' );
+        video.play();
+
+        const texture = new THREE.VideoTexture( video );
+
 
 				for (i = 0; i < particleCount; i++) {
 
@@ -100,19 +106,19 @@
 
 				parameters = [
 						[
-								[1, 1, 0.5], 0.5
+								[0.5, 0.4, 0.5], 0.5
 						],
 						[
-								[0.95, 1, 0.5], 0.4
+								[0.95, 0.1, 0.5], 0.4
 						],
 						[
-								[0.60, 1, 0.5], 0.3
+								[0.60, 0.2, 0.5], 0.3
 						],
 						[
-								[0.45, 1, 0.5], 0.2
+								[0.45, 0.1, 0.5], 0.2
 						],
 						[
-								[0.10, 1, 0.5], 0.1
+								[0.10, 0.1, 0.5], 0.1
 						]
 				];
 				parameterCount = parameters.length;
@@ -171,7 +177,7 @@
 
 				const loader = new OBJLoader();
 
-				loader.load('casa_mesh_.obj',
+				loader.load('botes_0.obj',
 				(geometry) => {
 
 						console.log("Mesh loaded")
@@ -183,7 +189,9 @@
 									size: size
 							});
 							const mesh = new THREE.Points(geometry.children[0].geometry, materials[i])
-							mesh.scale.set(150, 150, 150)
+	            // let material = new THREE.PointsMaterial({ size: 0.1, map: texture })
+							// const mesh = new THREE.Points(geometry.children[0].geometry, material)
+							mesh.scale.set(300, 300, 300)
 							scene.add(mesh)
 						}
 
@@ -233,7 +241,8 @@
 
 	            var object = scene.children[i];
 
-              object.rotation.y = time/4 * (i < 4 ? i + 1 : -(i + 1));
+              object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
+              // object.rotation.x = time/4 * (i < 4 ? i + 1 : -(i + 1));
 
 	        }
 
@@ -252,7 +261,7 @@
 
 				const fov = camera.fov + event.deltaY * 0.05;
 
-				camera.fov = THREE.MathUtils.clamp( fov, 40, 80 );
+				camera.fov = THREE.MathUtils.clamp( fov, 40, 150 );
 
 				camera.updateProjectionMatrix();
 
