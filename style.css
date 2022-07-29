@@ -325,8 +325,7 @@ body {
 .projects a {
   line-height: 10px;
   font-size:24px;
-  vertical-align: middle;
-  padding: 12px;
+  padding: 6px;
 }
 
 .projects {
