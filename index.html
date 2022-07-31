@@ -74,7 +74,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 		<a class="contact"  href="https://github.com/xyzalanix" target="_blank">&#x2014;github</a>
 
 	  <div id="about">
-		<p>&#x2698;&#x26AD;Alan Ixba&#x26AD;&#x2698; is a geneative artist and technologist based in Monterrey, México.</p>
+		<p>&#x2698;&#x26AD;Alan Ixba&#x26AD;&#x2698; is a geneative artist and developer based in Monterrey, México.</p>
 
 		<!-- <p>His practice seeks to stimulate contemporary myth-making, and to help facilitate artful interactions with data.
 		</p> -->
@@ -89,18 +89,19 @@ $('#myModal').on('hidden.bs.modal', function() {
 			<!-- <a class="title" onclick="openProjects()">&#x2766; index</a> -->
 			<!-- &#x2766;WORK -->
 			<div class="projects"id="projects" style="display:flex;  flex-wrap: wrap;">
-				<a class="description" onclick="comeUp(), openModal();currentSlide(1)">Tileworks</a>
+				<!-- <a class="description" onclick="comeUp(), openModal();currentSlide(1)">Tileworks</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(2)">Crystal Gazing</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(3)">Prenostalgia</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(4)">been feelin equirectangular</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(6)">Neural Digestions</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(7)">Reptilian Encounters</a>
 				<a class="description" onclick="comeUp(), openModal();currentSlide(9)">Jalaconda</a>
-				<a class="description"onclick="comeUp(), openModal();currentSlide(8)">Widows Collective</a>
+				<a class="description"onclick="comeUp(), openModal();currentSlide(8)">Widows Collective</a> -->
 				<a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description">&#x260D;Entangled Others: Hybrid Ecosystems</a>
 				<a id="external" href="https://futureeast-festival.com/favareh/" class="description"target="_blank">&#x260D;Favareh I & II: Future East Festival</a>
-
-				<a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">&#x260D;Revista Tonel</a>
+				<a id="external" href="https://xyzalanix.github.io/2020GANs/" target="_blank" class="description">&#x260D;GAN archive</a>
+				<a id="external" href="https://newart.city/show/to-spawn-a-door" target="_blank" class="description">&#x260D;To Spawn a Door</a>
+				<!-- <a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">&#x260D;Revista Tonel</a> -->
 				<a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=GeOYYts4SNQ','popup','width=600,height=600'); return false;" class="description">&#x260D;Dixon x Transmoderna @Fondation Beyeler</a>
 				<a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" target="_blank">&#x260D;Monja Rebelde</a>
 				<a id="external" href="https://www.dandad.org/awards/professional/2021/233945/connections/" target="blank"class="description">&#x260D;Beko Connections</a>
@@ -119,10 +120,10 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 
 			<div class="mySlides">
-				<a id="date"class="detail">2022</a><br>
+				<a id="date"class="detail">2022</a>
 				<a class="detail">Tileworks</a>
 				<div class="long-text">
-					<a id="credits">🅃🄸🄻🄴🅆🄾🅁🄺🅂 is an ongoing series of synchronistic tile arrangements.</a><br>
+					<a id="credits">🅃🄸🄻🄴🅆🄾🅁🄺🅂 is an ongoing series of synchronistic tile arrangements.<br><br>Models, image masks and tile dimensions all engage with each other in this generative system.</a><br><br>
 				</div>
 
 				<a id="credits" style="background-color:#99999900;">Memetic [̲̅t][̲̅i][̲̅l][̲̅e][̲̅w][̲̅o][̲̅r][̲̅k][̲̅s]</a><br><br>
@@ -143,7 +144,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 			</div>
 
 			<div class="mySlides">
-				<a id="date"class="detail">2021</a><br>
+				<a id="date"class="detail">2021</a>
 				<a class="detail">Crystal Gazing</a>
 				<!-- <div class="long-text">
 					<a id="credits">A selection of crystal specimens as seen through a dusty cloud made up by neural radiance fields.</a>
@@ -172,21 +173,21 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 			<div class="mySlides">
 				<a id="date"class="detail">2021</a>
-				<a><i>Prenostalgia</i> — memory reconstruction.</a><br><br>
+				<a><i>Prenostalgia</i> — memory reconstruction.</a><br>
 				<!-- <a>Prenostalgia is a sonic autoetnography that began in 2015, by collecting intimate sound fragments on my phone.</a><br><br> -->
 				<div class="long-text">
-					<a id="credits" style="font-family:italo;">Prenostalgia is a sonic autoetnography</a><a id="credits"> through intimate voice memos recorded from 2015 ⇢ 2021. The audios were reconstructed by a neural network as a detachment exercise:</a><br>
+					<a id="credits" style="font-family:italo;">Prenostalgia is a sonic autoetnography</a><a id="credits"> through intimate voice memos recorded from 2015 ⇢ 2021. The audios were reconstructed by a neural network (WGAN) as a detachment exercise:</a><br>
 				</div>
 				<audio controls><source src="work/sound/gracias_fake.mp3" type="audio/mpeg"></audio><br>
 				<audio controls><source src="work/sound/red-district_fake.mp3" type="audio/mpeg"></audio><br>
 				<audio controls><source src="work/sound/plath_fake.mp3" type="audio/mpeg"></audio><br>
 				<audio controls><source src="work/sound/snakes_fake.mp3" type="audio/mpeg"></audio><br>
-				<a href="prenostalgia.html" target="_blank">web experience ↗</a><br>
 				<!-- <a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br> -->
-			</div>
+				<a id="credits" href="prenostalgia.html" target="_blank">«web experience»</a><br>
+			</div><br><br>
 
 	    <div class="mySlides">
-	      <a id="date" class="detail">2021</a><br>
+	      <a id="date" class="detail">2021</a>
 	      <a class="detail">been feelin equirectangular</a><br><br>
 				<div class="long-text">
 					<a id="credits">Fragmented landscape visualizer.</a><br>
@@ -213,7 +214,10 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 			<div class="mySlides">
 	      <a id="date" class="detail">2021</a>
-	      <a class="detail"><i>blush</i> — video-guided plane distortions, inspired by Transient Luminous Events (TLEs)</a><br><br>
+	      <a class="detail"><i>blush</i>
+					<div class="long-text">
+						<a id="credits">Plane distortions, guided by latent interpolations.<br><br>Inspired by Transient Luminous Events (TLEs).</a><br><br>
+					</div>
 	      <img id="vertical" src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
 	      <img id="vertical" src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
 	      <img id="vertical" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush">
@@ -227,20 +231,22 @@ $('#myModal').on('hidden.bs.modal', function() {
 	    </div>
 
 	    <div class="mySlides">
-	      <a id="date"class="detail">2020</a><br>
-	      <a class="detail"><i>Neural Digestions</i></a><br><br>
-				<!-- <a id="credits">Structure, texture and meaning are interwoven.</a><br><br> -->
+	      <a id="date"class="detail">2020</a>
+	      <a class="detail"><i>Neural Digestions</i></a>
+				<div class="long-text">
+					<a id="credits">Texture synthesis exercise where the structure, texture and meaning of an image are interwoven.</a><br><br>
+				</div>
 	      <img data-title="Neural Digestions"data-caption="Flavor Twist"src="work/nd/flavortwist.jpg" >
 	      <img data-title="Neural Digestions"data-caption="Ten Dollar Tarot"src="work/nd/10dll.jpeg" >
 	      <img data-title="Neural Digestions"data-caption="Rammellzee"src="work/nd/rammellzee.jpeg" >
 	      <img data-title="Neural Digestions"data-caption="Vera"src="work/nd/vera.jpeg" >
-	    </div>
+	    </div><br><br>
 
 			<div class="mySlides">
-	 		 <a id="date"class="detail">2020</a><br>
+	 		 <a id="date"class="detail">2020</a>
 	 		 <a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a><br>
 	 		 <div class="long-text">
-	 			 <a id="credits">🐍🐍🐍<br>neuro-Reptilian prints with Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits">& Juan Duarte<a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>🦎🦎🦎</a>
+	 			 <a id="credits">🐍🐍🐍<br>neural interpretations of reptilian skin paterns.<br><br>Printed by Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits"> & Juan Duarte <a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>🦎🦎🦎</a>
 
 	 		 </div><br><br>
 
@@ -259,18 +265,18 @@ $('#myModal').on('hidden.bs.modal', function() {
 	 	 </div>
 
 	    <div class="mySlides">
-	      <a id="date"class="detail">2020</a><br>
+	      <a id="date"class="detail">2020</a>
 				<a id="detail" href="https://www.instagram.com/widows.de/" target="_blank">@widows.de</a><br><br>
 
 				<div class="long-text">
 	      	<a id="credits">Widows Reality Sessions — audio reactive landscape for DJ Sustancia's mix.</a>
-				</div>
+				</div><br>
 	      <div><iframe src="https://player.vimeo.com/video/593815465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="rs.mp4"></iframe></div>
 				<!-- <br><br> -->
 	      <!-- <a id="date"class="detail">2021</a> -->
 				<div class="long-text">
 					<a id="credits">Widows Reality Sessions — introduction visuals.</a>
-		      <a id="credits"href="https://www.instagram.com/widows.de/" target="_blank">Music by Yulav, Title design by Layla Rubí.</a>
+		      <a id="credits"href="https://www.instagram.com/widows.de/" target="_blank">Music by Yulav, Title design by Layla Rubí.</a><br><br>
 				</div>
 
 	      <div><iframe src="https://player.vimeo.com/video/535103162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dd30feec34&title=0&byline=0&portrait=0" frameborder="0" title="intro.mp4"></iframe></div>
@@ -282,7 +288,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 
 	    <div class="mySlides">
-	      <a id="date"class="detail">2021</a><br>
+	      <a id="date"class="detail">2021</a>
 				<a class="detail" href="https://www.jalaconda.com/" target="blank">jalaconda.com</a><br>
 				<div class="long-text">
 					<a id="credits">Patterns for <a id="credits"href="https://www.youtube.com/watch?v=Ujtv1_OF1MQ" target="_blank">4 Patas 5 Bocas: JALACONDA na 48ª Casa de Criadores.</a></a>
