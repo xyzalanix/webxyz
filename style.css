@@ -629,6 +629,7 @@ a{
     border-right: none;
     text-align: center;
     margin-top:10%;
+    padding:
   }
 
 #about{
@@ -679,7 +680,7 @@ a{
   .modal-content{
     padding: 24px;
     /* background-color: #33333398; */
-    margin-top: 60%;
+    margin-top: 65%;
     overflow-x: hidden;
   }
   .mySlides a{
