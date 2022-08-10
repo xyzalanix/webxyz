@@ -162,7 +162,7 @@ body {
 
 }
 .bio, .reachout, .ido{
-  font-size: 24px;
+  font-size: 26px;
   position: fixed;
   max-width: 25%;
   z-index: 6;
@@ -289,7 +289,7 @@ body {
 }
 
 .description {
-  font-family: italo;
+  /* font-family: italo; */
   overflow-x:  scroll;
   overflow-y: hidden;
   border:solid;
@@ -356,7 +356,7 @@ body {
   filter:blur(2px);
 }
 .projects a {
-  line-height: 10px;
+  line-height: 16px;
   font-size:20px;
   padding: 6px;
 }
@@ -566,9 +566,9 @@ a{
   /* background-color: #60fcae; */
 }
 #credits{
-  font-size: 24px;
+  font-size: 26px;
   /* color:#333; */
-
+  line-height: 1.5em;
   font-family:italo;
   /* text-shadow: 0 0 6px #60fcae; */
   /* background-color: #e2e2e250; */
