@@ -236,13 +236,13 @@ var Intense = (function() {
         margin: "0px",
         padding: "0px",
         fontWeight: "normal",
-        fontSize: "30px",
+        fontSize: "26px",
         letterSpacing: "0.2px",
         maxWidth: "400px",
         textAlign: "left",
         background: "none",
         marginTop: "5px",
-        textShadow: "0px 0px 2px #60fcae",
+        // textShadow: "0px 0px 2px #e2e2e2",
         // fontFamily: "tex"
 
       };
