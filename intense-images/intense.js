@@ -191,7 +191,8 @@ var Intense = (function() {
 
     var imageProperties = {
       cursor:
-        'url(./intense-images/demo/img/close.png)25 25, auto',
+        // 'url(./intense-images/demo/img/close.png)25 25, auto',
+        'not-allowed'
     };
     applyProperties(target, imageProperties);
 
@@ -204,10 +205,12 @@ var Intense = (function() {
       bottom: "0px",
       left: "0px",
       padding: "20px",
-      color: "#fff",
+      color: "#e2e2e2",
       wordSpacing: "0.2px",
       webkitFontSmoothing: "antialiased",
-      textShadow: "-1px 0px 1px rgba(0,0,0,0.4)"
+      width: "100%"
+      
+      // textShadow: "-1px 0px 1px rgba(0,0,0,0.4)"
     };
     var captionContainer = document.createElement("figcaption");
     applyProperties(captionContainer, captionContainerProperties);
@@ -223,7 +226,8 @@ var Intense = (function() {
         fontSize: "56px",
         letterSpacing: "0.5px",
         lineHeight: "35px",
-        textAlign: "left"
+        textAlign: "center"
+        
       };
       var captionTitle = document.createElement("h1");
       applyProperties(captionTitle, captionTitleProperties);
@@ -233,13 +237,13 @@ var Intense = (function() {
 
     if (caption) {
       var captionTextProperties = {
-        margin: "0px",
+        margin: "0 25%",
         padding: "0px",
         fontWeight: "normal",
         fontSize: "26px",
         letterSpacing: "0.2px",
-        maxWidth: "400px",
-        textAlign: "left",
+        // maxWidth: "500px",
+        textAlign: "center",
         background: "none",
         marginTop: "5px",
         // textShadow: "0px 0px 2px #e2e2e2",
