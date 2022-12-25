@@ -109,7 +109,7 @@ a:link:visited{
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin:0;
   padding: 0;
   /* background: rgb(96,252,174);
@@ -560,39 +560,6 @@ a{
 
   }
 
-
-
-  .screen img{
-    filter: blur(22px);
-
-  }
-
-  .twocolumn{
-    margin:0;
-  }
-  .contact{
-    font-size:90px;
-    /* display: none; */
-    /* background-color: #333; */
-    display: none;
-    /* padding: 22px; */
-    align-items: center;
-    /* align-content: center; */
-  }
-  .bio, .reachout, .ido{
-    /* position:relative; */
-    max-width: none;
-    font-size: 90px;
-    border-right: none;
-    text-align: center;
-
-  }
-
-#about{
-    margin-bottom: 80px;
-
-  }
-
   #credits{
     font-size: 60px;
     white-space: normal;
@@ -603,26 +570,19 @@ a{
     padding: 22px;
     text-align: center;
     word-break:keep-all;
-    font-size: 34px;
+    font-size: 56px;
     /* white-space:  pre-wrap; */
   }
-  #about-link{
-    display: none;
-  }
+
   .long-text{
     max-width: none;
     white-space: normal;
-    width: 100%;
+    /* width: 100%; */
   }
-  .close{
-    font-size: 400px;
-    line-height: 0.2em;
-    /* padding-top: 2px; */
-    text-shadow: 0px 0px 28px #60fcae90;
-  }
+
   .projects{
-    display:grid;
-    margin-top:15%;
+    /* display:grid; */
+    /* margin-top:15%; */
     /* margin: 60px; */
   }
   .projects a {
@@ -636,56 +596,51 @@ a{
   }
   .modal{
     /* border-radius: 15%; */
-    display: none;
-    left:0;
-    width: 100%;
+    /* display: none; */
+    /* left:0;
+    width: 100%; */
     /* background-color: #e2e2e2; */
     overflow-x: hidden;
+    display: grid;
+    
   }
   .modal-content{
-    padding: 24px;
+    /* padding: 24px; */
     /* background-color: #33333398; */
-    margin-top: 5%;
+    /* margin-top: 180%; */
     overflow-x: hidden;
+    display: none;
+    
   }
   .mySlides{
     text-align: center;
+    
+    
+  }
 
-  }
-  .mySlides a{
-    font-size: 80px;
-    text-align: center;
-    display: block;
-    color: #e2e2e2;
-    padding-bottom: 60px;
-  }
   .modal-content img, video{
     max-width: none;
 
   }
+
+  .twocolumn{
+    /* display: block; */
+    
+  }
   .imgcontainer{
-    /* display: none; */
+    /* display: block; */
     /* padding:42px; */
     /* background-color: #e2e2e2; */
     /* background:linear-gradient(0deg, #e2e2e2 0%, #e2e2e250 75%, #33333300 100%); */
     /* border-radius: 88px; */
-    z-index:99;
-    /* margin-top: 50%; */
+    z-index:0;
+    position: absolute;
+    overflow: scroll;
+    margin-top: 10%;
   }
 
   #widecontent{
     margin-bottom: 22px;
-  }
-  .title{
-    font-size: 60px;
-    /* background-color: #60fcae; */
-    display: block;
-    text-align: center;
-    color:#777;
-    line-height: 1.6em;
-    /* text-shadow: 0 0 22px #e2e2e2; */
-    /* font-family: tex-bold; */
-    /* text-shadow: none; */
   }
 
 
