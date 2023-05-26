@@ -13,20 +13,26 @@
 	<!-- <p>Loading...</p> -->
 </div>
 
+<div id="container3D"></div>
 
 <!-- https://stackoverflow.com/questions/35024689/how-do-i-link-to-a-modal-dialog-from-an-external-link -->
 
 <script>
 var flesh = new Array()
 
-flesh[0] = 'images/symmetry/000002.jpg'
-// flesh[1] = 'images/8colors/0352.png'
-flesh[1] = 'images/symmetry/000024.jpg'
-// flesh[3] = 'images/8colors/0352.png'
-// flesh[4] = 'images/8colors/1084.png'
-
-flesh[2] = 'images/symmetry/000044.jpg'
-flesh[3] = 'images/symmetry/000001.jpg'
+flesh[0] = 'images/all/01.jpg'
+flesh[1] = 'images/all/02.jpg'
+flesh[2] = 'images/all/03.jpg'
+flesh[3] = 'images/all/04.jpg'
+flesh[4] = 'images/all/05.jpg'
+flesh[5] = 'images/all/06.jpg'
+// flesh[6] = 'images/all/07.jpg'
+flesh[6] = 'images/all/08.jpg'
+flesh[7] = 'images/all/09.jpg'
+flesh[8] = 'images/all/10.jpg'
+flesh[9] = 'images/all/11.jpg'
+// flesh[9] = 'images/all/06.jpg'
+// flesh[10] = 'images/all/07.jpg'
 
 var j = 0
 var p = flesh.length;
@@ -37,7 +43,9 @@ for (i = 0; i < p; i++){
 }
 var whichFlesh = Math.round(Math.random()*(p-1));
 function showImage(){
+// document.body.style.backgroundImage('<url("+flesh[whichFlesh]+")>');
 document.write('<img src="'+flesh[whichFlesh]+'">');
+
 }
 
 $('#myModal').on('hidden.bs.modal', function() {
@@ -53,28 +61,31 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 	<div class="screen">
 
-		<script>
-		showImage();
-		</script>
+    <script type="module" src="js/main.js"></script>
 
 	</div>
+  <div class="back">
+    <script>
+    showImage();
+    </script>
+  </div>
 	<!-- ################################## -->
-	<div class="bio" style="bottom:0;width:100%;margin-right:80%;">
+	<div class="bio">
 
 	</div>
 	<div class="bio">
 		<div id="about">
-				<span>ALAN IXBA © 2022</span>
+				<!-- <span>Alan Ixba © 2023</span> -->
+        <!-- <span>email: xyzalanix at gmail.com</span> -->
+				<!-- <a href="https://instagram.com/xyzalanix" target="_blank">&#x2014;Instagram</a> -->
 
-				<!-- <a href="https://instagram.com/xyzalanix" target="_blank">&#x2014;Instagram</a>
-	
-				<a href="mailto:xyzalanix@gmail.com" target="_blank">&#x2014;Mail</a>
-		
-				<a href="https://github.com/xyzalanix" target="_blank">&#x2014;Github</a> -->
+				<!-- <a href="mailto:xyzalanix@gmail.com" target="_blank">Alan Ixba © 2023</a> -->
+        <a>© 2023 Miscelánea Generativa — xyzalanix (at) gmail.com</a>
+				<!-- <a href="https://github.com/xyzalanix" target="_blank">&#x2014;Github</a> -->
 				<!-- </div> -->
-	
+
 			</div>
-			
+
 
 
 	  	<div id="about">
@@ -90,29 +101,43 @@ $('#myModal').on('hidden.bs.modal', function() {
 	<div class="twocolumn"  onclick="closeAbout()"id="twocolumn">
 
 	  <div class="imgcontainer">
-			
-		
+
+
 			<!-- <a class="title">LINKS</a> -->
 			<!-- &#x2766;WORK -->
+      <div class="projects"id="projects">
+        <a >Alan Ixba (mx) is a border artist designing and researching generative audiovisual systems.</a>
+      </div>
 			<div class="projects"id="projects">
 
-				<a id="external" style="background-color: #e2e2e2;" href="https://instagram.com/xyzalanix" target="blank"class="description">@</a>
-				<a id="external" style="background-color: #e2e2e2;" href="https://github.com/xyzalanix" target="blank"class="description">Github</a>
-				<a id="external" style="background-color: #e2e2e2;" href="mailto:xyzalanix@gmail.com" target="blank"class="description">Mail</a>
+				<!-- <a id="external" style="background-color: #e2e2e2;" href="https://instagram.com/xyzalanix" target="blank"class="description">instagram</a> -->
+				<!-- <a id="external" href="mailto:xyzalanix@gmail.com" target="blank"class="description"style="text-align:center;color:#60fcae">Mail</a> -->
+
+        <!-- <a >:<br>:</a> -->
+				<!-- <a id="external" href="https://github.com/xyzalanix" target="blank"class="description"style="text-align:center;color:#60fcae">github</a> -->
+        <!-- <a>—</a> -->
+        <br><br>
+				<a id="external" href="https://globalaisummit.org/en/News/Pages/NewsDetails.aspx?NewsId=60" target="blank"class="description">SDAIA's Global AI Summit</a>
+        <a id="external" href="https://soundcloud.com/alanixba/sets/autofagia-beats" target="blank"class="description">Autofagia Beats</a>
+        <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1551735274&color=%2341a8af&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/alanixba" title="Axial Ban" target="_blank" style="color: #cccccc; text-decoration: none;">Axial Ban</a> · <a href="https://soundcloud.com/alanixba/sets/autofagia-beats" title="Autofagia Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Autofagia Beats</a></div> -->
 				<a id="external" href="https://nxtmuseum.com/nxtnews/ade-2022-recap-the-light-of-the-night/" target="blank"class="description">Nxt Museum x Transmoderna : AiR 2022</a>
 				<a id="external" href="https://www.amsterdam-dance-event.nl/en/program/2022/showcase-merging-digital-art-electronic-sounds/1778959/" target="blank"class="description">Merging Digital Art & Electronic Sounds (ADE)</a>
 				<a id="external" href="https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/" target="blank"class="description">Entangled Others: Hybrid Ecosystems</a>
 				<a id="external" href="https://futureeast-festival.com/favareh/" class="description"target="_blank">Favareh I & II: Future East Festival</a>
+				<!-- <a id="credits">Sample Text</a> -->
+				<a id="external" href="https://kioskmagazin.de/open.html" target="_blank"class="description" >Kiosk Magazin 01: zwischenraum</a>
 				<a id="external" href="https://xyzalanix.github.io/2020GANs/" target="_blank" class="description">Archive: StyleGAN2 TSNE</a>
 				<a id="external" href="https://newart.city/show/to-spawn-a-door" target="_blank" class="description">To Spawn a Door (New Art City)</a>
 				<a id="external" href="https://nustudio.xyz/Redemption" target="_blank" class="description">Vitam Aeternam: Redemption</a>
 				<!-- <a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">Revista Tonel</a> -->
 				<a id="external" href="https://www.youtube.com/watch?v=GeOYYts4SNQ" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=GeOYYts4SNQ','popup','width=600,height=600'); return false;" class="description">Dixon x Transmoderna @Fondation Beyeler</a>
-				<a id="external"  href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" target="_blank">C24: Monja Rebelde</a>
+				<a id="external" href="https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/"class="description" target="_blank">C24: Monja Rebelde</a>
 				<a id="external" href="https://www.dandad.org/awards/professional/2021/233945/connections/" target="blank"class="description">D&AD: Beko Connections</a>
+        <br><br>
 			</div>
 
 		</div>
+
 
 
 	</div>
@@ -126,16 +151,16 @@ $('#myModal').on('hidden.bs.modal', function() {
 
 <!-- &#x21c7; &#x2191;-->
 	  <div class="modal-content">
-		
+
 
 			<div class="mySlides">
-				
+
 				<!-- <a class="detail">Cheat Code</a>
 				<img id="widecontent" data-title="Cheat Code"data-caption="Irregular Super Resolution #091257" src="work/cheatcode/091257.png" >
 				<img id="widecontent"data-title="Cheat Code" data-caption="Irregular Super Resolution #084225"src="work/cheatcode/084225.png" >
 				<br> -->
 				<a class="detail">Tileworks</a>
-				
+
 				<!-- <div class="long-text">
 					<a id="credits">Synchronistic tile arrangements..<br>2022</a>
 				</div> -->
@@ -145,7 +170,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<br>
 				<!-- <img id="widecontent" data-caption="Synchronistic tile arrangements..<br>2022"src="work/tileworks/000021.jpg" > -->
 				<img id="widecontent" data-caption="Synchronistic tile arrangements.<br>GANs, masking, tiling.<br>2022"src="work/tileworks/000025.jpg" >
-				
+
 				<!-- <a id="credits" style="background-color:#99999900;">'Runic' series</a><br><br> -->
 				<!-- <img id="widecontent"data-caption="Synchronistic tile arrangements..<br>2022"src="work/tileworks/000033.jpg" >
 				<img id="widecontent"data-caption="Synchronistic tile arrangements..<br>2022"src="work/tileworks/000049.jpg" > -->
@@ -170,7 +195,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<!-- <img id="widecontent" data-title="id—11111"src="work/crystal_gazing/grid_11111.jpg" > -->
 				<img id="widecontent" data-caption="id—302, Artificial crystal forms.<br>2021"src="work/crystal_gazing/grid_0302.jpg" >
 				<!-- <img id="widecontent" data-title="id—55"src="work/crystal_gazing/grid_55-b.jpg" ><br><br> -->
-				
+
 				<!-- <a id="credits" style="background-color:#99999900;">'Algunos pollitos que apenas nacieron ya se quieren'</a><br> -->
 				<!-- <div class="long-text">
 				<a id="credits">This series engages with crystal forms in the earliest stages of development.<br><br>The quote translates to: 'Certain chicks that have only just hatched already love each other' and is borrowed from a children's art school wall sketch.</a><br> -->
@@ -178,7 +203,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<br>
 				<img id="widecontent" data-caption="id—1060, Artificial crystal forms.<br>2021"src="work/crystal_gazing/1060.jpg" >
 				<img id="widecontent" data-caption="id—11, Artificial crystal forms.<br>2021"src="work/crystal_gazing/1010.jpg" >
-				
+
 
 				<!-- <img id="widecontent" src="work/crystal_gazing/0476.jpg" >
 				<img id="widecontent" src="work/crystal_gazing/0442.jpg" > -->
@@ -195,14 +220,14 @@ $('#myModal').on('hidden.bs.modal', function() {
 					  <!-- <div class="long-text">
 				<a id="credits">Equirectangular images are a way of projecting a 360° view into the two-dimensional space. They offer a multi-format flexibility that I am specially interested in, technically and metaphorically.</a><br>
 				<a id="credits">I experimented with this ouroboric workflow, where I trained a GAN on equirectangular images, then re-introduced them into a 3D environment as world textures, allowing for a three-dimensional navigation of a generative space.</a><br>
-	  
-	  
+
+
 					  </div> -->
 					  <img id="widecontent" data-caption="Attempts to synthesize a wide variety of landscapes to use as environment textures inside 3D space.<br>2021" src="work/eqr/eqr_01.jpg" >
 					  <img id="widecontent"data-caption="Attempts to synthesize a wide variety of landscapes to use as environment textures inside 3D space.<br>2021" src="work/eqr/eqr_02.jpg" ><br>
 					  <img id="widecontent"data-caption="Attempts to synthesize a wide variety of landscapes to use as environment textures inside 3D space.<br>2021" src="work/eqr/0183.jpg">
 					  <img id="widecontent"data-caption="Attempts to synthesize a wide variety of landscapes to use as environment textures inside 3D space.<br>2021" src="work/eqr/0004.jpg">
-	  
+
 					  <!-- <video autoplay="true" loop  muted >
 						  <source src="work/eqr/eqr-0.0-2pass-6-12.mp4"/>
 						  <source src="work/eqr/eqr-0.0-2pass-6-12.webm"/>
@@ -212,19 +237,19 @@ $('#myModal').on('hidden.bs.modal', function() {
 						  <source src="work/eqr/eqr-wide-web.webm"/>
 					  </video> -->
 					  <!-- <div class="long-text">
-	  
+
 					  </div> -->
-	  
+
 				<a class="detail">Blush</a>
 				<!-- <a id="date" class="detail">(2021)</a> -->
-	  
+
 					  <!-- <div class="long-text">
 						  <a id="credits">Plane distortions, guided by latent interpolations of a StyleGAN2 network. Inspired by Transient Luminous Events (TLEs).</a>
 					  </div> -->
 				<img id="vertical" data-caption="Simulating Transient Luminous Events (TLEs).<br>2021"src="work/blush/0131.jpeg" style="border-radius: 0px;" alt="blush">
-	  
+
 				<!-- <img id="vertical" src="work/blush/1137.jpg" style="border-radius: 0px;" alt="blush"> -->
-	  
+
 				<!-- <img id="vertical" src="work/blush/1141.jpg" style="border-radius: 0px;" alt="blush"> -->
 				<img id="vertical" data-caption="Simulating Transient Luminous Events (TLEs).<br>2021"src="work/blush/1145.jpg" style="border-radius: 0px;" alt="blush">
 				<img id="vertical" data-caption="Simulating Transient Luminous Events (TLEs).<br>2021"src="work/blush/0233.jpeg" style="border-radius: 0px;" alt="blush">
@@ -233,11 +258,11 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<a id="credits" href="https://kioskmagazin.de/open.html" target="_blank" >(2021) Kiosk Magazin 01: zwischenraum</a>
 				<br>
 				<a id="credits" href="https://soundcloud.com/retreatradio/canine-a-la-furie-17" target="_blank" >(2022) Retreat Radio: Canine à la furie #17</a>
-		
+
 
 				<a class="detail">Neural Digestions</a>
 				<!-- <a id="date"class="detail">(2020)</a> -->
-	  
+
 					  <!-- <div class="long-text">
 						  <a id="credits">Texture synthesis exercise where the structure, texture and meaning of an image are interwoven.</a><br><br>
 					  </div> -->
@@ -245,7 +270,7 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<img id="widecontent" data-caption="Ten Dollar Tarot, texture synthesis<br>2020"src="work/nd/10dll.jpeg" ><br>
 				<img id="widecontent" data-caption="Rammellzee, texture synthesis<br>2020"src="work/nd/rammellzee.jpeg" >
 				<img id="widecontent" data-caption="Vera, texture synthesis<br>2020"src="work/nd/vera.jpeg" >
-				
+
 				<a class="detail" href="https://www.jalaconda.com/" target="blank">JALACONDA</a>
 				<div class="long-text">
 					<a id="credits">Patterns for <a id="credits"href="https://www.youtube.com/watch?v=Ujtv1_OF1MQ" target="_blank">4 Patas 5 Bocas: JALACONDA na 48ª Casa de Criadores.</a></a>
@@ -281,11 +306,11 @@ $('#myModal').on('hidden.bs.modal', function() {
 				<!-- <a id="credits">Special thanks to Jorge Lorenzo Flores and all involved in the recordings.</a><br> -->
 				<a id="credits" href="prenostalgia.html" target="_blank">Web visualization.</a>
 
-	
+
 
 	 		 <a class="detail" href="https://www.instagram.com/p/CPW3jmjl7Pn/" target="blank">Reptilian Encounters</a>
 			  <!-- <a id="date"class="detail">(2020)</a> -->
-<!-- 
+<!--
 	 		 <div class="long-text">
 	 			 <a id="credits">🐍🐍🐍<br>neural interpretations of reptilian skin paterns.<br>Fabricated in São Paulo by Jala </a><a href="https://www.instagram.com/jalinha97" id="credits" target="_blank">@jalinha97</a><a id="credits"> & Juan Duarte <a href="https://www.instagram.com/juanduarte" id="credits" target="_blank">@juanduarte</a><br>
 
