@@ -208,6 +208,7 @@ body{
 
 /* Modal Content */
 .modal-content {
+  opacity: 50%;
   display: flex;
   /* flex-direction:column; */
   /* flex-wrap: wrap; */
@@ -227,7 +228,7 @@ body{
 /* Hide the slides by default */
 .mySlides {
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   /* text-align: center; */
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -241,6 +242,11 @@ body{
   align-items: center;
 }
 
+.logo img{
+  margin-top: 25px;
+  width: 200px;
+}
+
 .mySlides a, .mySlides p{
   text-decoration: none;
   /* width: 50%; */
@@ -249,6 +255,7 @@ body{
   font-size:15px;
   color: #f1f1f1;
   text-align: center;
+  margin-top: -25px;
 }
 
 .credits{
