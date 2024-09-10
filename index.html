@@ -53,12 +53,12 @@ caption[7] = 'Tileworks:Synchronistic tile arrangements'
 caption[8] = 'Transmoderna — Xenopunk'
 caption[9] = 'Blush'
 caption[10] = 'GORGON character R&D, LAS Art Foundation'
-caption[11] = 'Nxt Museum x Transmoderna, photo by Maarten Nauw'
-caption[12] = 'Nxt Museum x Transmoderna, photo by Maarten Nauw'
+caption[11] = 'Nxt Museum x Transmoderna'
+caption[12] = 'Nxt Museum x Transmoderna'
 caption[13] = 'GORGON character R&D, LAS Art Foundation'
-caption[14] = 'GORGON, LAS Art Foundation, photo by Katja Illner'
-caption[15] = 'Tri/xon debut at Brooklyn Mirage, NYC. Photo: Jamie Jar'
-caption[16] = 'Transmoderna at Brooklyn Mirage, NYC. Photo: Jamie Jar'
+caption[14] = 'GORGON, LAS Art Foundation'
+caption[15] = 'Tri/xon debut at Brooklyn Mirage, NYC.'
+caption[16] = 'Transmoderna at Brooklyn Mirage, NYC.'
 
 
 // var j = 0
@@ -281,23 +281,6 @@ $(window).on("load",function(){
 
 });
 
-// Time zone calcs //
-
-// function getOffsetDate(offsetInMintues) {
-//   // Get local date object
-//   var d = new Date();
-//   // Add local time zone offset to get UTC and
-//   // Subtract offset to get desired zone
-//   d.setMinutes(d.getMinutes() + d.getTimezoneOffset() - offsetInMintues);
-
-// 	return d;
-// }
-// const options = { hour: 'numeric',hour12: false, minute:'numeric', weekday: 'short', month: 'short', day: 'numeric'};
-
-// var myTimezone = getOffsetDate(360).toLocaleString(undefined,options);
-// // document.getElementById("timezone").innerHTML = "(UTC-6) "+myTimezone;
-
-// Time zone calcs //
 
 function openAbout(){
 	document.getElementById("about").style.display = "block";
@@ -337,7 +320,6 @@ function closeModal() {
 
 	// $("#twocolumn").fadeIn("slow");
 
-
 	// $("#myModal").fadeOut("fast");
 
 
@@ -363,38 +345,6 @@ function openCollaborations(){
   }
 
 }
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("demo");
-//   var captionText = document.getElementById("caption");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-//   // captionText.innerHTML = dots[slideIndex-1].alt;
-// }
-
 
 </script>
 
