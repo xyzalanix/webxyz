@@ -68,58 +68,31 @@ for (i = 0; i < p; i++){
    preBuffer[i] = new Image()
    preBuffer[i].src = flesh[i]
 }
-var whichFlesh = Math.round(Math.random()*(p-0.5));
+var whichFlesh = Math.round(Math.random()*(p-1));
+// var whichFlesh = 1
 
-function showImage(){
-// document.body.style.backgroundImage('<url("+flesh[whichFlesh]+")>');
-document.write('<img src="'+flesh[whichFlesh]+'">');
-// document.write('"'+caption[whichFlesh]+'"');
-    // Create span element to wrap "dny"
+setInterval(function()
+	{
+		var whichFlesh = Math.round(Math.random()*(p-1));
+		document.getElementById('flesh_back').src=(''+flesh[whichFlesh]+'');
+		document.getElementById('flesh_back_2').src=(''+flesh[whichFlesh]+'');
+		document.getElementById('displayCaption').innerText=(''+caption[whichFlesh]+'');
+	}, 5000);
 
-    // Add span to document body
-    // document.body.append(span);
 
-}
+// function showImage(){
+// document.write('<img src="'+flesh[whichFlesh]+'" id="flesh">');
+
+// }
 
 $('#myModal').on('hidden.bs.modal', function() {
   $('iframe').contents().find('video')[0].pause();
 });
 
-function displayCaption(){
-	// var span = document.createElement("filename");
-
-	var span = document.write(''+caption[whichFlesh]+'');
-    
-    // Apply styles to span
-	// span.style.position = 'fixed';
-    // span.style.color = '#e2e2e2';
-    // span.style.fontFamily = 'tex';
-	// span.style.fontSize = '12px';
-	// span.style.textAlign = 'center';
-	// span.style.lineHeight = '400px';
-
-	// span.style.display = 'block';
-	// span.style.zIndex = '6';
-	// span.style.width = '100%';
-	// span.style.height = '100%';
-	// span.style.marginLeft = 'auto';
-	// span.style.marginRight = 'auto';
-	// span.style.marginBottom = 'auto';
-	// span.style.marginTop = 'auto';
-
-
-	// span.style.top = '0';
-	// span.style.left = '0';
-	// span.style.bottom = '0';
-	// span.style.right = '0';
-
-
-
-    // Set text of span element to "dny"
-    // span.innerText = '"'+caption[whichFlesh]+'"';
-
-	// document.body.append(span);
-}
+// function displayCaption(){
+// 	// var span = document.createElement("filename");
+// 	var span = document.write(''+caption[whichFlesh]+'');
+// }
 
 function refreshPage(){
     window.location.reload();
@@ -137,13 +110,17 @@ function refreshPage(){
 	</div>
   <div class="back">
     <script>
-    showImage();
-    </script>
+	// showImage()
+	// document.write('<img src="'+flesh[whichFlesh]+'">');
+	document.write('<img src="'+flesh[whichFlesh]+'" id="flesh_back">');
+
+    // </script>
   </div>
 
-  <div class="displayCaption">
+  <div class="displayCaption" id="displayCaption">
 	<script >
-	displayCaption();
+	// displayCaption();
+	var span = document.write(''+caption[whichFlesh]+'');
 	</script>
 	</div>
 
@@ -260,10 +237,13 @@ function refreshPage(){
 	  <div class="modal-content">
 		
 	  </div>
-	<div class="back2" onclick="refreshPage()">
+
+	<div class="back2">
 		<script>
-		showImage();
-		</script>
+		// showImage()
+		document.write('<img src="'+flesh[whichFlesh]+'" id="flesh_back_2">');
+		// </script>
+	</div>
 	  </div>
 
 </body>
