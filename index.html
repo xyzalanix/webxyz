@@ -36,6 +36,9 @@ flesh[11] = 'work/tm/Nxt Museum x Transmoderna – Artist in Residence – ADE 2
 flesh[12] = 'work/tm/Nxt Museum x Transmoderna – Artist in Residence – ADE 2022 – 20th October – low res 058 photo by Maarten Nauw.jpg'
 flesh[13] = 'work/gorgon/20230802044524_000000059.png'
 flesh[14] = 'work/gorgon/LAS_Art_Foundation_Marianna_Simnett_©_Katja_Illner_20230912-210151.jpg'
+flesh[15] = 'work/tm/mirage2024/Jamie.jar-28.jpg'
+flesh[16] = 'work/tm/mirage2024/Jamie.jar-64.jpg'
+
 
 
 
@@ -54,6 +57,8 @@ caption[11] = 'Nxt Museum x Transmoderna, photo by Maarten Nauw'
 caption[12] = 'Nxt Museum x Transmoderna, photo by Maarten Nauw'
 caption[13] = 'GORGON character R&D, LAS Art Foundation'
 caption[14] = 'GORGON, LAS Art Foundation, photo by Katja Illner'
+caption[15] = 'Tri/xon debut at Brooklyn Mirage, NYC. Photo: Jamie Jar'
+caption[16] = 'Transmoderna at Brooklyn Mirage, NYC. Photo: Jamie Jar'
 
 
 // var j = 0
@@ -63,7 +68,7 @@ for (i = 0; i < p; i++){
    preBuffer[i] = new Image()
    preBuffer[i].src = flesh[i]
 }
-var whichFlesh = Math.round(Math.random()*(p-1));
+var whichFlesh = Math.round(Math.random()*(p-0.5));
 
 function showImage(){
 // document.body.style.backgroundImage('<url("+flesh[whichFlesh]+")>');
@@ -185,6 +190,7 @@ function refreshPage(){
 			<!-- <a class="title">Alan Ixba (1996, MX) is a creative technologist active in the fields of generative design, audiovisual performance and neural art.</a> -->
 			<!-- <a id="external">↓</a> -->
 			<!-- <a class="title">Latest:</a> -->
+			<a id="external" onclick="window.open('https://www.instagram.com/p/C66hVWLLQJH/','popup','width=800,height=800'); return false;" target="blank"class="description">Tri/xon, Brooklyn Mirage</a>
 			<a id="external" onclick="window.open('https://www.las-art.foundation/programme/gorgon','popup','width=800,height=800'); return false;" target="blank"class="description">GORGON, LAS Art Foundation</a>
 			<!-- <a id="external" href="" target="blank"class="description">In Insomnia, wishshes</a> -->
 			<a id="external" onclick="window.open('https://www.instagram.com/p/CsHL5ihM4uO/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==','popup','width=800,height=800'); return false;" target="blank"class="description">Transmoderna x Dixon, Arts District Brooklyn</a>

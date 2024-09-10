@@ -234,21 +234,21 @@ body {
 .displayCaption{
   /* filter: blur(1px); */
   /* max-width: 100px; */
-  opacity: 70%;
+  /* opacity: 70%; */
   font-family: italo;
   position: absolute;
-  /* display: grid; */
-  display: inline;
+  display: grid;
+  /* display: inline; */
   
-  justify-content: center;
+  justify-content: right;
   /* grid-template-columns: 50% 50%; */
   /* display: none; */
   z-index: 6;
-  width: 100%;
+  width: 99%;
 
   height: 100%;
   /* margin: auto auto auto auto; */
-  text-shadow: 0 0 12px #333;
+  text-shadow: 0 0 6px #000;
   /* top:0;
   left: 0;
   bottom: 0;
@@ -256,10 +256,10 @@ body {
   color: #e2e2e2;
   /* mix-blend-mode: difference; */
   /* transform: rotate(25deg); */
-  margin-top: -12px;
+  /* margin-top: -2px; */
   font-size: 20px;
   text-align: right;
-  align-items: center;
+  align-items:end;
   /* bottom: 0; */
   /* background-color: red; */
     /* justify-content: stretch; */
