@@ -268,7 +268,7 @@ body {
 
 }
 
-.back{
+.back, #canv_net{
   position: fixed;
   z-index:3;
   isolation: isolate;

@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<title>IMAGE REGRESSION</title>
+<!-- <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'> -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel='shortcut icon' href="imgs/favicon.ico" type='image/x-icon'>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<script src="convnet-min.js"></script>
+<script src="js/image_regression.js"></script>
+
+</head>
+
+<body>
+
+<!-- <input id="f" type="file" class="drop"> -->
+
+<input id="f" type="file"  class="drop" >
+
+
+<!-- <textarea id="layerdef" style="width:100%; height:250px;"></textarea> -->
+
+<!-- <div style="background-color: #EEE; padding: 10px; margin-top: 10px;"> -->
+<div>
+  <!-- <p>IMAGE REGRESSION</p> -->
+  <canvas id="canv_original"></canvas>
+  <!-- <canvas id="canv_original"  style="width:32px;height:auto;padding-left:6px;display: none;"></canvas> -->
+</div>
+<div class="backdrop">
+  <!-- Neural Network output<br> -->
+  <canvas id="canv_net"></canvas>
+</div>
+
+</div>
+
+<div class="info">
+  <!-- <div id="slider"></div>
+  <div id="lr">learning rate:</div> -->
+  <!-- <div id="report"></div> -->
+  <!-- <br> -->
+  <input id="buttontp" type="submit" value="reset network" onclick="reload();"/>
+
+</div>
+<div id="report"></div>
+</div>
+
+</body>
+</html>
+
