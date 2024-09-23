@@ -149,11 +149,11 @@ function saveImg(){
 
   var canvas = document.getElementById('canv_net')
 
-  // window.open(canvas.toDataURL('image/png'));
   // canvas.style.width=window.innerWidtht+4
   // canvas.style.height=window.innerHeight+4
 
   resizedContext.drawImage(canvas, 0, 0, window.innerWidth, window.innerHeight); 
+  window.open(resizedCanvas.toDataURL('image/png'));
 
   var gh = resizedCanvas.toDataURL('png');
 
