@@ -20,7 +20,7 @@ net.makeLayers(layer_defs);\n\
 trainer = new convnetjs.SGDTrainer(net, {learning_rate:0.01, momentum:0.9, batch_size:5, l2_decay:0.0});\n\
 ";
 
-const input_img = "../../work/eqr/eqr_01.jpg";
+const input_img = "../../work/cheatcode/084225.png";
 // const input_img = document.getElementById("input_img")
 
 var batches_per_iteration = 100;
@@ -90,6 +90,7 @@ function draw() {
   }
   // nn_ctx.imageSmoothingEnabled = true;
   // nn_ctx.imageSmoothingQuality = "high";
+      
   nn_ctx.putImageData(g, 0, 0);
 
   //Resize canvas realtime
@@ -138,6 +139,31 @@ function reload() {
   //$("#slider").slider("value", Math.log(trainer.learning_rate) / Math.LN10);
   //$("#lr").html('learning rate: ' + trainer.learning_rate);
 }
+
+function saveImg(){
+  var resizedCanvas = document.createElement("canvas");
+  var resizedContext = resizedCanvas.getContext("2d");
+
+  resizedCanvas.width = window.innerWidth;
+  resizedCanvas.height = window.innerHeight;
+
+  var canvas = document.getElementById('canv_net')
+
+  // window.open(canvas.toDataURL('image/png'));
+  // canvas.style.width=window.innerWidtht+4
+  // canvas.style.height=window.innerHeight+4
+
+  resizedContext.drawImage(canvas, 0, 0, window.innerWidth, window.innerHeight); 
+
+  var gh = resizedCanvas.toDataURL('png');
+
+  var a  = document.createElement('a');
+  a.href = gh;
+  a.download = 'regression.png';
+
+  a.click()
+}
+
 function refreshSwatch() {
   var lr = $("#slider").slider("value");
   trainer.learning_rate = Math.pow(10, lr).toFixed(3);
@@ -160,9 +186,10 @@ $(function() {
       ori_canvas.height = sz;
       nn_canvas.width = sz;
       nn_canvas.height = sz;
-
+      
       ori_ctx = ori_canvas.getContext("2d");
       nn_ctx = nn_canvas.getContext("2d");
+
       ori_ctx.drawImage(image, 0, 0, sz, sz);
       oridata = ori_ctx.getImageData(0, 0, sz, sz); // grab the data pointer. Our dataset.
 
