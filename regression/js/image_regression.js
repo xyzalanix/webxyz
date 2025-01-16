@@ -124,9 +124,9 @@ function reload() {
   
   layer_defs.push({type:'fc', num_neurons:20, group_size: 4, activation:'maxout'});
 
-  // layer_defs.push({type:'fc', num_neurons:20, activation:'relu'});
-  // layer_defs.push({type:'fc', num_neurons:20, activation:'relu'});
-  // layer_defs.push({type:'fc', num_neurons:20, activation:'relu'});
+  // layer_defs.push({type:'fc', num_neurons:6, activation:'relu'});
+  // layer_defs.push({type:'fc', num_neurons:6, activation:'maxout'});
+  // layer_defs.push({type:'fc', num_neurons:6, activation:'relu'});
   layer_defs.push({type:'regression', num_neurons:3}); // 3 outputs: r,g,b \n\
   net = new convnetjs.Net();
   net.makeLayers(layer_defs);
@@ -171,7 +171,10 @@ function refreshSwatch() {
 }
 
 var ori_canvas, nn_canvas, ori_ctx, nn_ctx, oridata;
-var sz = 128; // size of our drawing area
+// Get aspect ratio of input image
+ratio = 1920 / 1080
+var szw = 256; // size of our drawing area
+var szh = parseInt(256*ratio)
 var counter = 0;
 
 $(function() {
@@ -182,16 +185,18 @@ $(function() {
 
       ori_canvas = document.getElementById('canv_original');
       nn_canvas = document.getElementById('canv_net');
-      ori_canvas.width = sz;
-      ori_canvas.height = sz;
-      nn_canvas.width = sz;
-      nn_canvas.height = sz;
+      ori_canvas.width = szw;
+      ori_canvas.height = szh;
+      nn_canvas.width = szw;
+      nn_canvas.height = szh;
       
       ori_ctx = ori_canvas.getContext("2d");
       nn_ctx = nn_canvas.getContext("2d");
 
-      ori_ctx.drawImage(image, 0, 0, sz, sz);
-      oridata = ori_ctx.getImageData(0, 0, sz, sz); // grab the data pointer. Our dataset.
+      console.log(ratio)
+
+      ori_ctx.drawImage(image, 0, 0, szw, szh);
+      oridata = ori_ctx.getImageData(0, 0, szw, szh); // grab the data pointer. Our dataset.
 
       // start the regression!
       setInterval(tick, 1);
@@ -223,8 +228,8 @@ $(function() {
       fr.onload = function(ev2) {
         var image = new Image();
         image.onload = function(){
-          ori_ctx.drawImage(image, 0, 0, sz, sz);
-          oridata = ori_ctx.getImageData(0, 0, sz, sz);
+          ori_ctx.drawImage(image, 0, 0, szw, szh);
+          oridata = ori_ctx.getImageData(0, 0, szw, szh);
           reload();
         }
         image.src = ev2.target.result;
@@ -234,8 +239,8 @@ $(function() {
 
     $('.ci').click(function(){
       var src = $(this).attr('src');
-      ori_ctx.drawImage(this, 0, 0, sz, sz);
-      oridata = ori_ctx.getImageData(0, 0, sz, sz);
+      ori_ctx.drawImage(this, 0, 0, szw, szh);
+      oridata = ori_ctx.getImageData(0, 0, szw, szh);
       reload();
     });
 

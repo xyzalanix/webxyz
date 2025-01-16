@@ -21,41 +21,51 @@
 var flesh = new Array()
 var caption = new Array()
 
-flesh[0] = 'images/all/01.jpg'
-flesh[1] = 'images/all/02.jpg'
+flesh[0] = 'work/sphere/Bats.jpg'
+flesh[1] = 'work/livegan/LM_sG_.0.jpg'
 flesh[2] = 'images/all/03.jpg'
-flesh[3] = 'images/all/04.jpg'
+flesh[3] = 'work/eqr/eqr-0.gif'
 flesh[4] = 'images/all/05.jpg'
 flesh[5] = 'images/all/06.jpg'
 flesh[6] = 'images/all/11.jpg'
-flesh[7] = 'images/all/09.jpg'
+flesh[7] = 'work/sphere/Heads.jpg'
 flesh[8] = 'work/tm/junkbunnymafia.jpg'
-flesh[9] = 'work/blush/1137.jpg'
+flesh[9] = 'work/blush/blush-trim.gif'
 flesh[10] = 'work/gorgon/00054-3772307942.png'
-flesh[11] = 'work/tm/Nxt Museum x Transmoderna – Artist in Residence – ADE 2022 – 19th October – low res 031 photo by Maarten Nauw.jpg'
-flesh[12] = 'work/tm/Nxt Museum x Transmoderna – Artist in Residence – ADE 2022 – 20th October – low res 058 photo by Maarten Nauw.jpg'
+flesh[11] = 'work/tm/Nxt Museum x TRANSMODERNA – Artist in Residence – ADE 2022 – 19th October – low res 031 photo by Maarten Nauw.jpg'
+flesh[12] = 'work/tm/Nxt Museum x TRANSMODERNA – Artist in Residence – ADE 2022 – 20th October – low res 058 photo by Maarten Nauw.jpg'
 flesh[13] = 'work/gorgon/20230802044524_000000059.png'
 flesh[14] = 'work/gorgon/LAS_Art_Foundation_Marianna_Simnett_©_Katja_Illner_20230912-210151.jpg'
 flesh[15] = 'work/tm/mirage2024/Jamie.jar-28.jpg'
 flesh[16] = 'work/tm/mirage2024/Jamie.jar-64.jpg'
+flesh[17] = 'work/livegan/liveshaping.gif'
+flesh[18] = 'work/shatter/sg3td_.4.jpg'
+flesh[19] = 'work/tm/trixon.gif'
+flesh[20] = 'work/shatter/sg3td_.4.jpg'
 
-caption[0] = 'Widows Reality Sessions — audio reactive landscape.'
-caption[1] = 'Jalaconda S2021'
+
+
+caption[0] = 'Sphere - Imogen Heap x Dixon'
+caption[1] = 'live-shaping GANs: PsyOp'
 caption[2] = 'Neural Digestions'
 caption[3] = 'Been Feelin Equirectangular'
 caption[4] = 'Been Feelin Equirectangular'
 caption[5] = 'Cheat Code'
 caption[6] = 'Tileworks:Synchronistic tile arrangements'
-caption[7] = 'Tileworks:Synchronistic tile arrangements'
-caption[8] = 'Transmoderna — Xenopunk'
+caption[7] = caption[0]
+caption[8] = 'Trash Bunnies, TRANSMODERNA'
 caption[9] = 'Blush'
 caption[10] = 'GORGON character R&D, LAS Art Foundation'
-caption[11] = 'Nxt Museum x Transmoderna'
-caption[12] = 'Nxt Museum x Transmoderna'
+caption[11] = 'Nxt Museum x TRANSMODERNA'
+caption[12] = 'Nxt Museum x TRANSMODERNA'
 caption[13] = 'GORGON character R&D, LAS Art Foundation'
 caption[14] = 'GORGON, LAS Art Foundation'
-caption[15] = 'Tri/xon debut at Brooklyn Mirage, NYC.'
-caption[16] = 'Transmoderna at Brooklyn Mirage, NYC.'
+caption[15] = 'Tri/xon debut at Brooklyn Mirage'
+caption[16] = 'TRANSMODERNA at Brooklyn Mirage'
+caption[17] = 'live-shaping GANs: Gut Feeling'
+caption[18] = 'Shatter'
+caption[19] = 'Tri/xon debut at Brooklyn Mirage'
+caption[20] = 'Shatter'
 
 
 // var j = 0
@@ -66,7 +76,7 @@ for (i = 0; i < p; i++){
    preBuffer[i].src = flesh[i]
 }
 var whichFlesh = Math.round(Math.random()*(p-1));
-// var whichFlesh = 1
+// var whichFlesh = 20
 
 setInterval(function()
 	{
@@ -105,7 +115,14 @@ function refreshPage(){
     <!-- <script type="module" src="js/main.js"></script> -->
 
 	</div>
-  <div class="back">
+	<div class="ditherbg">
+		<!-- <a>a</a> -->
+
+		<!-- <script type="module" src="js/main.js"></script> -->
+	
+		</div>
+
+  <div class="back"> 
     <script>
 	// showImage()
 	// document.write('<img src="'+flesh[whichFlesh]+'">');
@@ -113,6 +130,7 @@ function refreshPage(){
 
     // </script>
   </div>
+  
 
   <div class="displayCaption" id="displayCaption">
 	<script >
@@ -120,6 +138,13 @@ function refreshPage(){
 	var span = document.write(''+caption[whichFlesh]+'');
 	</script>
 	</div>
+
+	<div class="year" id="year">
+		<script >
+		// displayCaption();
+		// var span = document.write('© 2025 MISCELANEA GENERATIVA');
+		</script>
+		</div>
 
 	<!-- ################################## -->
 	<div class="bio">
@@ -141,81 +166,63 @@ function refreshPage(){
 
 			<!-- <a class="title">LINKS</a> -->
 			<!-- &#x2766;WORK -->
-      <div class="projects"id="projects">
-        <!-- <a>Alan Ixba (1996, MX) is an artist and coder who researches art-making technologies.</a> -->
-      </div>
-		<div class="projects"id="projects">
-
-				<!-- <a id="external" style="background-color: #e2e2e2;" href="https://instagram.com/xyzalanix" target="blank"class="description">instagram</a> -->
-				<!-- <a id="external" href="mailto:xyzalanix@gmail.com" target="blank"class="description"style="text-align:center;color:#60fcae">Mail</a> -->
-
-        <!-- <a >:<br>:</a> -->
-				<!-- <a id="external" href="https://github.com/xyzalanix" target="blank"class="description"style="text-align:center;color:#60fcae">github</a> -->
-        <!-- <a>—</a> -->
-        <br><br>
 		<div id="about2">
 			<!-- <a>xyzalanix (at) gmail.com</a><br> -->
 
 			<a>Alan Ixba (1996, MX) is a creative technologist active in the fields of generative design, audiovisual performance and neural art.</a>
 
 		</div>
-		
+
 		<div id="list">
 			<!-- <a class="title">Alan Ixba (1996, MX) is a creative technologist active in the fields of generative design, audiovisual performance and neural art.</a> -->
 			<!-- <a id="external">↓</a> -->
 			<!-- <a class="title">Latest:</a> -->
-			<a id="external" onclick="window.open('https://www.instagram.com/p/C66hVWLLQJH/','popup','width=800,height=800'); return false;" target="blank"class="description">Tri/xon, Brooklyn Mirage</a>
-			<a id="external" onclick="window.open('https://www.las-art.foundation/programme/gorgon','popup','width=800,height=800'); return false;" target="blank"class="description">GORGON, LAS Art Foundation</a>
-			<!-- <a id="external" href="" target="blank"class="description">In Insomnia, wishshes</a> -->
-			<a id="external" onclick="window.open('https://www.instagram.com/p/CsHL5ihM4uO/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==','popup','width=800,height=800'); return false;" target="blank"class="description">Transmoderna x Dixon, Arts District Brooklyn</a>
-
-			<a id="external" onclick="window.open('https://xyzalanix.bandcamp.com/album/autofagia-beats','popup','width=800,height=800'); return false;" target="blank"class="description">Autofagia Beats</a>
-
-			<a id="external" onclick="window.open('https://youtu.be/5UUoH3p1lH8?si=PXWbd_hN_ybdnZ4N','popup','width=800,height=800'); return false;" target="blank"class="description">Boiler Room x Transmoderna: Live from Printworks</a>
-
-		
-			<a id="external" onclick="window.open('https://globalaisummit.org/en/News/Pages/NewsDetails.aspx?NewsId=60','popup','width=800,height=800'); return false;" target="blank"class="description">SDAIA's Global AI Summit</a>
-			
-			<a id="external" onclick="window.open('https://nxtmuseum.com/nxtnews/ade-2022-recap-the-light-of-the-night/','popup','width=800,height=800'); return false;" target="blank"class="description">Transmoderna : Artist in Residence, Nxt Museum</a>
-			<!-- <a id="external" href="" target="blank"class="description">Showcase - Merging Digital Art & Electronic Sounds, Amsterdam Dance Event</a> -->
-			<a id="external" onclick="window.open('https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/','popup','width=800,height=800'); return false;" target="blank"class="description">Hybrid Ecosystems, Entangled Others</a>
-
-			<a id="external" onclick="window.open('https://futureeast-festival.com/favareh/','popup','width=800,height=800'); return false;" class="description"target="_blank">Favareh I & II, Future East Festival</a>
-			
-			<!-- <a id="credits">Sample Text</a> -->
-			<a id="external" onclick="window.open('https://kioskmagazin.de/open.html','popup','width=800,height=800'); return false;" target="_blank"class="description" >Kiosk Magazin 01: zwischenraum</a>
-
-			<a id="external" onclick="window.open('https://newart.city/show/to-spawn-a-door','popup','width=800,height=800'); return false;" target="_blank" class="description">To Spawn a Door - Nacoca Ko, New Art City</a>
-
-			<a id="external" onclick="window.open('https://nustudio.xyz/Redemption','popup','width=800,height=800'); return false;" target="_blank" class="description">Redemption - Vitam Aeternam, nu studio</a>
-
-			<!-- <a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">Revista Tonel</a> -->
-
-			<a id="external"onclick="window.open('https://www.youtube.com/watch?v=GeOYYts4SNQ','popup','width=800,height=800'); return false;" class="description">Dixon x Transmoderna @Fondation Beyeler</a>
-
-			<a id="external" onclick="window.open('https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/','popup','width=800,height=800'); return false;"class="description" target="_blank">Collide24: Monja Rebelde</a>
-
-			<a id="external" onclick="window.open('https://youtu.be/foHcFuKtTAk?si=cs3cH467i5crF5fc','popup','width=800,height=800'); return false;"class="description" target="_blank">Widows Reality Sessions</a>
-
-			<a id="external" onclick="window.open('https://www.dandad.org/awards/professional/2021/233945/connections/','popup','width=800,height=800'); return false;" target="blank"class="description">D&AD: Beko Connections</a>
-
-			<a id="external" onclick="window.open('https://xyzalanix.github.io/2020GANs/','popup','width=800,height=800'); return false;" target="_blank" class="description">Adversarial Studies: TSNE Plotting</a>
-			
-			<a id="external" onclick="window.open('prenostalgia.html','popup','width=800,height=800'); return false;" target="_blank" class="description">Prenostalgia web player</a>
-	
-			<!-- <a id="external" onclick="window.open('https://github.com/xyzalanix/','popup','width=800,height=800'); return false;" target="_blank" class="description">github.com/xyzalanix</a> -->
-
-		</div>
-
-				<!-- <a class="title">CONTACT:</a> -->
-				<div id="about">
-					<!-- <a>xyzalanix (at) gmail.com</a><br> -->
-
-					<a>© 2024 Miscelánea Generativa — xyzalanix (at) gmail.com</a>
-		
-				</div>
-        <br><br>
+			<!-- <div id="divWorks"> <a onclick="openWorks()">works</a> -->
+			<button type="button" class="collapsible" id="divWorks">works</button>
+			<div class="contentWorks">
+				<a id="external" onclick="window.open('https://www.instagram.com/dixon_/p/DEPzpecvAn7/?img_index=3','popup','width=800,height=800'); return false;" target="blank"class="description">Dixon at Sphere</a>
+				<a id="external" onclick="window.open('https://www.instagram.com/p/C66hVWLLQJH/','popup','width=800,height=800'); return false;" target="blank"class="description">Tri/xon, Brooklyn Mirage</a>
+				<a id="external" onclick="window.open('https://www.las-art.foundation/programme/gorgon','popup','width=800,height=800'); return false;" target="blank"class="description">GORGON, LAS Art Foundation</a>
+				<!-- <a id="external" href="" target="blank"class="description">In Insomnia, wishshes</a> -->
+				<a id="external" onclick="window.open('https://www.instagram.com/p/CsHL5ihM4uO/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==','popup','width=800,height=800'); return false;" target="blank"class="description">Transmoderna x Dixon, Arts District Brooklyn</a>
+				<a id="external" onclick="window.open('https://xyzalanix.bandcamp.com/album/autofagia-beats','popup','width=800,height=800'); return false;" target="blank"class="description">Autofagia Beats</a>
+				<a id="external" onclick="window.open('https://youtu.be/5UUoH3p1lH8?si=PXWbd_hN_ybdnZ4N','popup','width=800,height=800'); return false;" target="blank"class="description">Boiler Room x Transmoderna: Live from Printworks</a>
+				<a id="external" onclick="window.open('https://nxtmuseum.com/nxtnews/ade-2022-recap-the-light-of-the-night/','popup','width=800,height=800'); return false;" target="blank"class="description">Transmoderna : Artist in Residence, Nxt Museum</a>
+				<!-- <a id="external" href="" target="blank"class="description">Showcase - Merging Digital Art & Electronic Sounds, Amsterdam Dance Event</a> -->
+				<a id="external" onclick="window.open('https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/','popup','width=800,height=800'); return false;" target="blank"class="description">Hybrid Ecosystems, Entangled Others</a>
+				<a id="external" onclick="window.open('https://futureeast-festival.com/favareh/','popup','width=800,height=800'); return false;" class="description"target="_blank">Favareh I & II, Future East Festival</a>
+				<a id="external" onclick="window.open('https://kioskmagazin.de/open.html','popup','width=800,height=800'); return false;" target="_blank"class="description" >Kiosk Magazin 01: zwischenraum</a>
+				<a id="external" onclick="window.open('https://newart.city/show/to-spawn-a-door','popup','width=800,height=800'); return false;" target="_blank" class="description">To Spawn a Door - Nacoca Ko, New Art City</a>
+				<a id="external" onclick="window.open('https://nustudio.xyz/Redemption','popup','width=800,height=800'); return false;" target="_blank" class="description">Redemption - Vitam Aeternam, nu studio</a>
+				<!-- <a id="external" href="http://www.tonel.co/33-dias-3-horas-34-minutos/" target="_blank" class="description">Revista Tonel</a> -->
+				<a id="external"onclick="window.open('https://www.youtube.com/watch?v=GeOYYts4SNQ','popup','width=800,height=800'); return false;" class="description">Dixon x Transmoderna @Fondation Beyeler</a>
+				<a id="external" onclick="window.open('https://youtu.be/foHcFuKtTAk?si=cs3cH467i5crF5fc','popup','width=800,height=800'); return false;"class="description" target="_blank">widows.de: Reality Sessions</a>
 			</div>
+
+			<button type="button" class="collapsible" id="divWorks">press</button>
+			<div class="contentPress">
+				<a id="external" onclick="window.open('https://globalaisummit.org/en/News/Pages/NewsDetails.aspx?NewsId=60','popup','width=800,height=800'); return false;" target="blank"class="description">SDAIA's Global AI Summit</a>
+				<a id="external" onclick="window.open('https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/','popup','width=800,height=800'); return false;"class="description" target="_blank">Collide24: Monja Rebelde</a>
+				<a id="external" onclick="window.open('https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/','popup','width=800,height=800'); return false;" target="blank"class="description">FACT: Entangled Others</a>
+				<a id="external" onclick="window.open('https://www.dandad.org/awards/professional/2021/233945/connections/','popup','width=800,height=800'); return false;" target="blank"class="description">D&AD: Beko Connections</a>
+			</div>
+
+			<button type="button" class="collapsible" id="divWorks">web-demos</button>
+			<div class="contentWeb">
+				<a id="external" onclick="window.open('https://xyzalanix.github.io/2020GANs/','popup','width=800,height=800'); return false;" target="_blank" class="description">Adversarial Studies: TSNE Plotting</a>
+				<a id="external" onclick="window.open('prenostalgia.html','popup','width=800,height=800'); return false;" target="_blank" class="description">Prenostalgia Player</a>
+				<a id="external" onclick="window.open('regression/','popup','width=800,height=800'); return false;" target="blank"class="description">Image Regression</a>
+				</div>
+				<!-- <a id="external" onclick="window.open('https://github.com/xyzalanix/','popup','width=800,height=800'); return false;" target="_blank" class="description">github.com/xyzalanix</a> -->
+			</div>
+
+		
+		<!-- <a class="title">CONTACT:</a> -->
+		<div id="about">
+			<!-- <a>xyzalanix (at) gmail.com</a><br> -->
+
+			<a>©2025 — xyzalanix(at)gmail.com</a>
+			<!-- <a>© 2025</a> -->
 
 		</div>
 
@@ -322,16 +329,39 @@ function closeModal() {
 
 }
 
-function openProjects(){
-	var x = document.getElementById("projects");
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    // if (content.style.display === "grid") {
+    //   content.style.display = "none";
+    // } else {
+    //   content.style.display = "grid";
+    // }
+	if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+	
+  });
+} 
 
-}
+
+
+// function openProjects(){
+// 	var x = document.getElementById("projects");
+
+//   if (x.style.display === "none") {
+//     x.style.display = "flex";
+//   } else {
+//     x.style.display = "none";
+//   }
+
+// }
 function openCollaborations(){
 	var x = document.getElementById("collaborations");
 
