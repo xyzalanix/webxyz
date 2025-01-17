@@ -286,8 +286,19 @@ body {
   pointer-events: none;
 
 }
+iframe{
+  margin: 0 0;
 
+  /* width: 320px; */
+  /* margin: 6%; */
+  /* padding:0 0 12px 0; */
+  border-style: none none dashed none;
+  border-width: thin;
+}
 
+.linkwrap { position:relative; display:inline-block; }
+.blocker { position:absolute; height:120px; width:320px; z-index:1; transform: translateY(120px); background:rgba(255,0,0,0.0);  }
+.linkwrap iframe { z-index: 2; }
 
 .year{
   /* filter: blur(1px); */
@@ -429,7 +440,7 @@ body {
 }
 
 .description {
-  opacity: 50%;
+  opacity: 75%;
   font-family: tex;
 
   /* word-break: break-word; */
@@ -668,6 +679,13 @@ button{
     opacity: 50%;
     
 
+  }
+
+  iframe{
+    margin: 0 60px;
+    width: 100%;
+    height: 100%;
+    /* transform: scale(2.0); */
   }
   #about2{
     max-width: none;
