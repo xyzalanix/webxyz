@@ -171,8 +171,8 @@ body {
   display: grid;
   color: #e2e2e2;
   width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-all;
+  /* overflow-wrap: break-word;
+  word-break: break-all; */
   border-radius: 0 0 50px 50px;
   text-align: left;
   /* background-color: #60fcae; */
@@ -195,15 +195,15 @@ body {
   color: #e2e2e2;
   /* margin-top:12px; */
   /* position: fixed; */
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.0em;
   top:0;
   padding: 0;
   max-width: 320px;
   max-height: 100px;
   height: 100%;
-  overflow-wrap: break-word;
-  word-break: break-all;
+  /* overflow-wrap: break-word;
+  word-break: break-all; */
   font-family: tex;
   /* opacity: 80%; */
 
@@ -692,8 +692,8 @@ button{
     max-height: none;
     font-size: 60px;
     text-shadow:0 0 14px #e2e2e2;
-    overflow-wrap: break-word;
-    word-break:break-all;
+    /* overflow-wrap: break-word;
+    word-break:break-all; */
 
     /* max-width: 100%; */
     mix-blend-mode: difference;
