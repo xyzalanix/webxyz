@@ -66,21 +66,21 @@ a, a.watch, a.back {
   text-decoration: none;
   text-align: left;
   font-family: tex;
-  line-height: 1.6em;
+  /* line-height: 1.6em; */
   position: fixed;
   bottom: 0;
   /* right: 50px; */
   z-index: 9999999;
-  /* border: dashed 0.6px; */
+  border: dashed 0.6px;
   color: #e2e2e2;
   cursor: pointer;
-  padding: 6px;
-  font-size: 14px;
+  padding: 16px;
+  font-size: 16px;
   /* box-shadow: 0 0 24px #00000075; */
   background-color: #33333375;
   /* background-color: red; */
   /* border-radius: 25px; */
-  /* width: 100%; */
+  width: 100%;
   /* background-color: #60fcae; */
   pointer-events: none;
   word-break: break-all;

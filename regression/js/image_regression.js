@@ -115,7 +115,7 @@ function reload() {
   layer_defs.push({type:'input', out_sx:1, out_sy:1, out_depth:2}); // 2 inputs: x, y \n\
   //  supported activations inconvnetjs "sigmoid, tanh, relu, maxout"
   layer_defs.push({type:'fc', num_neurons:20, activation:'tanh'});
-  layer_defs.push({type:'fc', num_neurons:20, activation:'tanh'});
+  // layer_defs.push({type:'fc', num_neurons:20, activation:'tanh'});
 
   // Adding relu in between tanh introduces slashy threads,
   // and using only tanh results in really smooth non pixelated output.

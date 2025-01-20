@@ -7,38 +7,48 @@
   src: url("CirrusCumulus.woff") format("woff");
 }
 body {
-  /* background: rgb(182,182,182);
-  background: radial-gradient(circle, rgba(182,182,182,1) 28%, rgba(0,0,0,1) 100%); */
-  background-image: url("../images/main_bg-b.png");
+  background: rgb(182,182,182);
+  background: radial-gradient(circle,#333 35%, #e2e2e2 100%);
+  /* background-image: url("../images/main_bg-b.png"); */
   /* display: grid; */
+  margin: 0;
 
 }
 nav {
-  display: flex;
-  line-height:40px;
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  /* display: grid; */
+  /* line-height:40px; */
   width: 100%;
-
   justify-content: center;
+  align-content: center;
+  height: 100%;
+  top:0;
+
   /* margin:50px; */
+  /* background-color: red; */
 }
 
 a{
-  display: flex;
+  display: grid;
   justify-content: center;
   font-family: terminal;
-  font-size: 33px;
+  font-size: 24px;
   color: #f3f3f3;
   text-decoration: none;
   padding: 11px;
+  /* background-color: red; */
+
 }
 p {
-  max-width: 300px;
+  max-width: 280px;
   margin: 32px auto;
   text-align: center;
   margin-bottom: 10px;
   font-family: terminal;
-  font-size: 18px;
-  color: white;
+  font-size: 16px;
+  color: #e2e2e2;
   text-decoration: none;
 }
 
@@ -47,19 +57,20 @@ a{
 }
 a:hover {
   /* padding-left: 100px; */
-  font-family: cirrus;
+  /* font-family: cirrus; */
   color: #12fc35;
 }
 
 a.credits {
   justify-content: center;
-  border-radius: 25px;
+  text-align: center;
+  /* border-radius: 25px; */
   border: dashed 0.6px;
   text-decoration: none;
   font-family: terminal;
-  line-height: 25px;
+  line-height: 22px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -81,12 +92,12 @@ div.credits{
   padding:0;
 }
 .titre {
-  font-family: cirrus;
+  font-family: terminal;
   max-width: 200px;
   position: fixed;
   bottom: 50px;
   left: 50px;
-  font-size:24px;
+  font-size:16px;
   border:none;
-  color: white;
+  color: #e2e2e2;
 }
