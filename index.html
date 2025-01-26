@@ -123,16 +123,6 @@ for (i = 0; i < p; i++){
 var whichFlesh = Math.round(Math.random()*(p-1));
 // var whichFlesh = 20
 
-setInterval(function()
-	{
-		var whichFlesh = Math.round(Math.random()*(p-1));
-		// console.log(whichFlesh)
-		document.getElementById('flesh_back').src=(''+flesh[whichFlesh]+'');
-		document.getElementById('flesh_back_2').src=(''+flesh[whichFlesh]+'');
-		document.getElementById('displayCaption').innerText=(''+caption[whichFlesh]+'');
-	}, 3000);
-
-
 // function showImage(){
 // document.write('<img src="'+flesh[whichFlesh]+'" id="flesh">');
 
@@ -207,7 +197,7 @@ function refreshPage(){
 	<!-- ################################### -->
 	<div class="twocolumn"  onclick="closeAbout()"id="twocolumn">
 
-	  <div class="imgcontainer">
+	<div class="imgcontainer">
 
 
 			<!-- <a class="title">LINKS</a> -->
@@ -227,13 +217,13 @@ function refreshPage(){
 			<button type="button" class="collapsible" id="divWorks">works</button>
 			<div class="contentWorks">
 				<button type="button" class="description" id="divIndividual">Dixon at Sphere (Anyma Residency)</button>
-				<a class="contentIndividual">Visual System and 3D portrait for "What Have You", Dixon & Imogen Heap. GAN dataset source: Floating Heads by Bernardo Martins. 2024, Vegas Sphere. <span onclick="window.open('https://www.instagram.com/dixon_/p/DEPzpecvAn7/?img_index=3','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
+				<a class="contentIndividual">Visual System and 3D portrait for "What Have You", Dixon & Imogen Heap. 2024, Vegas Sphere. <span onclick="window.open('https://vimeo.com/1050590084','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 
 				<button type="button" class="description" id="divIndividual">WINNER, Marianna Simnett</button>
 				<a class="contentIndividual">AI Lip-Sync for Marianna Simnett's WINNER multi-channel film installation. 2024,  Hamburger Bahnhof.<span onclick="window.open('https://www.smb.museum/ausstellungen/detail/marianna-simnett/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 
 				<button type="button" class="description" id="divIndividual">Tri/xon, Brooklyn Mirage</button>
-				<a class="contentIndividual">Audioreactive system for Tri/xon debut. 2024, The Brooklyn Mirage. <span onclick="window.open('https://www.instagram.com/p/C66hVWLLQJH/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
+				<a class="contentIndividual">Audioreactive system for Tri/xon debut. 2024, The Brooklyn Mirage. <span onclick="window.open('https://vimeo.com/1050588202','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 
 				<button type="button" class="description" id="divIndividual">GORGON, LAS Art Foundation</button>
 				<a class="contentIndividual">Model Embeddings and Video Artworks for the flute opera "GORGON", by Marianna Simnett. 2023, HAU Berlin.<span onclick="window.open('https://www.las-art.foundation/programme/gorgon','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
@@ -251,7 +241,7 @@ function refreshPage(){
 				<a class="contentIndividual">AI System Operator and Video Artist with Transmoderna. 2022.<span onclick="window.open('https://nxtmuseum.com/nxtnews/ade-2022-recap-the-light-of-the-night/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 					
 				<button type="button" class="description" id="divIndividual">Hybrid Ecosystems, Entangled Others</button>
-				<a class="contentIndividual">Audio Models for Hybrid Ecosystems. 2022.<span onclick="window.open('https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
+				<a class="contentIndividual">Audio model training for Hybrid Ecosystems. 2022.<span onclick="window.open('https://www.factmag.com/2021/11/24/entangled-others-studio-hybrid-ecosystems/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 				
 				<button type="button" class="description" id="divIndividual">Favareh I & II, Future East Festival</button>
 				<a class="contentIndividual">Training and creation of Crystal Volumes for Unity-based virtual world. 2022, Future East Festival.<span onclick="window.open('https://futureeast-festival.com/favareh/','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
@@ -304,6 +294,8 @@ function refreshPage(){
 				<!-- <a id="external" onclick="window.open('https://github.com/xyzalanix/','popup','width=800,height=800'); return false;" target="_blank" class="description">github.com/xyzalanix</a> -->
 			</div>
 
+
+		
 		
 		<!-- <a class="title">CONTACT:</a> -->
 		<div id="about">
@@ -314,9 +306,13 @@ function refreshPage(){
 
 		</div>
 
-
+		</div>
 
 	</div>
+<!-- 	
+	<div class="slidecontainer">
+		<input type="range" min="30" max="4000" value="4000" class="slider" id="interval">
+	</div> -->
 
 	        <!-- MODAL -->
 
@@ -342,6 +338,30 @@ function refreshPage(){
 
 <!-- scroll to top when closing modals or opening new ones -->
 <script>
+
+var slider = document.getElementById("interval");
+var interval = document.getElementById("interval").value;
+console.log(interval)
+let intervalFunction = 3000;
+
+
+slider.addEventListener('input', (event) => {
+	interval = event.target.value;
+	console.log(interval);
+	cycle();
+}, false)
+
+function cycle(){
+	clearInterval(intervalFunction)
+	intervalFunction = setInterval(function()
+	{
+		var whichFlesh = Math.round(Math.random()*(p-1));
+		document.getElementById('flesh_back').src=(''+flesh[whichFlesh]+'');
+		document.getElementById('flesh_back_2').src=(''+flesh[whichFlesh]+'');
+		document.getElementById('displayCaption').innerText=(''+caption[whichFlesh]+'');
+	}, interval);
+}
+
 
 function comeUp(){
 	// $("#myModal").fadeOut("fast");
@@ -488,6 +508,10 @@ function openCollaborations(){
   }
 
 }
+
+
+cycle();
+
 
 </script>
 
