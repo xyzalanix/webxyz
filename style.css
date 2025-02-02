@@ -636,10 +636,11 @@ button{
   position: absolute;
   display: grid;
   justify-content: right;
-  width: 24px; /* Width of the outside container */
-  height: 100%;
+  width: 32px; /* Width of the outside container */
+  height: 32px;
   right: 0;
   align-items: end;
+  bottom: 0;
   touch-action: none;
   z-index: 4;
 
@@ -658,7 +659,7 @@ button{
   outline: none; /* Remove outline */
   /* opacity: 0.8; */
   line-height: 1em;
-  border-style: none;
+  border-style: dashed;
   border-width: 1px;
   /* border-radius: 22px; */
   border-radius: 0;
@@ -794,7 +795,10 @@ input[type="range"]::-moz-range-thumb:hover{
 
 .slidecontainer{
   align-items: center;
+  bottom: 120PX;
   width: 120px; /* Width of the outside container */
+  height: 120px;
+  /* background-color: red; */
 
 }
 
@@ -814,8 +818,8 @@ input[type="range"]::-moz-range-thumb:hover{
   /* filter: drop-shadow(0 0 12px #e2e2e2); */
   /* line-height: 0.8em; */
   border-style: dashed;
-  border-width: 1px;
-  border-color: #333;
+  border-width: 2px;
+  border-color: #e2e2e2;
   font-size: 36px;
   padding-bottom: 12px;
   border-radius: 80px 0 0 80px;
@@ -862,7 +866,6 @@ button{
     line-height: 0.8em;
     padding-bottom: 22px;
     opacity: 50%;
-    
 
   }
 
@@ -949,8 +952,8 @@ button{
 
   
 #list{
-  /* display: grid; */
-  display: block;
+  display: grid;
+  /* display: block; */
   /* backdrop-filter: blur(34px);
   -webkit-backdrop-filter: blur(34px); */
 
@@ -991,8 +994,8 @@ button{
 
   #divIndividual, .contentIndividual, #external{
     font-family: tex;
-    /* max-width: 88%;
-    margin: 0 6%; */
+    max-width: 88%;
+    margin: 0 6%;
 
     /* background-color: #33333350; */
     text-shadow:0 0 14px #e2e2e2;
@@ -1004,7 +1007,7 @@ button{
     /* padding: 4px 0; */
     line-height: 1.8em;
     color: #e2e2e2;
-    text-align: center;
+    text-align: left;
     opacity: 100%;
     border-width:0 0 2px 0;
     border-style: dashed;

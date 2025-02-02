@@ -323,7 +323,7 @@ function refreshPage(){
 	</div>
 	
 	<div class="slidecontainer">
-		<input type="button" value="?" class="strobo" id="interval">
+		<input type="button" value=">" class="strobo" id="interval">
 
 		<!-- <input type="range" min="30" max="4000" value="4000" class="strobo" id="interval"> -->
 	</div>
@@ -361,8 +361,8 @@ var interval = 3000;
 
 // console.log(interval)
 let intervalFunction = 3000;
-button.style.backgroundColor = "#e2e2e2"
-button.style.color = "#333"
+button.style.backgroundColor = "#e2e2e200"
+button.style.color = "#e2e2e2"
 
 
 
@@ -378,13 +378,12 @@ button.addEventListener('click', (event) => {
 		interval = 30
 		button.style.backgroundColor = "#60fcae"
 		// button.style.color = "#e2e2e2"
-		button.style.color = "#e2e2e2"
+		button.style.color = "#333"
 
 	} else {
 		interval = 3000
-
-		button.style.backgroundColor = "#e2e2e2"
-		button.style.color = "#333"
+		button.style.backgroundColor = "#e2e2e200"
+		button.style.color = "#e2e2e2"
 
 	}
 	// interval = 3
@@ -498,7 +497,7 @@ for (i = 0; i < coll.length; i++) {
     //   content.style.maxHeight = content.scrollHeight + "px";
 	// Instead of dislpaying a specific height, do:
 	  content.style.maxHeight = "100%";
-	  this.style.color = "#333";
+	  this.style.color = "#60fcae50";
 
     } 
 	
