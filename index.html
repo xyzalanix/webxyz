@@ -214,7 +214,7 @@ function refreshPage(){
 			<!-- <a id="external">↓</a> -->
 			<!-- <a class="title">Latest:</a> -->
 			<!-- <div id="divWorks"> <a onclick="openWorks()">works</a> -->
-			<button type="button" class="collapsible" id="divWorks">Works</button>
+			<button type="button" class="collapsible" id="divWorks">works</button>
 			<div class="contentWorks">
 				<button type="button" class="description" id="divIndividual">Dixon at Sphere (Anyma Residency)</button>
 				<a class="contentIndividual">Visual System and 3D portrait for "What Have You", Dixon & Imogen Heap. 2024, Vegas Sphere. <span onclick="window.open('https://vimeo.com/1050590084','popup','width=800,height=800'); return false;" target="blank" class="links">☍</span></a>
@@ -263,7 +263,7 @@ function refreshPage(){
 
 			</div>
 
-			<button type="button" class="collapsible" id="divWorks">Press</button>
+			<button type="button" class="collapsible" id="divWorks">press</button>
 			<div class="contentPress">
 				<a id="external" onclick="window.open('https://globalaisummit.org/en/News/Pages/NewsDetails.aspx?NewsId=60','popup','width=800,height=800'); return false;" target="blank"class="description">SDAIA's Global AI Summit</a>
 				<a id="external" onclick="window.open('https://www.collide24.org/2021/02/05/music/the-music-video-monja-rebelde-by-juan-duarte-and-guilerrrmo-explores-the-intertwinement-between-our-online-and-offline-worlds/','popup','width=800,height=800'); return false;"class="description" target="_blank">Collide24: Monja Rebelde</a>
@@ -271,7 +271,7 @@ function refreshPage(){
 				<a id="external" onclick="window.open('https://www.dandad.org/awards/professional/2021/233945/connections/','popup','width=800,height=800'); return false;" target="blank"class="description">D&AD: Beko Connections</a>
 			</div>
 
-			<button type="button" class="collapsible" id="divWorks">Archive</button>
+			<button type="button" class="collapsible" id="divWorks">archive</button>
 			<div class="contentWeb">
 
 				<!-- <a onclick="window.open('testinggrounds/scan.html','popup','width=800,height=800'); return false;" target="_blank" class="description">
@@ -301,7 +301,7 @@ function refreshPage(){
 		<div id="about">
 			<!-- <a>xyzalanix (at) gmail.com</a><br> -->
 
-			<a>©2025— xyzalanix(at)gmail.com</a>
+			<a>©2025—xyzalanix(at)gmail.com</a>
 			<!-- <a>© 2025</a> -->
 
 		</div>
@@ -311,7 +311,7 @@ function refreshPage(){
 	</div>
 	
 	<div class="slidecontainer">
-		<input type="button" value="☼" class="strobo" id="interval">
+		<input type="button" value="     " class="strobo" id="interval">
 
 		<!-- <input type="range" min="30" max="4000" value="4000" class="strobo" id="interval"> -->
 	</div>
@@ -349,6 +349,7 @@ var interval = 3000;
 
 // console.log(interval)
 let intervalFunction = 3000;
+button.style.backgroundColor = "#60fcae"
 
 
 // slider.addEventListener('input', (event) => {
@@ -361,12 +362,12 @@ button.addEventListener('click', (event) => {
 	// interval = event.target.value;
 	if(interval != 30){
 		interval = 30
-		button.style.backgroundColor = "#333"
-		button.style.color = "#e2e2e2"
+		button.style.backgroundColor = "#e2e2e2"
+		// button.style.color = "#e2e2e2"
 	} else {
 		interval = 3000
-		button.style.backgroundColor = "#e2e2e2"
-		button.style.color = "#333"
+		button.style.backgroundColor = "#60fcae"
+		// button.style.color = "#333"
 
 	}
 	// interval = 3

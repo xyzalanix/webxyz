@@ -163,6 +163,7 @@ body {
 
 
 #about{
+  
   font-family: tex;
   font-size: 16px;
   /* max-width: 320px; */
@@ -207,7 +208,7 @@ body {
   font-family: tex;
   /* opacity: 80%; */
 
-
+  text-shadow:0 0 14px #e2e2e2;
 }
 
 .ido{
@@ -284,6 +285,7 @@ body {
     /* justify-content: stretch; */
   z-index: 4;
   pointer-events: none;
+  text-shadow:0 0 14px #e2e2e2;
 
 }
 iframe{
@@ -535,9 +537,10 @@ button{
 
 
 #divWorks, #divPress, #divWeb{
-  font-size: 14px;
+  font-size: 16px;
   color: #60fcae;
   text-align: left;
+  text-shadow:0 0 14px #60fcae;
   
 }
 
@@ -549,6 +552,7 @@ button{
   text-align: left;
   /* opacity: 100%; */
   overflow: hidden;
+  text-shadow:0 0 14px #e2e2e2;
   
 
 }
@@ -657,6 +661,8 @@ button{
   border-style: none;
   border-width: 1px;
   /* border-radius: 22px; */
+  border-radius: 50%;
+
   /* background-color: #333; */
   /* transform: rotate(180deg); */
 
@@ -808,7 +814,7 @@ input[type="range"]::-moz-range-thumb:hover{
   border-width: 1px;
   font-size: 48px;
   padding-bottom: 12px;
-  /* border-radius: 22px; */
+  border-radius: 50%;
   /* background-color: #333; */
   /* transform: rotate(180deg); */
 
