@@ -68,50 +68,6 @@ caption = [
 
 ]
 
-// flesh[0] = 'work/sphere/sphere.gif'
-// flesh[1] = 'work/livegan/LM_sG_.0.jpg'
-// flesh[2] = 'images/all/03.jpg'
-// flesh[3] = 'work/eqr/eqr-0.gif'
-// flesh[4] = 'work/shatter/sg3td_.12.jpg'
-// flesh[5] = 'images/all/06.jpg'
-// flesh[6] = 'images/all/11.jpg'
-// flesh[7] = 'work/sphere/Heads.jpg'
-// flesh[8] = 'work/tm/junkbunnymafia.jpg'
-// flesh[9] = 'work/blush/blush-trim.gif'
-// flesh[10] = 'work/gorgon/00054-3772307942.png'
-// flesh[11] = 'work/tm/nxt-tm-031.jpg'
-// flesh[12] = 'work/tm/nxt-tm-058.jpg'
-// flesh[13] = 'work/gorgon/20230802044524_000000059.png'
-// flesh[14] = 'work/gorgon/LAS_Art_Foundation_Marianna_Simnett_©_Katja_Illner_20230912-210151.jpg'
-// flesh[15] = 'work/tm/mirage2024/Jamie.jar-28.jpg'
-// flesh[16] = 'work/tm/mirage2024/Jamie.jar-64.jpg'
-// flesh[17] = 'work/livegan/liveshaping.gif'
-// flesh[18] = 'work/shatter/sg3td_.4.jpg'
-// flesh[19] = 'work/tm/trixon.gif'
-
-// caption[0] = 'Dixon at Sphere (Anyma Residency)'
-// caption[1] = 'live-shaping GANs: PsyOp'
-// caption[2] = 'Neural Digestions'
-// caption[3] = 'Been Feelin Equirectangular'
-// caption[4] = 'Shatter'
-// caption[5] = 'Cheat Code'
-// caption[6] = 'Tileworks:Synchronistic tile arrangements'
-// caption[7] = caption[0]
-// caption[8] = 'Trash Bunnies, TRANSMODERNA'
-// caption[9] = 'Blush'
-// caption[10] = 'GORGON character R&D, LAS Art Foundation'
-// caption[11] = 'Nxt Museum x TRANSMODERNA'
-// caption[12] = 'Nxt Museum x TRANSMODERNA'
-// caption[13] = 'GORGON character R&D, LAS Art Foundation'
-// caption[14] = 'GORGON, LAS Art Foundation'
-// caption[15] = 'Tri/xon debut at Brooklyn Mirage'
-// caption[16] = 'TRANSMODERNA at Brooklyn Mirage'
-// caption[17] = 'live-shaping GANs: Gut Feeling'
-// caption[18] = caption[4]
-// caption[19] = 'Tri/xon debut at Brooklyn Mirage'
-
-
-
 
 // var j = 0
 var p = flesh.length;
@@ -226,7 +182,7 @@ function refreshPage(){
 				<a class="contentIndividual">Audioreactive visual system for Tri/xon debut. 2024, The Brooklyn Mirage. <span onclick="window.open('https://vimeo.com/1050588202','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 
 				<button type="button" class="description" id="divIndividual">GORGON, LAS Art Foundation</button>
-				<a class="contentIndividual">Model Embeddings and Video Artworks for the flute opera "GORGON", by Marianna Simnett. 2023, HAU Berlin.<span onclick="window.open('https://www.las-art.foundation/programme/gorgon','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
+				<a class="contentIndividual">Model Embeddings and Video Artworks for the flute opera "GORGON", by Marianna Simnett. 2023, HAU Berlin.<span onclick="window.open('https://www.youtube.com/watch?v=pH7E8m3aKOY','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
 
 				<button type="button" class="description" id="divIndividual">Transmoderna x Dixon, Arts District Brooklyn</button>
 				<a class="contentIndividual">AI System Operator and Video Artist with Transmoderna. 2023, Arts District Brooklyn.<span onclick="window.open('https://www.instagram.com/p/CsHL5ihM4uO','popup','width=800,height=800'); return false;" target="blank" class="links">(1)</span></a>
@@ -283,15 +239,6 @@ function refreshPage(){
 			<button type="button" class="collapsible" id="divWorks">archive</button>
 			<div class="contentWeb">
 
-				<!-- <a onclick="window.open('testinggrounds/scan.html','popup','width=800,height=800'); return false;" target="_blank" class="description">
-					<div class="blocker"></div>
-					<iframe src="testinggrounds/scan.html" width="320px" height="240px" frameborder="0"></iframe>
-				</a> -->
-				<!-- <a onclick="window.open('crystals/','popup','width=800,height=800'); return false;" target="_blank" class="description">
-					<div class="blocker"></div>
-					<iframe src="crystals/" width="320px" height="240px" frameborder="0"></iframe>
-				</a> -->
-
 
 
 				<button type="button" class="description" id="divIndividual">Image Regression</button>
@@ -323,8 +270,20 @@ function refreshPage(){
 	</div>
 	
 	<div class="slidecontainer">
-		<input type="button" value=">" class="strobo" id="interval">
-
+		<input type="button" value="⊚" class="strobo" id="interval">
+<!-- ⊕ -->
+<!-- ⋇ -->
+<!-- ⊚ -->
+<!-- ⊠ -->
+		<!-- <input type="range" min="30" max="4000" value="4000" class="strobo" id="interval"> -->
+	</div>
+	<div class="slidecontainerCounter">
+		<!-- <input type="button" value="⊚" class="strobo" id="interval"> -->
+		<a id="counter"></a>
+<!-- ⊕ -->
+<!-- ⋇ -->
+<!-- ⊚ -->
+<!-- ⊠ -->
 		<!-- <input type="range" min="30" max="4000" value="4000" class="strobo" id="interval"> -->
 	</div>
 
@@ -400,6 +359,8 @@ function cycle(){
 		document.getElementById('flesh_back').src=(''+flesh[whichFlesh]+'');
 		document.getElementById('flesh_back_2').src=(''+flesh[whichFlesh]+'');
 		document.getElementById('displayCaption').innerText=(''+caption[whichFlesh]+'');
+		document.getElementById('counter').innerText=([whichFlesh]+' of '+p);
+
 	}, interval);
 }
 
@@ -497,7 +458,7 @@ for (i = 0; i < coll.length; i++) {
     //   content.style.maxHeight = content.scrollHeight + "px";
 	// Instead of dislpaying a specific height, do:
 	  content.style.maxHeight = "100%";
-	  this.style.color = "#60fcae50";
+	  this.style.color = "#60fcae75";
 
     } 
 	
