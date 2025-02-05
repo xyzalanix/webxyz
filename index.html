@@ -24,13 +24,13 @@ var caption = new Array()
 flesh = [
 	'work/sphere/sphere.gif',
 	'work/livegan/LM_sG_.0.jpg',
-	'images/all/03.jpg',
+	// 'images/all/03.jpg',
 	'work/eqr/eqr-0.gif',
-	'work/shatter/sg3td_.12.jpg',
+	// 'work/shatter/sg3td_.12.jpg',
 	'images/all/06.jpg',
 	'images/all/11.jpg',
 	'work/sphere/Heads.jpg',
-	'work/tm/junkbunnymafia.jpg',
+	// 'work/tm/junkbunnymafia.jpg',
 	'work/blush/blush-trim.gif',
 	'work/gorgon/00054-3772307942.png',
 	'work/tm/nxt-tm-031.jpg',
@@ -41,19 +41,21 @@ flesh = [
 	'work/tm/mirage2024/Jamie.jar-64.jpg',
 	'work/livegan/liveshaping.gif',
 	'work/shatter/sg3td_.4.jpg',
-	'work/tm/trixon.gif'	
+	'work/tm/Trixon_Rnd_Pose_1.gif',
+	'work/tm/Trixon_Rnd_Pose_2_16fps.gif',
+	// 'work/tm/trixon.gif'	
 ]
 
 caption = [
 	'Dixon at Sphere (Anyma Residency)',
 	'live-shaping GANs: PsyOp',
-	'Neural Digestions',
+	// 'Neural Digestions',
 	'Been Feelin Equirectangular',
-	'Shatter',
+	// 'Shatter',
 	'Cheat Code',
-	'Tileworks:Synchronistic tile arrangements',
+	'Tileworks',
 	'Dixon at Sphere (Anyma Residency)',
-	'Trash Bunnies, TRANSMODERNA',
+	// 'Trash Bunnies, TRANSMODERNA',
 	'Blush',
 	'GORGON character R&D, LAS Art Foundation',
 	'Nxt Museum x TRANSMODERNA',
@@ -62,10 +64,11 @@ caption = [
 	'GORGON, LAS Art Foundation',
 	'Tri/xon debut at Brooklyn Mirage',
 	'TRANSMODERNA at Brooklyn Mirage',
-	'live-shaping GANs: Gut Feeling',
+	'live-shaping GANs',
 	'Shatter',
-	'Tri/xon debut at Brooklyn Mirage',
-
+	'Tri/xon - Pose System R&D',
+	'Tri/xon - Pose System R&D'
+	// 'Tri/xon debut at Brooklyn Mirage',
 ]
 
 
@@ -76,7 +79,9 @@ for (i = 0; i < p; i++){
    preBuffer[i] = new Image()
    preBuffer[i].src = flesh[i]
 }
-var whichFlesh = Math.round(Math.random()*(p-1));
+// var whichFlesh = Math.round(Math.random()*(p-1));
+var whichFlesh = 17;
+
 // var whichFlesh = 20
 
 // function showImage(){
