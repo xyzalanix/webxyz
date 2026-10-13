@@ -215,12 +215,11 @@ body {
   max-width: 320px;
   max-height: 100px;
   height: 100%;
-  /* overflow-wrap: break-word;
-  word-break: break-all; */
+  /* word-break: break-all; */
   font-family: tex;
   /* opacity: 80%; */
 
-  text-shadow:0 0 14px #e2e2e2;
+  text-shadow:0 0 8px #e2e2e2;
 }
 
 #about3{
@@ -298,31 +297,35 @@ body {
   border-width: thin;
   border-style: none none none none;
 
-  width:50%;
+  /* width:50%; */
   /* transform: rotate(-90deg) translate(-50%, 90%) ; */
-  transform: translate(100%) ;
+  /* transform: translate(100%) ; */
 
 
   height: 50%;
   /* margin: auto auto auto auto; */
-  text-shadow: 0 0 6px #000;
+  /* text-shadow: 0 0 6px #000; */
   /* top:0;
   left: 0;
   bottom: 0;
   right: 0; */
+
   color: #e2e2e2;
-  /* mix-blend-mode: difference; */
   /* transform: rotate(25deg); */
   /* margin-top: -2px; */
-  font-size: 14px;
+  font-size: 16px;
   text-align: right;
-  align-items:end;
-  /* bottom: 0; */
+  align-items:start;
+  bottom: 0;
   /* background-color: red; */
     /* justify-content: stretch; */
   z-index: 3;
   pointer-events: none;
-  text-shadow:0 0 14px #e2e2e2;
+  margin-bottom:4px;
+  /* text-shadow:0 0 4px #e2e2e2; */
+    text-shadow:0 0 8px #e2e2e2;
+
+
   font-family: tex;
   line-height: 0.1em;
 
@@ -567,7 +570,8 @@ button{
   display: block;
   text-align: left;
   max-width: 300px;
-
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
 }
 
@@ -576,8 +580,11 @@ button{
   font-size: 16px;
   color: #60fcae;
   text-align: left;
-  text-shadow:0 0 14px #60fcae;
+  /* text-shadow:0 0 14px #60fcae; */
   border-width: 0;
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  padding-bottom: 4px;
   
 }
 
@@ -585,11 +592,12 @@ button{
   font-family: tex;
   /* max-width: 320px; */
   font-size: 14px;
-  color: #e2e2e2;
+  color: #333;
   text-align: left;
   /* opacity: 100%; */
   overflow: hidden;
-  text-shadow:0 0 14px #333;
+  /* text-shadow:0 0 14px #333;   */
+  background-color: #e2e2e2;
   
 
 }
@@ -600,21 +608,21 @@ button{
 .contentIndividual{
   
   /* text-indent: 50px; */
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3em;
 
   color:#e2e2e2;
   /* opacity: 90%; */
-  /* background-color: #60fcae; */
+  background-color: #33333350;
   border-width: 1px 0 0 0;
   border-style: dashed;
   /* border-style: none; */
 
-  background-color:#33333325;
+  /* background-color:#33333325; */
   /* background-color:#60fcae25; */
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); */
 
 }
 
