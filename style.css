@@ -585,27 +585,30 @@ button{
   /* backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); */
   padding-bottom: 4px;
-  
+  /* background-color: red; */
+
 }
 
-#divIndividual, .contentIndividual, #external{
+#divIndividual, #external{
   font-family: tex;
   /* max-width: 320px; */
-  font-size: 14px;
-  color: #333;
+  font-size: 12px;
+  color: #e2e2e2;
   text-align: left;
   /* opacity: 100%; */
   overflow: hidden;
   /* text-shadow:0 0 14px #333;   */
-  background-color: #e2e2e2;
+  /* background-color: blue; */
   
-
+  text-transform: uppercase;
+  line-height: 1.3em;
 }
 #divIndividual:hover{
   opacity: 100%;
 }
 
 .contentIndividual{
+  font-family: tex;
   
   /* text-indent: 50px; */
   font-size: 16px;
@@ -623,6 +626,7 @@ button{
 
   /* backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px); */
+  /* background-color: yellow; */
 
 }
 
