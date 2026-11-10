@@ -1004,15 +1004,15 @@ body.comfy-off .panel .comfy{opacity:.25!important;pointer-events:none}
   .top>.tabs button kbd{font-size:16px!important;margin:0!important}
   .top>.tabs button[aria-pressed="true"]{background:radial-gradient(circle at 50% 40%,rgba(96,252,174,.35),rgba(20,20,20,.4) 72%)!important;box-shadow:0 0 16px rgba(96,252,174,.35)}
   /* gamepad: views 1-4 as a d-pad on the left, 5-8 as a face-button diamond on the right, save in the middle like start */
-  .top>.tabs{display:grid!important;grid-template-columns:repeat(3,36px) 1fr repeat(3,36px)!important;grid-template-rows:repeat(3,36px)!important;gap:0!important;
-    left:14px!important;right:14px!important;bottom:calc(60px + env(safe-area-inset-bottom,0px))!important}
-  .top>.tabs button{width:38px!important;height:38px!important;margin:-1px}
-  .top>.tabs button kbd{font-size:17px!important}
+  .top>.tabs{display:grid!important;grid-template-columns:repeat(3,48px) 1fr repeat(3,48px)!important;grid-template-rows:repeat(3,48px)!important;gap:0!important;
+    left:12px!important;right:12px!important;bottom:calc(58px + env(safe-area-inset-bottom,0px))!important}
+  .top>.tabs button{width:50px!important;height:50px!important;margin:-1px}
+  .top>.tabs button kbd{font-size:21px!important}
   .top>.tabs [data-view="0"]{grid-area:1/2}.top>.tabs [data-view="1"]{grid-area:2/3}.top>.tabs [data-view="2"]{grid-area:3/2}.top>.tabs [data-view="3"]{grid-area:2/1}
   .top>.tabs [data-view="4"]{grid-area:1/6}.top>.tabs [data-view="5"]{grid-area:2/7}.top>.tabs [data-view="6"]{grid-area:3/6}.top>.tabs [data-view="7"]{grid-area:2/5}
   /* the dock becomes one round save button, bottom centre between the pads; focus is press-and-hold, top save goes */
   .topend>#saveTopBar,#focusBtn{display:none!important}
-  .dock{position:fixed!important;top:auto!important;bottom:calc(92px + env(safe-area-inset-bottom,0px))!important;left:50%!important;transform:translateX(-50%)!important;padding:0!important;z-index:9}
+  .dock{position:fixed!important;top:auto!important;bottom:calc(110px + env(safe-area-inset-bottom,0px))!important;left:50%!important;transform:translateX(-50%)!important;padding:0!important;z-index:9}
   #saveTop{font-size:0!important;width:44px;height:44px;border-radius:50%;border:0!important;display:grid;place-items:center;
     background:radial-gradient(circle at 50% 40%,rgba(96,252,174,.4),rgba(20,20,20,.4) 72%)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.45)}
   #saveTop{position:relative}
@@ -1031,6 +1031,7 @@ body.comfy-off .panel .comfy{opacity:.25!important;pointer-events:none}
     border:0!important;pointer-events:auto!important;z-index:10;scrollbar-width:none}
   /* the strip must not become a containing block (blur, transform), or it clips the sheets that rise from it */
   .panel::-webkit-scrollbar{display:none}
+  .panel.frozen{overflow:visible!important}
   .panel>.cat,.sources>.cat{display:none!important}
   .sources{display:contents!important}
   .grp>summary{width:auto!important;white-space:nowrap;padding:6px 8px!important;font-size:12px!important;background:none!important;transform:none!important}
@@ -1046,8 +1047,20 @@ body.comfy-off .panel .comfy{opacity:.25!important;pointer-events:none}
   .pairfix .pair{gap:6px!important}
   .pairfix .slot .tag{font-size:11px!important}
   .pairfix .pairarrow{display:none}
-  /* intro: scrolls as one column */
-  .intro{overflow:auto}
+  /* intro: scrolls as one column; logo on top, then MISCGEN DSP and the hero line, then the sections */
+  .intro{overflow:auto;pointer-events:auto!important}
+  .introcard{width:100%!important;min-height:100svh;padding:calc(24px + env(safe-area-inset-top,0px)) 16px 24px!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+  .itext{height:auto!important;min-height:0!important;flex:none!important}
+  .ilogo2{margin:0!important;transform:none!important}
+  .itext{width:100%!important;max-width:none!important;flex-direction:column!important;align-items:stretch!important}
+  .ihead{flex-direction:column!important;align-items:flex-start!important;gap:14px!important;width:100%!important;height:auto!important}
+  .ilogo2{width:50vw!important;max-width:50vw!important;height:auto!important;max-height:none!important}
+  .iheadt{width:100%!important;padding:0!important}
+  .introcard h2,.ihk{max-width:50vw!important;white-space:normal!important}
+  .iacc{width:100%!important;flex:none!important;height:auto!important;flex-direction:column!important;margin-top:18px}
+  .iacc+.iacc{margin-top:6px}
+  .ilist{max-width:none!important;width:100%!important}
+  .icredit{position:static!important;width:100%!important;margin-top:24px}
 }
 </style>
 </head>
@@ -4203,7 +4216,14 @@ nzSync('none');
   });
   if(phone()) setTimeout(()=>toast('swipe to change view · hold for focus'),2500);
   // the view numbers hide while a sheet is up, so the sheet has the room
-  new MutationObserver(()=>document.body.classList.toggle('sheet-open',!!$('.panel .grp[open], .topend .grp[open]'))).observe(document.body,{subtree:true,attributes:true,attributeFilter:['open']});
+  const panel=$('.panel'); let held=null;
+  new MutationObserver(()=>{
+    const open=!!$('.panel .grp[open], .topend .grp[open]'); document.body.classList.toggle('sheet-open',open);
+    // iOS Safari clips fixed sheets inside a scrolling strip: while one is open the strip stops scrolling, its offset kept by a negative margin
+    const first=panel.querySelector('.grp'); if(!phone()||!first) return;
+    if(open&&held===null){ held=panel.scrollLeft; first.style.marginLeft=(-held)+'px'; panel.classList.add('frozen'); }
+    else if(!open&&held!==null){ first.style.marginLeft=''; panel.classList.remove('frozen'); panel.scrollLeft=held; held=null; }
+  }).observe(document.body,{subtree:true,attributes:true,attributeFilter:['open']});
 })();
 
 /* ---------- bundled examples ----------
