@@ -976,6 +976,79 @@ div.itext.ihome{flex-wrap:wrap!important;align-content:center}
 .panel .cat.comfy{text-transform:none}
 /* ComfyUI section switched off when no workflow is in use */
 body.comfy-off .panel .comfy{opacity:.25!important;pointer-events:none}
+
+/* ===== phone (≤600px): the image fills the screen; controls live where the thumb is =====
+   top: about · save export record; top-right corner: tiny base / displace thumbs; bottom: a scrolling strip of the
+   setting labels, each opening a sheet that rises from it; the view numbers sit just above the strip.
+   Swipe the image to change view, press and hold it for focus (see the phone gestures in the script). */
+@media (max-width:600px){
+  html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+  .app{padding:0!important;height:100svh!important}
+  .viewer{height:100svh}
+  .stage{position:fixed!important;inset:0;height:auto!important;min-height:0!important;touch-action:manipulation}
+  .top{position:fixed!important;top:0;left:0;right:0;z-index:9;display:flex!important;flex-wrap:nowrap!important;justify-content:space-between;align-items:center;
+    padding:calc(6px + env(safe-area-inset-top,0px)) 10px 14px!important;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,0))!important;pointer-events:none}
+  .top>*{pointer-events:auto}
+  .top>.aboutbtn,.topend>.btn,.topend>.outbar>.grp>summary{font-size:14px!important}
+  .topend{position:static!important;display:flex!important;gap:14px!important;margin:0!important}
+  .topend .outbar{position:static!important;margin:0!important}
+  .topend .outbar .grp>.gb{position:fixed!important;left:0!important;right:0!important;top:auto!important;bottom:calc(46px + env(safe-area-inset-bottom,0px))!important;width:auto!important;max-height:58svh!important;z-index:11}
+  /* view numbers: a row just above the strip */
+  .top>.tabs{position:fixed!important;top:auto!important;bottom:calc(52px + env(safe-area-inset-bottom,0px))!important;left:50%!important;transform:translateX(-50%)!important;gap:18px!important;z-index:9}
+  .top>.tabs button kbd{font-size:18px!important}
+  /* no keyboard on a phone: the numbers become soft round buttons */
+  .top>.tabs{gap:5px!important;bottom:calc(64px + env(safe-area-inset-bottom,0px))!important;left:62px!important;right:8px!important;transform:none!important;justify-content:space-between!important}
+  .top>.tabs button{width:32px!important;height:32px!important;padding:0!important;border:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;
+    background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.16),rgba(20,20,20,.35) 70%)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    box-shadow:0 2px 14px rgba(0,0,0,.45),inset 0 0 8px rgba(255,255,255,.06)}
+  .top>.tabs button kbd{font-size:16px!important;margin:0!important}
+  .top>.tabs button[aria-pressed="true"]{background:radial-gradient(circle at 50% 40%,rgba(96,252,174,.35),rgba(20,20,20,.4) 72%)!important;box-shadow:0 0 16px rgba(96,252,174,.35)}
+  /* gamepad: views 1-4 as a d-pad on the left, 5-8 as a face-button diamond on the right, save in the middle like start */
+  .top>.tabs{display:grid!important;grid-template-columns:repeat(3,36px) 1fr repeat(3,36px)!important;grid-template-rows:repeat(3,36px)!important;gap:0!important;
+    left:14px!important;right:14px!important;bottom:calc(60px + env(safe-area-inset-bottom,0px))!important}
+  .top>.tabs button{width:38px!important;height:38px!important;margin:-1px}
+  .top>.tabs button kbd{font-size:17px!important}
+  .top>.tabs [data-view="0"]{grid-area:1/2}.top>.tabs [data-view="1"]{grid-area:2/3}.top>.tabs [data-view="2"]{grid-area:3/2}.top>.tabs [data-view="3"]{grid-area:2/1}
+  .top>.tabs [data-view="4"]{grid-area:1/6}.top>.tabs [data-view="5"]{grid-area:2/7}.top>.tabs [data-view="6"]{grid-area:3/6}.top>.tabs [data-view="7"]{grid-area:2/5}
+  /* the dock becomes one round save button, bottom centre between the pads; focus is press-and-hold, top save goes */
+  .topend>#saveTopBar,#focusBtn{display:none!important}
+  .dock{position:fixed!important;top:auto!important;bottom:calc(92px + env(safe-area-inset-bottom,0px))!important;left:50%!important;transform:translateX(-50%)!important;padding:0!important;z-index:9}
+  #saveTop{font-size:0!important;width:44px;height:44px;border-radius:50%;border:0!important;display:grid;place-items:center;
+    background:radial-gradient(circle at 50% 40%,rgba(96,252,174,.4),rgba(20,20,20,.4) 72%)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.45)}
+  #saveTop{position:relative}
+  #saveTop::after{content:'save';font-size:12px;line-height:1;color:#e2e2e2;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+  #saveTop{padding:0!important;line-height:1!important}
+  .top>.tabs button,.top>.tabs button[aria-pressed="true"]{border-bottom:0!important;text-decoration:none!important}
+  .top>.tabs button::after,.top>.tabs button::before{display:none!important}
+  body.sheet-open .dock{visibility:hidden}
+  .stage{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+  .dock .meta{display:none}
+  .viewkeys{position:static!important;transform:none!important}
+  /* settings: one scrolling strip at the bottom */
+  .panel{position:fixed!important;top:auto!important;left:0!important;right:0!important;bottom:0!important;width:auto!important;height:auto!important;
+    display:flex!important;flex-flow:row nowrap!important;align-items:stretch!important;justify-content:flex-start!important;gap:6px!important;overflow-x:auto!important;overflow-y:hidden!important;
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px))!important;background:rgba(8,8,8,.86)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;transform:none!important;contain:none!important;
+    border:0!important;pointer-events:auto!important;z-index:10;scrollbar-width:none}
+  /* the strip must not become a containing block (blur, transform), or it clips the sheets that rise from it */
+  .panel::-webkit-scrollbar{display:none}
+  .panel>.cat,.sources>.cat{display:none!important}
+  .sources{display:contents!important}
+  .grp>summary{width:auto!important;white-space:nowrap;padding:6px 8px!important;font-size:12px!important;background:none!important;transform:none!important}
+  .grp[open]>summary{color:var(--accent)!important;border-bottom-color:var(--accent)!important}
+  /* sheets: rise from the strip, full width */
+  .panel .grp>.gb{position:fixed!important;left:0!important;right:0!important;top:auto!important;bottom:calc(46px + env(safe-area-inset-bottom,0px))!important;width:auto!important;
+    max-height:58svh!important;transform:none!important;opacity:1!important;filter:none!important;background:rgba(10,10,10,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  body.sheet-open .top>.tabs{visibility:hidden}
+  /* sources: two small thumbs in the top-right corner (tap = picker); overlay lives in its own label */
+  .pairfix{position:fixed!important;top:calc(64px + env(safe-area-inset-top,0px))!important;right:6px!important;left:auto!important;bottom:auto!important;transform:none!important;
+    width:128px!important;padding:4px!important;gap:4px!important;background:rgba(8,8,8,.5)!important;z-index:8}
+  .pairfix-h,.pairfix .srinfo,.pairfix .slotadd,.pairfix .ov{display:none!important}
+  .pairfix .pair{gap:6px!important}
+  .pairfix .slot .tag{font-size:11px!important}
+  .pairfix .pairarrow{display:none}
+  /* intro: scrolls as one column */
+  .intro{overflow:auto}
+}
 </style>
 </head>
 <body>
@@ -3531,7 +3604,7 @@ async function addFiles(files,role){
     }catch(e){ console.warn(e); it.loading=false; it.broken=true; }
     if(!assigned&&!it.broken){ assigned=true; role==='map'?setMap(it):setBase(it); }
     if(it.session&&!sessionOffered){ sessionOffered=true; offerRestore(it); }
-    if(!it.broken) makeDepth(it);   // every new image gets a depth map
+    if(!it.broken) makeDepth(it,{useAsMap:role!=='map'&&it===S.cur});   // every new image gets a depth map; a new base displaces by its own
     else renderLibrary();
   }
   if(!assigned) toast(list.length>1?'Those images could not be read':'That image could not be read');
@@ -3837,7 +3910,7 @@ function factoryLook(over){
   return {settings,typeW:{},activeLayer:0,layers:[{name:'Layer 1',on:true,opts,mapName:null}]};
 }
 const FACTORY=[
-  {id:'f-shear',name:'Shear',factory:true,content:{base:'Reja_Style_00109_.png',maps:['ltxv_us__00046-depth.png']},...{"settings":{"collapseReroutes":false,"hideBypassed":true,"dropNotes":true,"direction":"auto","treePull":true,"routing":"POLYLINE","nodeSpacing":85,"layerSpacing":38,"margin":6.5,"nodeStyle":"filled","nodeH":89,"nodeWidth":"fit","outlineW":1.8,"edgeW":0.35,"radius":0.5,"dash":0,"ports":true,"taper":-0.75,"labelMode":"both","abbrLen":4,"textSize":2.02,"font":"tex","fontWeight":"400","tracking":-0.08,"labelPos":"inside","upper":false,"labelGap":0.35,"textStroke":0.09,"labelReach":0.59,"reliefMode":"engrave","reliefAmt":0.71,"bevel":0.6,"reliefDepth":1.45,"lightAngle":250,"groove":0.43,"edgeRelief":0.99,"mode":"shear","strength":30,"reach":60,"softness":3.05,"wavelength":1.5,"waveWidth":0.16,"speed":1,"rStyle":"sine","rDir":"out","rEmit":"all","rCycle":8,"rSpread":0.75,"rWidth":0.12,"rSteps":4,"rGloss":0.6,"rChirp":0,"rNoise":0,"rNoiseScale":8,"rBoil":1,"rChroma":0,"nodeWt":1.35,"edgeWt":1,"labelWt":1.45,"depthFade":0.2,"invert":false,"procSize":"1536","overlay":0,"overlayColor":"original","palette":"spectral","cStart":"#2d0b59","cEnd":"#fde68a","cSolid":"#ffffff","cNode":"#ffffff","cEdge":"#7fd1ff","cLabel":"#ffb35c","blend":"normal","ovThick":0,"glow":0,"glowAmt":0.6,"useWorkflow":true,"layerMix":1,"layerRelief":true,"useQuad":false,"quadSrc":"base","quadDetail":0.55,"quadDepth":7,"quadDraw":"lines","quadLineW":0.3,"quadTaper":0.6,"quadDot":0.35,"quadAmt":1,"quadCalm":1,"quadLib":"mosaic","mapMode":"seeds","mapCombine":"add","mapFit":"contain","mapAmt":1,"mapSoft":0.4,"mapAngle":45,"mapThresh":0.86,"mapFeather":3.8,"mapSeedSoft":0,"mapInvert":false,"mapRelief":true},"typeW":{"FLOAT":-1,"SIGMAS":-1,"MODEL":1,"INT":-1,"STG_ADVANCED_PRESET":-1},"view":0,"activeLayer":0,"layers":[{"name":"Layer 1","on":true,"opts":{"useWorkflow":true,"mode":"shear","strength":30,"reach":60,"softness":3.05,"wavelength":1.5,"waveWidth":0.16,"speed":1,"nodeWt":1.35,"edgeWt":1,"labelWt":1.45,"labelReach":0.59,"depthFade":0.2,"invert":false,"rStyle":"sine","rDir":"out","rEmit":"all","rCycle":8,"rSpread":0.75,"rWidth":0.12,"rSteps":4,"rGloss":0.6,"rChirp":0,"rNoise":0,"rNoiseScale":8,"rBoil":1,"rChroma":0,"mapMode":"seeds","mapCombine":"add","mapFit":"contain","mapAmt":1,"mapSoft":0.4,"mapAngle":45,"mapThresh":0.86,"mapFeather":3.8,"mapSeedSoft":0,"mapInvert":false,"mapRelief":true,"layerMix":1,"layerRelief":true,"useQuad":false,"quadSrc":"base","quadDetail":0.55,"quadDepth":7,"quadDraw":"lines","quadLineW":0.3,"quadTaper":0.6,"quadDot":0.35,"quadAmt":1,"quadCalm":1},"mapName":"ltxv_us__00046-depth.png"}]}},
+  {id:'f-shear',name:'Shear',factory:true,content:{base:'Reja_Style_00109_.png'},...{"settings":{"collapseReroutes":false,"hideBypassed":true,"dropNotes":true,"direction":"auto","treePull":true,"routing":"POLYLINE","nodeSpacing":85,"layerSpacing":38,"margin":6.5,"nodeStyle":"filled","nodeH":89,"nodeWidth":"fit","outlineW":1.8,"edgeW":0.35,"radius":0.5,"dash":0,"ports":true,"taper":-0.75,"labelMode":"both","abbrLen":4,"textSize":2.02,"font":"tex","fontWeight":"400","tracking":-0.08,"labelPos":"inside","upper":false,"labelGap":0.35,"textStroke":0.09,"labelReach":0.59,"reliefMode":"engrave","reliefAmt":0.71,"bevel":0.6,"reliefDepth":1.45,"lightAngle":250,"groove":0.43,"edgeRelief":0.99,"mode":"shear","strength":30,"reach":60,"softness":3.05,"wavelength":1.5,"waveWidth":0.16,"speed":1,"rStyle":"sine","rDir":"out","rEmit":"all","rCycle":8,"rSpread":0.75,"rWidth":0.12,"rSteps":4,"rGloss":0.6,"rChirp":0,"rNoise":0,"rNoiseScale":8,"rBoil":1,"rChroma":0,"nodeWt":1.35,"edgeWt":1,"labelWt":1.45,"depthFade":0.2,"invert":false,"procSize":"1536","overlay":0,"overlayColor":"original","palette":"spectral","cStart":"#2d0b59","cEnd":"#fde68a","cSolid":"#ffffff","cNode":"#ffffff","cEdge":"#7fd1ff","cLabel":"#ffb35c","blend":"normal","ovThick":0,"glow":0,"glowAmt":0.6,"useWorkflow":true,"layerMix":1,"layerRelief":true,"useQuad":false,"quadSrc":"base","quadDetail":0.55,"quadDepth":7,"quadDraw":"lines","quadLineW":0.3,"quadTaper":0.6,"quadDot":0.35,"quadAmt":1,"quadCalm":1,"quadLib":"mosaic","mapMode":"seeds","mapCombine":"add","mapFit":"contain","mapAmt":1,"mapSoft":0.4,"mapAngle":45,"mapThresh":0.86,"mapFeather":3.8,"mapSeedSoft":0,"mapInvert":false,"mapRelief":true},"typeW":{"FLOAT":-1,"SIGMAS":-1,"MODEL":1,"INT":-1,"STG_ADVANCED_PRESET":-1},"view":0,"activeLayer":0,"layers":[{"name":"Layer 1","on":true,"opts":{"useWorkflow":true,"mode":"shear","strength":30,"reach":60,"softness":3.05,"wavelength":1.5,"waveWidth":0.16,"speed":1,"nodeWt":1.35,"edgeWt":1,"labelWt":1.45,"labelReach":0.59,"depthFade":0.2,"invert":false,"rStyle":"sine","rDir":"out","rEmit":"all","rCycle":8,"rSpread":0.75,"rWidth":0.12,"rSteps":4,"rGloss":0.6,"rChirp":0,"rNoise":0,"rNoiseScale":8,"rBoil":1,"rChroma":0,"mapMode":"seeds","mapCombine":"add","mapFit":"contain","mapAmt":1,"mapSoft":0.4,"mapAngle":45,"mapThresh":0.86,"mapFeather":3.8,"mapSeedSoft":0,"mapInvert":false,"mapRelief":true,"layerMix":1,"layerRelief":true,"useQuad":false,"quadSrc":"base","quadDetail":0.55,"quadDepth":7,"quadDraw":"lines","quadLineW":0.3,"quadTaper":0.6,"quadDot":0.35,"quadAmt":1,"quadCalm":1}}]}},
 ];
 const sortedPresets=()=>[...FACTORY,...[...PS.list].sort((a,b)=>(a.created||'').localeCompare(b.created||'')||a.name.localeCompare(b.name))];
 function resetLook(){
@@ -4111,12 +4184,33 @@ $('#nzBake').addEventListener('click',()=>{
 S.noiseItem=nzMakeLive();
 nzSync('none');
 
+/* ---------- phone gestures (≤600px) ----------
+   swipe the image left/right: next / previous view · press and hold: focus in and out · tap: close an open sheet */
+(()=>{
+  const stage=$('#stage'); let t0=null, hold=null;
+  const cancelHold=()=>{ clearTimeout(hold); hold=null; };
+  const phone=()=>isNarrow();
+  const onUi=e=>e.target.closest('.panel,.pairfix,.top,.dock,.note');
+  stage.addEventListener('touchstart',e=>{ if(!phone()||onUi(e)||e.touches.length!==1) { t0=null; return; } const t=e.touches[0]; t0={x:t.clientX,y:t.clientY,time:Date.now()};
+    cancelHold(); hold=setTimeout(()=>{ hold=null; t0=null; const on=!$('.app').classList.contains('focus'); setFocus(on); navigator.vibrate?.(15); if(on) toast('hold again to come back'); },450); },{passive:true});
+  stage.addEventListener('touchmove',e=>{ if(!t0) return; const t=e.touches[0]; if(Math.hypot(t.clientX-t0.x,t.clientY-t0.y)>10) cancelHold(); },{passive:true});
+  stage.addEventListener('touchcancel',()=>{ cancelHold(); t0=null; });
+  stage.addEventListener('contextmenu',e=>{ if(phone()) e.preventDefault(); });
+  stage.addEventListener('touchend',e=>{
+    cancelHold(); if(!t0||!phone()) return; const t=e.changedTouches[0], dx=t.clientX-t0.x, dy=t.clientY-t0.y, dt=Date.now()-t0.time; t0=null;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5&&dt<600){ setView((S.view+(dx<0?1:-1)+VIEW_NAMES.length)%VIEW_NAMES.length); return; }
+    if(Math.abs(dx)<12&&Math.abs(dy)<12) closePopups();
+  });
+  if(phone()) setTimeout(()=>toast('swipe to change view · hold for focus'),2500);
+  // the view numbers hide while a sheet is up, so the sheet has the room
+  new MutationObserver(()=>document.body.classList.toggle('sheet-open',!!$('.panel .grp[open], .topend .grp[open]'))).observe(document.body,{subtree:true,attributes:true,attributeFilter:['open']});
+})();
+
 /* ---------- bundled examples ----------
    Real images shipped next to the page (pixels as WebP; a ComfyUI workflow + prompt as JSON beside it).
    Fetched on demand and added to the library as samples, so they step aside once your own images arrive. */
 const EXAMPLES={
-  'Reja_Style_00109_.png':{img:'/displacement/examples/reja-style-00109.webp',meta:'/displacement/examples/reja-style-00109.json'},
-  'ltxv_us__00046-depth.png':{img:'/displacement/examples/ltxv-us-00046-depth.webp',depthKind:'ai'}
+  'Reja_Style_00109_.png':{img:'/displacement/examples/reja-style-00109.webp',meta:'/displacement/examples/reja-style-00109.json'}
 };
 const exampleLoads={};
 function ensureExample(name){
