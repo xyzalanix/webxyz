@@ -4124,6 +4124,8 @@ function nzLiveSize(){
   if(NZ.size!=='base') return NZ.size.split('x').map(Number);
   const b=S.cur&&!S.cur.live&&S.cur.w?S.cur:null;
   if(b){ const m=Math.min(1,4096/Math.max(b.w,b.h)); return [Math.round(b.w*m),Math.round(b.h*m)]; }
+  // on a phone the opening noise is portrait, shaped like the screen, so the placeholder fills it
+  if(isNarrow()){ const w=1080; return [w,Math.round(Math.min(2.4,Math.max(1,innerHeight/innerWidth))*w)]; }
   return NZ_DEFAULT_SIZE;
 }
 /* redraw the live card and push it down the chain. fast: low resolution, stretched, for slider drags */
@@ -4256,7 +4258,15 @@ ensureExample('Reja_Style_00109_.png').catch(e=>console.warn('example',e));
 (async()=>{
   try{
     const img=new Image(); img.src=LOGO_SRC; await img.decode();
-    const lc=document.createElement('canvas'); lc.width=img.naturalWidth; lc.height=img.naturalHeight; lc.getContext('2d').drawImage(img,0,0);
+    const lc=document.createElement('canvas'), iw=img.naturalWidth, ih=img.naturalHeight;
+    if(isNarrow()){
+      // phone: a portrait frame shaped like the screen, the logo across its middle at 84% width
+      const [fw,fh]=nzLiveSize(), W=iw/0.84, H=Math.round(W*fh/fw); lc.width=Math.round(W); lc.height=H;
+      const t=document.createElement('canvas'); t.width=t.height=1; const tx=t.getContext('2d'); tx.drawImage(img,0,0,1,1,0,0,1,1);
+      const [r,g,b,al]=tx.getImageData(0,0,1,1).data, lx=lc.getContext('2d');
+      if(al>0){ lx.fillStyle=`rgba(${r},${g},${b},${al/255})`; lx.fillRect(0,0,lc.width,H); }   // the logo's own ground fills the frame
+      lx.drawImage(img,Math.round((W-iw)/2),Math.round((H-ih)/2));
+    } else { lc.width=iw; lc.height=ih; lc.getContext('2d').drawImage(img,0,0); }
     S.stoneItem=S.noiseItem;   // the opening "stone" is the live noise card
     S.logoItem={name:'miscgen-logo-map.png',sample:true,meta:null,src:lc,w:lc.width,h:lc.height,thumb:thumbOf(lc)};
     S.items.unshift(S.noiseItem,S.logoItem);
